@@ -2,4 +2,4 @@
 
 
 
-@include('.includes/footer')
+@include('.includes/footer') 
