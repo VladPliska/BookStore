@@ -1,5 +1,5 @@
 <div class="popular-book">
-<h5>{{$type}} book</h3>
+<h2>{{$type}} book</h2>
 <div class="slider-{{$type}}">  
         <div class="popular-item">
             <img class = "book-img" src="{{asset('img/img.jpeg')}}" alt="test">

@@ -8,6 +8,7 @@ let slider1 = tns({
     autoWidth:false,
     controlsPosition:"bottom",
     controlsText:["<",">"],
+    mouseDrag:true,
     responsive:{
         320:{
             items:1
@@ -28,6 +29,7 @@ let slider2 = tns({
     autoWidth:false,
     controlsPosition:"bottom",
     controlsText:["<",">"],
+    mouseDrag:true,
     responsive:{
         320:{
             items:1
