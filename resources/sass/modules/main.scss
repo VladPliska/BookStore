@@ -1,4 +1,134 @@
 body{
-    background-color:red;
-    height: 100px;
+    background-color: #D6D9DC;
+    width: 100%;  
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.container{
+    border-radius: 13px;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.content-container{
+    padding:0 1%;    
+}
+.logo-header{
+    text-align: center;
+    margin: 5px;
+}
+
+nav{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    a{
+        border-radius: 10px;
+        font-size: .8em;
+        padding: 5px;
+        text-align: center;
+        border:1px solid #5C353C;
+        display: inline-block;
+
+    }
+}
+footer{
+    margin-top:5%;
+    width: 100%;
+    height: 25vh;
+    background-color: #28D09E;
+}
+.searc-block{
+    width: 100%;
+    margin: 10px 0;
+    .search-query{
+        border-radius: 4px;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        box-shadow: salmon;
+    }
+}
+
+.popular-book{
+    margin-top: 5%;
+    width: 100% ;
+    overflow: hidden; 
+    h5{
+        margin: 10px;
+    }   
+    .popular-item{
+        position: relative;
+        display:inline-block;
+        text-align: center;
+        height:100%;
+        width:55%;
+        // border:10px solid black;
+    }
+}
+.book-img{
+    position: relative;
+    width: 90%;
+    height: 70%;
+    border: 1px solid;
+}
+
+
+.book-title{
+    display: block;    
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.book-price{
+    display: block;   
+    font-size: 0.8em; 
+}
+
+.tns-liveregion,.tns-nav {
+    display:none!important;
+}
+
+.slider{
+    &-Action,&-Popular{
+    z-index:10;
+    height: 40vh;
+    }
+}
+
+.tns-controls{
+    button{
+        position: relative;
+        height: 30px;
+        width: 100px;
+        &:first-child{
+            float: left!important;
+        }
+        &:last-child{
+            float:right;
+        }
+    }
+}
+
+.footer-nav {
+    display:inline-block;
+    margin-left: 5%;
+    padding-top: 15px;
+    a{
+    display: block;
+    padding:5px;
+    max-width: 100px;
+    border: 1px solid;
+    margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+.about-author{
+    float: right;
+    margin-top: 2%;
 }

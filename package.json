@@ -36,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/VladPliska/BookStore/issues"
   },
-  "homepage": "https://github.com/VladPliska/BookStore#readme"
+  "homepage": "https://github.com/VladPliska/BookStore#readme",
+  "dependencies": {
+    "tiny-slider": "^2.9.2"
+  }
 }
