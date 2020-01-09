@@ -1,12 +1,12 @@
 body{
-    // background-color: #525252;
+    background-color: #BDC4FF;
     // background-image: '../public/img/background.jpg';
-    background-image: url('https://timetracker.yaware.com.ua/wp-content/uploads/2016/01/library-360x270.jpg');
+    // background-image: url('https://timetracker.yaware.com.ua/wp-content/uploads/2016/01/library-360x270.jpg');
     width: 100%;  
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#A2EFE9;
+    // color:#A2EFE9;
 }
 a{
     text-decoration:none;
@@ -16,7 +16,8 @@ a{
     border-radius: 13px;
     max-width: 1024px;
     margin: 0 auto;
-    // background-color:#5E300F ;
+    background-color: #C3C9FF;
+    
 }
 .content-container{
     padding:0 1%;    
@@ -32,7 +33,6 @@ nav{
     display: inline-block;
     text-align: center;
     a{
-        color:#fff;
         text-transform: uppercase;
         border-radius: 10px;
         font-size: 1em;
@@ -49,7 +49,7 @@ footer{
     margin-top:5%;
     width: 100%;
     height: 25vh;
-    
+
     h1{
         display: inline-block;
         position: absolute;
@@ -70,9 +70,9 @@ footer{
 }
 
 .popular-book{
-    margin-top: 5%;
     width: 100% ;
     overflow: hidden; 
+    // max-height: 370px;
     h5{
         margin: 10px;
     }   
@@ -87,9 +87,8 @@ footer{
 }
 .book-img{
     position: relative;
-    width: 90%;
-    height: 70%;
-    border: 1px solid;
+    width: 63%;
+    height: 55%;
 }
 
 
@@ -116,7 +115,7 @@ footer{
 
 .tns-controls{
     button{
-        display:none!important;
+        // display:none!important;
         border-radius: 50%;
         background-color:#fff;
         outline: none;
@@ -138,7 +137,6 @@ footer{
     margin-left: 5%;
     padding-top: 15px;
     a{
-        color:#A2EFE9;
     text-transform:uppercase ;
     display: block;
     border-radius: 8px;
@@ -157,4 +155,11 @@ footer{
     div{
         padding:10px;
     }
+}
+
+.news-block{
+    height:300px ;
+    text-align: center;
+    border: 1px solid;
+    
 }
