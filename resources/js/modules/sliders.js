@@ -42,3 +42,5 @@ let slider2 = tns({
         }
     }
 });
+
+let controllerSlider = document.getElementsByClassName('.tns-controls');

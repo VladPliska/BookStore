@@ -30,19 +30,34 @@ a{
 
 nav{
     width: 100%;
-    display: inline-block;
+    display: flex;
     text-align: center;
+    padding: 10px;
+    // margin-left: 10%;
     a{
         text-transform: uppercase;
         border-radius: 10px;
         font-size: 1em;
         padding: 5px;
-        text-align: center;
         border:1px solid #5C353C;
         display: inline-block;
-        // &:hover{
-        //     background-color: ;
-        // }
+    
+    }
+    .nav-link{
+    width: 100%;    
+    display: inline-block!important;
+    }
+    .searc-block{
+        width:20%;
+        float: right;
+        .search-query{
+            right: 0;
+            font-size: 18px;
+            border-radius: 4px;
+            width: 90%;
+            display: block;
+            height: 30px;
+        }
     }
 }
 footer{
@@ -57,17 +72,7 @@ footer{
         font-size: 4em;
     }
 }
-.searc-block{
-    width: 100%;
-    margin: 10px 0;
-    .search-query{
-        border-radius: 4px;
-        width: 90%;
-        margin: 0 auto;
-        display: block;
-        box-shadow: salmon;
-    }
-}
+
 
 .popular-book{
     width: 100% ;
@@ -109,13 +114,13 @@ footer{
 .slider{
     &-Action,&-Popular{
     z-index:10;
-    height: 40vh;
+    height: 30vh;
     }
 }
 
 .tns-controls{
     button{
-        // display:none!important;
+        // border:none;
         border-radius: 50%;
         background-color:#fff;
         outline: none;
@@ -123,6 +128,8 @@ footer{
         position: relative;
         height: 50px;
         width: 50px;
+        font-weight: bolder;
+        font-size: 16px;
         &:first-child{
             float: left!important;
         }
@@ -161,5 +168,6 @@ footer{
     height:300px ;
     text-align: center;
     border: 1px solid;
-    
+    margin-top: 3%;
 }
+
