@@ -1,5 +1,7 @@
-body {
-  background-color: #BDC4FF;
+body,
+html {
+  background: -webkit-gradient(linear, left bottom, left top, from(#dae2f8), to(#d6a4a4));
+  background: linear-gradient(to top, #dae2f8, #d6a4a4);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -14,8 +16,10 @@ a {
 .container {
   border-radius: 13px;
   max-width: 1024px;
+  min-height: 100vh;
   margin: 0 auto;
-  background-color: #C3C9FF;
+  background: #fff;
+  box-shadow: 0 0 20px 1px;
 }
 
 .content-container {
@@ -37,12 +41,16 @@ nav {
 }
 
 nav a {
+  border-radius: 3px;
   text-transform: uppercase;
-  border-radius: 10px;
   font-size: 1em;
   padding: 5px;
-  border: 1px solid #5C353C;
   display: inline-block;
+  background: #afb6bc;
+}
+
+nav a:hover {
+  background: #92989c;
 }
 
 nav .nav-link {
@@ -94,10 +102,14 @@ footer h1 {
   width: 55%;
 }
 
+.popular-book .popular-item:hover {
+  cursor: pointer;
+}
+
 .book-img {
   position: relative;
   width: 63%;
-  height: 55%;
+  height: 70%;
 }
 
 .book-title {
@@ -174,5 +186,9 @@ footer h1 {
   text-align: center;
   border: 1px solid;
   margin-top: 3%;
+}
+
+.main-info {
+  border: 1px solid;
 }
 

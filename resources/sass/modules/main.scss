@@ -1,7 +1,5 @@
-body{
-    background-color: #BDC4FF;
-    // background-image: '../public/img/background.jpg';
-    // background-image: url('https://timetracker.yaware.com.ua/wp-content/uploads/2016/01/library-360x270.jpg');
+body,html{
+    background: linear-gradient(to top, #dae2f8, #d6a4a4);
     width: 100%;  
     margin: 0;
     padding: 0;
@@ -15,8 +13,10 @@ a{
 .container{
     border-radius: 13px;
     max-width: 1024px;
+    min-height: 100vh;
     margin: 0 auto;
-    background-color: #C3C9FF;
+    background: #fff; 
+    box-shadow: 0 0 20px 1px;
     
 }
 .content-container{
@@ -35,13 +35,17 @@ nav{
     padding: 10px;
     // margin-left: 10%;
     a{
+        border-radius:3px;
         text-transform: uppercase;
-        border-radius: 10px;
         font-size: 1em;
         padding: 5px;
-        border:1px solid #5C353C;
         display: inline-block;
-    
+        background: #afb6bc;
+        &:hover{
+            // border:1px solid;
+            background: #92989c;
+
+        }
     }
     .nav-link{
     width: 100%;    
@@ -87,13 +91,15 @@ footer{
         text-align: center;
         height:100%;
         width:55%;
-        // border:10px solid black;
+        &:hover{
+            cursor:pointer;
+        }
     }
 }
 .book-img{
     position: relative;
     width: 63%;
-    height: 55%;
+    height: 70%;
 }
 
 
@@ -171,3 +177,13 @@ footer{
     margin-top: 3%;
 }
 
+///////BOOK PAGE/////////
+
+.main-info{
+    border:1px solid;
+    
+}
+
+
+
+///////END///////////////

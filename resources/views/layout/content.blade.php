@@ -5,7 +5,7 @@
 <div class="slider">
     <div class="slider-{{$type}}">  
         <div class="popular-item">
-            <img class = "book-img" src="{{asset('img/img.jpeg')}}" alt="test">
+            <img class = "book-img" src="{{asset('img/img.jpeg')}}" alt="testS">
             <span class = "book-title">Title book1</span>
             <span class ="book-price">Price book</span>
         </div> 
