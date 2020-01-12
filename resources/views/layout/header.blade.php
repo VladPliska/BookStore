@@ -1,7 +1,7 @@
 <h2 class = 'logo-header'>BookStore</h2>
 <nav>
     <div class="nav-link">
-        <a href="/index">Головна</a>
+        <a href="/">Головна</a>
         <a href="/catalog">Каталог</a>
         <a href="/news">Новини</a>
         <a href="/action">Акції</a>

@@ -17,7 +17,7 @@ a{
     margin: 0 auto;
     background: #fff; 
     box-shadow: 0 0 20px 1px;
-    
+    position:relative;
 }
 .content-container{
     padding:0 1%;    
@@ -33,6 +33,7 @@ nav{
     display: flex;
     text-align: center;
     padding: 10px;
+    position: relative;
     // margin-left: 10%;
     a{
         border-radius:3px;
@@ -52,8 +53,10 @@ nav{
     display: inline-block!important;
     }
     .searc-block{
+
         width:20%;
-        float: right;
+        position: absolute;
+        right: 3%;
         .search-query{
             right: 0;
             font-size: 18px;
@@ -68,13 +71,19 @@ footer{
     margin-top:5%;
     width: 100%;
     height: 25vh;
+    bottom:0;
+    display:grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
 
     h1{
         display: inline-block;
-        position: absolute;
-        right: 41%;
+        text-align:center;
         font-size: 4em;
     }
+    *{
+        margin: 0 auto;
+    }
+    
 }
 
 
@@ -147,7 +156,6 @@ footer{
 
 .footer-nav {
     display:inline-block;
-    margin-left: 5%;
     padding-top: 15px;
     a{
     text-transform:uppercase ;
@@ -248,7 +256,101 @@ footer{
     line-height: 2em;
     margin-bottom: 30px;
 }
-
-
-
 ///////END///////////////
+
+////////BASKET PAGE////////
+.buy-page-title{
+    text-align:center;
+}
+.all-select-book{
+    min-height:30vh;
+    padding:10px;
+    // border: 1px solid;
+}
+.book-section{
+    // border: 1px solid;
+    padding:10px 0;
+    display: grid;
+    grid-template-columns:0.01fr 1fr 1.5fr 1fr 1fr 1fr;
+}
+
+.buy-book-img{
+    img{
+        display: block;
+        margin:0 auto;
+        max-height:100px;
+    }
+}
+
+.buy-title-book{
+    padding-top: 7%;
+    .name-book{
+    max-width: 300px;
+    overflow:hidden;
+    margin-bottom: 3%;    
+    }
+}
+
+.parent-book-price{
+    position: relative;
+    // border:1px solid;
+    .buy-book-price
+    {
+        font-weight:bold;
+       position: absolute;
+       right: 10%;
+       top:35%;
+       color:#c50023;
+        
+    }
+}
+
+.buy-total-book{
+    position: relative;
+    input{
+    position:absolute;
+    max-width: 30px;
+    height: 20px;
+    right: 40%;
+    top:35%;
+    text-align:center;
+}
+}
+
+.buy-remove-book{
+    position:relative;
+    a{
+    position: absolute;
+    display:block;
+    text-align:center;
+    padding:3px;
+    max-width:20px;
+    width: 20px;
+    top:35%;
+    right: 40%;
+    color:#fff;
+    background-color:#f83b3b;
+    border: 2px solid #af2323;
+    border-radius:4px;
+    &:hover{
+        background-color:#c52222;
+    }
+    }
+}
+
+.buy-basket{
+    position: absolute;
+    right: 8%;
+    font-size: 20px;
+    background-color: rgb(87, 216, 216);
+    border-radius:6px;
+    margin-top: 2%;
+    min-width: 150px;
+    text-align:center;
+    padding: 15px;
+    border:1px solid #28AFB0;
+    &:hover{
+        background-color: rgb(35, 199, 199);
+    }
+}
+/////////END///////////////

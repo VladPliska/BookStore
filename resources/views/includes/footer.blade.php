@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-nav">
-        <a href="/index">Головна</a>
+        <a href="/">Головна</a>
         <a href="/catalog">Каталог</a>
         <a href="/news">Новини</a>
         <a href="/action">Акції</a>

@@ -20,6 +20,7 @@ a {
   margin: 0 auto;
   background: #fff;
   box-shadow: 0 0 20px 1px;
+  position: relative;
 }
 
 .content-container {
@@ -38,6 +39,7 @@ nav {
   display: flex;
   text-align: center;
   padding: 10px;
+  position: relative;
 }
 
 nav a {
@@ -60,7 +62,8 @@ nav .nav-link {
 
 nav .searc-block {
   width: 20%;
-  float: right;
+  position: absolute;
+  right: 3%;
 }
 
 nav .searc-block .search-query {
@@ -76,13 +79,19 @@ footer {
   margin-top: 5%;
   width: 100%;
   height: 25vh;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
 }
 
 footer h1 {
   display: inline-block;
-  position: absolute;
-  right: 41%;
+  text-align: center;
   font-size: 4em;
+}
+
+footer * {
+  margin: 0 auto;
 }
 
 .popular-book {
@@ -156,7 +165,6 @@ footer h1 {
 
 .footer-nav {
   display: inline-block;
-  margin-left: 5%;
   padding-top: 15px;
 }
 
@@ -255,5 +263,101 @@ footer h1 {
   margin: 0 2%;
   line-height: 2em;
   margin-bottom: 30px;
+}
+
+.buy-page-title {
+  text-align: center;
+}
+
+.all-select-book {
+  min-height: 30vh;
+  padding: 10px;
+}
+
+.book-section {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 0.01fr 1fr 1.5fr 1fr 1fr 1fr;
+}
+
+.buy-book-img img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100px;
+}
+
+.buy-title-book {
+  padding-top: 7%;
+}
+
+.buy-title-book .name-book {
+  max-width: 300px;
+  overflow: hidden;
+  margin-bottom: 3%;
+}
+
+.parent-book-price {
+  position: relative;
+}
+
+.parent-book-price .buy-book-price {
+  font-weight: bold;
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  color: #c50023;
+}
+
+.buy-total-book {
+  position: relative;
+}
+
+.buy-total-book input {
+  position: absolute;
+  max-width: 30px;
+  height: 20px;
+  right: 40%;
+  top: 35%;
+  text-align: center;
+}
+
+.buy-remove-book {
+  position: relative;
+}
+
+.buy-remove-book a {
+  position: absolute;
+  display: block;
+  text-align: center;
+  padding: 3px;
+  max-width: 20px;
+  width: 20px;
+  top: 35%;
+  right: 40%;
+  color: #fff;
+  background-color: #f83b3b;
+  border: 2px solid #af2323;
+  border-radius: 4px;
+}
+
+.buy-remove-book a:hover {
+  background-color: #c52222;
+}
+
+.buy-basket {
+  position: absolute;
+  right: 8%;
+  font-size: 20px;
+  background-color: #57d8d8;
+  border-radius: 6px;
+  margin-top: 2%;
+  min-width: 150px;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #28AFB0;
+}
+
+.buy-basket:hover {
+  background-color: #23c7c7;
 }
 
