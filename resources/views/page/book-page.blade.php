@@ -4,5 +4,5 @@
 <div class="content-container">
     @include('./layout/book-content')
 </div>
-
+@include('.includes/footer') 
 {{-- @include('.includes/footer')  --}}

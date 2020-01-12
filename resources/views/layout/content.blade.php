@@ -1,7 +1,6 @@
 <div class="popular-book">
 <h2>{{$type}} book</h2>
 <div class="main-slider"> 
-{{-- <button class = "prev-book"><</button> --}}
 <div class="slider">
     <div class="slider-{{$type}}">  
         <div class="popular-item">

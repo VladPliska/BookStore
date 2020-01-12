@@ -163,13 +163,18 @@ footer h1 {
 .footer-nav a {
   text-transform: uppercase;
   display: block;
-  border-radius: 8px;
+  border-radius: 3px;
   padding: 5px;
   width: 150px;
   max-width: 200px;
   border: 1px solid;
   margin-bottom: 5px;
   text-align: center;
+  background: #afb6bc;
+}
+
+.footer-nav a:hover {
+  background: #92989c;
 }
 
 .about-author {
@@ -189,6 +194,66 @@ footer h1 {
 }
 
 .main-info {
-  border: 1px solid;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  padding-top: 2%;
+}
+
+.main-info .img-book {
+  height: 90%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.main-info .img-book img {
+  height: 90%;
+}
+
+.main-info .first-book-info {
+  height: 80%;
+  display: grid;
+  grid-row: 10px 10px 10px 200px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.main-info .first-book-info .page-title-book {
+  font-weight: bold;
+}
+
+.main-info .first-book-info .page-rice {
+  font-weight: bolder;
+  color: #c50023;
+  font-size: 18px;
+}
+
+.main-info .button-buy {
+  height: 80%;
+  position: relative;
+}
+
+.main-info .button-buy .buyBook {
+  position: absolute;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  bottom: 5%;
+  width: 150px;
+  height: 40px;
+  right: 10%;
+  background-color: #eb0000;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+  color: #fff;
+}
+
+.main-info .button-buy .buyBook:hover {
+  background-color: #f83b3b;
+}
+
+.description-info {
+  margin: 0 2%;
+  line-height: 2em;
+  margin-bottom: 30px;
 }
 
