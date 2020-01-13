@@ -12,8 +12,9 @@
         <div class="filter-action">Акція</div>
         <div id="showAllFilter"class="show-main-filter">Фільтри</div>
     </div>
-    <div id="mainFilter"class="main-filters">
+    <div id="mainFilter"class="main-filters ">
         <div class="ganre-list">
+            <div>Виберіть жанр</div>
             <select name="ganre" id="ganre-select" >
                 <option value="Fan" selected disabled>Виберіть жанр</option>
                 <option value="Fan">Психологія</option>
@@ -21,9 +22,13 @@
             </select>
         </div>
         <div class="filter-price">
-            <p class = "minPrice">1</p>
-            <input type="range" step="50" max="10000" min="1">
-            <p class = "maxPrice">1000</p>
+            <p>Мінімальна ціна</p>
+            <input class = "range-min" value="0" type="range" step="50" max="1000" min="0">
+            <div class = "minPrice">0</div>
+            <p>Максимальна ціна</p>
+            <input class = "range-max" type="range" value='500' step="50" max="1000" min="0">
+            <div class = "maxPrice">500</div>
+            
         </div>
         <div class="filter-author">
             <input type="text" name="filter-author">

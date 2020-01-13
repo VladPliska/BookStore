@@ -23125,14 +23125,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 var showAllFilter = document.getElementById('showAllFilter');
 var mainFilter = document.getElementById('mainFilter');
-showAllFilter.addEventListener('click', function () {
-  //for animation show main filter
-  mainFilter.style.display = "grid"; //   document.getElementById('mainFilter').classList.add('active');
 
-  window.setTimeout(function () {
-    mainFilter.classList.add("active");
-  }, 0);
-});
+if (showAllFilter != null) {
+  showAllFilter.addEventListener('click', function () {
+    //for animation show main filter
+    mainFilter.style.display = "grid";
+    window.setTimeout(function () {
+      mainFilter.classList.toggle("active");
+    }, 0);
+  });
+}
 
 /***/ }),
 
@@ -23147,16 +23149,28 @@ showAllFilter.addEventListener('click', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
 
-var popularSlider = document.getElementsByClassName('slider-Popular');
-var actionSlider = document.getElementsByClassName('slider-Action');
+var popularSlider = document.getElementsByClassName("slider-Popular");
+var actionSlider = document.getElementsByClassName("slider-Action");
+var rangeMin = document.getElementsByClassName("range-min");
+var rangeMax = document.getElementsByClassName("range-max");
+
+if (rangeMax != null && rangeMin != null) {
+  rangeMax[0].addEventListener('input', function () {
+    document.getElementsByClassName('maxPrice')[0].innerHTML = rangeMax[0].value;
+  });
+  rangeMin[0].addEventListener('input', function () {
+    document.getElementsByClassName('minPrice')[0].innerHTML = rangeMin[0].value;
+  });
+}
 
 if (popularSlider.length > 0) {
   var slider1 = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
-    container: '.slider-Popular',
+    container: ".slider-Popular",
     items: 1,
-    slideBy: 'page',
+    slideBy: "page",
     autoplay: false,
     autoWidth: false,
+    controlsPosition: "bottom",
     controlsText: ["<", ">"],
     mouseDrag: true,
     responsive: {
@@ -23175,11 +23189,12 @@ if (popularSlider.length > 0) {
 
 if (actionSlider.length > 0) {
   var slider2 = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
-    container: '.slider-Action',
+    container: ".slider-Action",
     items: 1,
-    slideBy: 'page',
+    slideBy: "page",
     autoplay: false,
     autoWidth: false,
+    controlsPosition: "bottom",
     controlsText: ["<", ">"],
     mouseDrag: true,
     responsive: {
@@ -23196,7 +23211,7 @@ if (actionSlider.length > 0) {
   });
 }
 
-var controllerSlider = document.getElementsByClassName('.tns-controls');
+var controllerSlider = document.getElementsByClassName(".tns-controls");
 
 /***/ }),
 
