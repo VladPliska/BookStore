@@ -1,12 +1,15 @@
 import { tns } from "tiny-slider/src/tiny-slider"
 
+let popularSlider = document.getElementsByClassName('slider-Popular');
+let actionSlider = document.getElementsByClassName('slider-Action');
+
+if(popularSlider.length > 0){
 let slider1 = tns({
     container:'.slider-Popular',
     items:1,
     slideBy:'page',
     autoplay:false,
     autoWidth:false,
-    controlsPosition:"bottom",
     controlsText:["<",">"],
     mouseDrag:true,
     responsive:{
@@ -21,13 +24,14 @@ let slider1 = tns({
         }
     }
 });
+}
+if(actionSlider.length > 0 ){
 let slider2 = tns({
     container:'.slider-Action',
     items:1,
     slideBy:'page',
     autoplay:false,
     autoWidth:false,
-    controlsPosition:"bottom",
     controlsText:["<",">"],
     mouseDrag:true,
     responsive:{
@@ -42,5 +46,6 @@ let slider2 = tns({
         }
     }
 });
-
+}
 let controllerSlider = document.getElementsByClassName('.tns-controls');
+

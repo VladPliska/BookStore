@@ -25,6 +25,7 @@ a {
 
 .content-container {
   padding: 0 1%;
+  min-height: 60vh;
 }
 
 .logo-header {
@@ -359,5 +360,80 @@ footer * {
 
 .buy-basket:hover {
   background-color: #23c7c7;
+}
+
+.header-filter {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: 3fr 0.6fr 0.6fr 0.6fr;
+}
+
+.header-filter .filter-main-search {
+  padding: 5px;
+}
+
+.header-filter .filter-main-search label {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.header-filter .filter-main-search input {
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.header-filter .filter-main-search span {
+  margin-left: 2px;
+  border: 1px solid;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.header-filter .filter-news,
+.header-filter .filter-action {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #EE964B;
+  text-align: center;
+  margin: 1px;
+}
+
+.header-filter .filter-news:hover,
+.header-filter .filter-action:hover {
+  cursor: pointer;
+  background-color: #eca465;
+}
+
+.show-main-filter {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #28AFB0;
+  text-align: center;
+  margin: 1px;
+}
+
+.show-main-filter:hover {
+  cursor: pointer;
+  background-color: #08caca;
+}
+
+.main-filters {
+  border: 1px solid;
+  width: 10%;
+  height: 0;
+  display: none;
+  opacity: 0;
+}
+
+.main-filters.active {
+  opacity: 1;
+  width: 100%;
+  height: 400px;
+  margin: 30px auto;
 }
 

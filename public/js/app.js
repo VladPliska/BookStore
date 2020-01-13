@@ -23080,6 +23080,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./modules/sliders */ "./resources/js/modules/sliders.js");
 
+__webpack_require__(/*! ./modules/main */ "./resources/js/modules/main.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -23114,6 +23116,26 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/modules/main.js":
+/*!**************************************!*\
+  !*** ./resources/js/modules/main.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var showAllFilter = document.getElementById('showAllFilter');
+var mainFilter = document.getElementById('mainFilter');
+showAllFilter.addEventListener('click', function () {
+  //for animation show main filter
+  mainFilter.style.display = "grid"; //   document.getElementById('mainFilter').classList.add('active');
+
+  window.setTimeout(function () {
+    mainFilter.classList.add("active");
+  }, 0);
+});
+
+/***/ }),
+
 /***/ "./resources/js/modules/sliders.js":
 /*!*****************************************!*\
   !*** ./resources/js/modules/sliders.js ***!
@@ -23125,48 +23147,55 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
 
-var slider1 = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
-  container: '.slider-Popular',
-  items: 1,
-  slideBy: 'page',
-  autoplay: false,
-  autoWidth: false,
-  controlsPosition: "bottom",
-  controlsText: ["<", ">"],
-  mouseDrag: true,
-  responsive: {
-    320: {
-      items: 1
-    },
-    450: {
-      items: 2
-    },
-    1024: {
-      items: 3
+var popularSlider = document.getElementsByClassName('slider-Popular');
+var actionSlider = document.getElementsByClassName('slider-Action');
+
+if (popularSlider.length > 0) {
+  var slider1 = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
+    container: '.slider-Popular',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    autoWidth: false,
+    controlsText: ["<", ">"],
+    mouseDrag: true,
+    responsive: {
+      320: {
+        items: 1
+      },
+      450: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      }
     }
-  }
-});
-var slider2 = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
-  container: '.slider-Action',
-  items: 1,
-  slideBy: 'page',
-  autoplay: false,
-  autoWidth: false,
-  controlsPosition: "bottom",
-  controlsText: ["<", ">"],
-  mouseDrag: true,
-  responsive: {
-    320: {
-      items: 1
-    },
-    450: {
-      items: 2
-    },
-    1024: {
-      items: 3
+  });
+}
+
+if (actionSlider.length > 0) {
+  var slider2 = Object(tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__["tns"])({
+    container: '.slider-Action',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    autoWidth: false,
+    controlsText: ["<", ">"],
+    mouseDrag: true,
+    responsive: {
+      320: {
+        items: 1
+      },
+      450: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      }
     }
-  }
-});
+  });
+}
+
 var controllerSlider = document.getElementsByClassName('.tns-controls');
 
 /***/ }),

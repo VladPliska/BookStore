@@ -20,7 +20,8 @@ a{
     position:relative;
 }
 .content-container{
-    padding:0 1%;    
+    padding:0 1%;
+    min-height: 60vh;    
 }
 .logo-header{
     text-align: center;
@@ -354,3 +355,79 @@ footer{
     }
 }
 /////////END///////////////
+
+///////////FILTER PAGE/////////
+.header-filter{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 3fr 0.6fr 0.6fr 0.6fr;
+    .filter-main-search{
+    //  border: 1px solid;   
+     padding: 5px;
+     label{
+    font-size: 24px;
+    font-weight:500;     
+    }
+     input{
+         width: 300px;
+         height: 40px;
+         border-radius:4px;
+     }
+     span{
+         margin-left:2px;
+         border:1px solid;
+         text-align:center;
+         padding:8px;
+         border-radius:5px;
+         font-size:15px;
+     }
+    }
+    .filter{
+        &-news,&-action{
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #EE964B;
+            text-align: center;
+            margin: 1px;
+            &:hover{
+                cursor: pointer;
+                background-color: rgb(236, 164, 101);
+            }
+        }
+    }
+}
+
+.show-main-filter{
+    font-size: 20px;
+    padding:10px;
+    border-radius:5px;
+    background-color:#28AFB0;
+    text-align: center;
+    margin: 1px;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(8, 202, 202);
+    }
+}
+.main-filters{
+    // transition: all 2s;
+    border:1px solid;
+    width:10%;
+    height: 0;
+   display:none;
+   opacity:0;
+}
+
+.main-filters.active{
+    opacity:1;
+    width: 100%;
+    height: 400px;
+    margin:30px auto;
+}
+
+#mainFilter{
+    
+}
+
+//////////////////END//////////

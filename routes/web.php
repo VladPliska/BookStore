@@ -13,7 +13,10 @@ Route::get('/buy',function(){
     return view('page/basket');
 });
 
-Route
+Route::get('/filter',function(){
+    return view('page/filter-page');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
