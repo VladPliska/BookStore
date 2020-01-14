@@ -4,12 +4,19 @@ let popularSlider = document.getElementsByClassName("slider-Popular");
 let actionSlider = document.getElementsByClassName("slider-Action");
 let rangeMin = document.getElementsByClassName("range-min");
 let rangeMax = document.getElementsByClassName("range-max");
-if (rangeMax != null && rangeMin != null) {
-    rangeMax[0].addEventListener('input',function(){
-        document.getElementsByClassName('maxPrice')[0].innerHTML = rangeMax[0].value;
+
+if (rangeMax[0] != null && rangeMin[0] != null) {
+    rangeMax[0].addEventListener("input", function() {
+        if (rangeMax[0].value - rangeMin[0].value >= 50) {
+        document.getElementsByClassName("maxPrice")[0].innerHTML =rangeMax[0].value;
+            let maxVal = rangeMax[0].value;
+    }
     });
-    rangeMin[0].addEventListener('input',function(){
-        document.getElementsByClassName('minPrice')[0].innerHTML = rangeMin[0].value;
+    rangeMin[0].addEventListener("input", function() {
+        if (rangeMax[0].value - rangeMin[0].value >= 50) {
+            let minVal = rangeMin[0].value;
+            document.getElementsByClassName("minPrice")[0].innerHTML =rangeMin[0].value;
+        }
     });
 }
 

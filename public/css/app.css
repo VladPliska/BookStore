@@ -13,6 +13,11 @@ a {
   color: black;
 }
 
+input {
+  border: 1px solid cadetblue;
+  outline: none;
+}
+
 .container {
   border-radius: 13px;
   max-width: 1024px;
@@ -365,7 +370,7 @@ footer * {
 .header-filter {
   margin-top: 3%;
   display: grid;
-  grid-template-columns: 3fr 0.6fr 0.6fr 0.6fr;
+  grid-template-columns: 2fr 0.7fr;
 }
 
 .header-filter .filter-main-search {
@@ -448,24 +453,29 @@ footer * {
 }
 
 .main-filters .ganre-list select {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
   font-size: 1.2em;
+  width: 70%;
 }
 
 .main-filters .filter-price {
-  padding: 5px;
   width: 200px;
   text-align: center;
 }
 
-.main-filters .filter-price span {
-  border: 1px solid;
+.main-filters .filter-price p {
+  -webkit-margin-before: 0.3em;
+          margin-block-start: 0.3em;
+  -webkit-margin-after: 0.3em;
+          margin-block-end: 0.3em;
   font-size: 20px;
-  font-family: Comic Sans;
 }
 
 .main-filters.active {
   opacity: 1;
-  height: 400px;
+  height: 25vh;
 }
 
 input[type=range] {
@@ -473,6 +483,7 @@ input[type=range] {
   -webkit-appearance: none;
   outline: none;
   width: 80%;
+  border: unset !important;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -497,5 +508,132 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -6px;
+}
+
+.filter-author {
+  margin: 10px 20px 0 20px !important;
+  text-align: center;
+}
+
+.filter-author div {
+  font-size: 1.5em;
+  margin-bottom: 5%;
+}
+
+.filter-author input {
+  width: 70%;
+  height: 24px;
+  border-radius: 9px;
+  border: 1px solid cadetblue;
+  outline: none;
+  font-size: 1.2em;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.result-search {
+  width: 100%;
+  min-height: 400px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.book-card {
+  height: 350px;
+  width: 250px;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.book-card img {
+  margin: 0 auto;
+  display: block;
+  height: 250px;
+  width: 200px;
+}
+
+.book-card-name {
+  font-weight: 500;
+  font-size: 1.8em;
+}
+
+.book-card-price {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: rgba(236, 52, 52, 0.705);
+}
+
+.book-card-add-bascket {
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 5px;
+  width: 40%;
+  background-color: #EE964B;
+  border-radius: 8px;
+}
+
+.book-card-add-bascket:hover {
+  cursor: pointer;
+  background-color: #e07d27;
+}
+
+.sort {
+  display: grid;
+  text-align: center;
+  grid-template-rows: 0.3fr 0.4fr 1fr;
+}
+
+.sort-by {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sort-by label {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.sort-by input {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.sort .button-block {
+  max-height: 80px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.sort .button-block .sort-btn-all {
+  font-size: 1em;
+  padding: 7px;
+  border-radius: 9px;
+  background-color: #ee964b;
+  text-align: center;
+  margin: 1px;
+}
+
+.sort .button-block .sort-btn-all:hover {
+  cursor: pointer;
+  background-color: #e07d27;
+}
+
+.sort .button-block .sort-btn-search {
+  padding: 7px;
+  font-size: 1em;
+  border-radius: 9px;
+  margin: 1px;
+  background-color: #05d1d1;
+}
+
+.sort .button-block .sort-btn-search:hover {
+  cursor: pointer;
+  background-color: #058d8d;
 }
 
