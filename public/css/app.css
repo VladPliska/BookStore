@@ -49,16 +49,16 @@ nav {
 }
 
 nav a {
-  border-radius: 3px;
+  border-radius: 9px;
   text-transform: uppercase;
-  font-size: 1em;
-  padding: 5px;
+  font-size: 1.2em;
+  padding: 5px 15px;
   display: inline-block;
-  background: #afb6bc;
+  background: #D98945;
 }
 
 nav a:hover {
-  background: #92989c;
+  background: #ac692f;
 }
 
 nav .nav-link {
@@ -66,19 +66,15 @@ nav .nav-link {
   display: inline-block !important;
 }
 
-nav .searc-block {
-  width: 20%;
-  position: absolute;
-  right: 3%;
-}
-
 nav .searc-block .search-query {
-  right: 0;
   font-size: 18px;
-  border-radius: 4px;
-  width: 90%;
+  border-radius: 9px;
+  width: 80%;
   display: block;
   height: 30px;
+  margin: 0 auto;
+  padding: 5px;
+  padding-left: 25px !important;
 }
 
 footer {
@@ -635,5 +631,103 @@ input[type=range]::-webkit-slider-thumb {
 .sort .button-block .sort-btn-search:hover {
   cursor: pointer;
   background-color: #058d8d;
+}
+
+.profile-page {
+  display: grid;
+  margin: 30px auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profile-page .ressetPassword button,
+.profile-page .dop-info button {
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-page input {
+  width: 270px;
+  border-radius: 9px;
+  height: 33px;
+  font-size: 1.5em;
+  padding: 5px;
+  padding-left: 10px;
+  margin: 20px 10px;
+  display: block;
+}
+
+.profile-page h1 {
+  font-weight: normal;
+  text-align: center;
+}
+
+.profile-mainInfo {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.profile-mainInfo img {
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 30%;
+  display: block;
+}
+
+.profile-mainInfo .user-name,
+.profile-mainInfo .user-surname {
+  margin: 20px 10px;
+}
+
+.btn-g {
+  min-width: 150px;
+  height: 45px;
+  border-radius: 9px;
+  font-size: 1.3em;
+  padding: 10px;
+  border: 1px solid cadetblue;
+  background-color: #36A051;
+  outline: none;
+}
+
+.btn-g:hover {
+  background-color: #1b8a37;
+}
+
+.ce {
+  margin: 0 auto;
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 0.7fr 3fr 0.7fr;
+  height: 100px;
+}
+
+header .logo-header {
+  font-weight: 500;
+  font-size: 2em;
+  padding: 15px;
+  font-family: Comic Sans;
+}
+
+header nav {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+header .btnLogin {
+  padding: 15px;
+}
+
+header .btnLogin .avatar-header {
+  width: 70px;
+  height: 60px;
+  border-radius: 30%;
 }
 

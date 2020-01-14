@@ -16,6 +16,12 @@ Route::get('/buy',function(){
 Route::get('/filter',function(){
     return view('page/filter-page');
 });
+Route::get('/profile',function(){
+    return view('page/profile-page');
+});
+Route::get('/admin',function(){
+    return view('page/index-admin');
+});
 
 Auth::routes();
 
