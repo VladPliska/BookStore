@@ -717,18 +717,57 @@ header .btnLogin .avatar-header {
 }
 
 .admin-nav a {
-  padding: 5px 41px;
+  padding: 5px 40px;
   border-bottom-left-radius: unset !important;
   border-bottom-right-radius: unset !important;
 }
 
+.admin-nav .btn-nav.active {
+  background: #ac692f;
+}
+
 .admin-workspace {
-  border: 1px solid;
   width: 99%;
   margin: 0 auto;
-  min-height: 70vh;
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px;
+  box-shadow: 0 0 2em #3071a9;
+}
+
+.admin-workspace:only-child {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.admin-workspace .tab-stats {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.admin-workspace .tab-stats .info-1,
+.admin-workspace .tab-stats .info-2,
+.admin-workspace .tab-stats .info-3 {
+  text-align: center;
+}
+
+.admin-workspace .tab-stats .info-block {
+  text-align: center;
+}
+
+.admin-workspace .tab-stats .info-block h4 {
+  margin: 0;
+  font-size: 1.7em;
+}
+
+.admin-workspace .tab-stats .info-block p {
+  font-size: 2em;
+  margin: 10px auto;
+}
+
+.admin-workspace .tab-stats .info-center {
+  margin: 30% auto;
 }
 
 .ce {
