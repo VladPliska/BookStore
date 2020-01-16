@@ -18,6 +18,18 @@ input {
   outline: none;
 }
 
+textarea {
+  resize: none;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.2em;
+  width: 70%;
+}
+
 .container {
   border-radius: 13px;
   max-width: 1024px;
@@ -448,14 +460,6 @@ footer * {
   margin-bottom: 5%;
 }
 
-.main-filters .ganre-list select {
-  padding: 5px;
-  border-radius: 5px;
-  outline: none;
-  font-size: 1.2em;
-  width: 70%;
-}
-
 .main-filters .filter-price {
   width: 200px;
   text-align: center;
@@ -770,6 +774,167 @@ header .btnLogin .avatar-header {
   margin: 30% auto;
 }
 
+.admin-workspace .add-book {
+  padding-bottom: 20px;
+}
+
+.admin-workspace .book-save {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.admin-workspace .book-save .add-info-book:first-child {
+  margin-top: 30px;
+}
+
+.admin-workspace .book-save .add-info-book .info-block {
+  margin: 10px auto 10px 5%;
+}
+
+.admin-workspace .book-save .add-info-book label {
+  display: inline-block;
+  font-size: 1.2em;
+  vertical-align: top;
+  min-width: 60px;
+}
+
+.admin-workspace .book-save .add-info-book input {
+  width: 80%;
+}
+
+.admin-workspace .book-save .add-info-book .new-description-book {
+  padding: 5px 5px;
+  width: 65%;
+  font-size: 1.3em;
+}
+
+.admin-workspace .book-save .imgBlock img {
+  width: 300px;
+  height: 250px;
+}
+
+.admin-workspace .book-save .imgBlock label {
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+}
+
+.admin-workspace .book-save .imgBlock label:hover {
+  cursor: pointer;
+}
+
+.admin-workspace .btnAddBook {
+  margin: 20px auto;
+}
+
+.admin-workspace .admin-all-book .book-info {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.admin-workspace .admin-all-book .book-info div {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.admin-workspace .user-list,
+.admin-workspace .user-list-title,
+.admin-workspace .all-coments-title,
+.admin-workspace .all-comments {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.admin-workspace .user-list div,
+.admin-workspace .user-list-title div,
+.admin-workspace .all-coments-title div,
+.admin-workspace .all-comments div {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.admin-workspace .user-list .admin-user-name,
+.admin-workspace .user-list-title .admin-user-name,
+.admin-workspace .all-coments-title .admin-user-name,
+.admin-workspace .all-comments .admin-user-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-workspace .user-list-title,
+.admin-workspace .all-coments-title {
+  border-bottom: 1px solid;
+}
+
+.admin-workspace .user-list-title div,
+.admin-workspace .all-coments-title div {
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.admin-workspace .user-list-title .first,
+.admin-workspace .all-coments-title .first {
+  border-left: none !important;
+}
+
+.admin-workspace .user-list-title .last,
+.admin-workspace .all-coments-title .last {
+  border-right: none !important;
+}
+
+.admin-workspace .admin-user-block {
+  color: red;
+}
+
+.admin-workspace .admin-user-block:hover {
+  cursor: pointer;
+  color: #ad0303;
+}
+
+.admin-workspace .forCommentsAdmin {
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 2%;
+}
+
+.admin-workspace .comment-response-btn {
+  color: #1ccf1c;
+  font-weight: 500;
+}
+
+.admin-workspace .comment-response-btn:hover {
+  color: #0ba30b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-workspace .comment-remove-btn {
+  color: #fa3512;
+  font-weight: 500;
+}
+
+.admin-workspace .comment-remove-btn:hover {
+  color: #af0017;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .ce {
   margin: 0 auto;
   display: block;
@@ -791,6 +956,7 @@ header .btnLogin .avatar-header {
 }
 
 .btn-g:hover {
+  cursor: pointer;
   background-color: #1b8a37;
 }
 
@@ -805,5 +971,22 @@ header .btnLogin .avatar-header {
 
 .btn-nav:hover {
   background: #ac692f;
+}
+
+.inpStan {
+  outline: hidden;
+  padding-left: 10px;
+  padding: 10px;
+  border-radius: 9px;
+  font-size: 1em;
+}
+
+.small-book-img {
+  height: 100px;
+}
+
+.small-avatar-img {
+  height: 50px;
+  border-radius: 30%;
 }
 

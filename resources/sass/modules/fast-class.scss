@@ -16,6 +16,7 @@
     background-color: #36A051;
     outline:none;
     &:hover{
+        cursor:pointer;
         background-color: rgb(27, 138, 55);
     }
 }
@@ -30,4 +31,20 @@
     &:hover {
         background: rgb(172, 105, 47);
     }
+}
+
+.inpStan{
+    outline:hidden;    
+    padding-left:10px;
+    padding:10px;
+    border-radius:9px;
+    font-size: 1em;
+}
+
+.small-book-img {
+    height: 100px;
+}
+.small-avatar-img{
+    height: 50px;
+    border-radius:30%;
 }

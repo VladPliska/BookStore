@@ -15,6 +15,16 @@ input{
     border: 1px solid cadetblue;
     outline: none;
 }
+textarea{
+    resize: none;
+}
+select {
+    padding: 5px;
+    border-radius:5px;
+    outline:none;
+    font-size: 1.2em;
+    width: 70%;  
+}
 .container {
     border-radius: 13px;
     max-width: 1024px;
@@ -427,14 +437,7 @@ footer {
             font-size: 1.5em;
             margin-bottom: 5%;
         }
-        select {
-            padding: 5px;
-            border-radius:5px;
-            outline:none;
-            font-size: 1.2em;
-            width: 70%;
-           
-        }
+       
     }
     .filter-price {
         width: 200px;
@@ -752,8 +755,126 @@ header{
             margin: 30% auto;
           }
 
+  }
+  .add-book{
+      padding-bottom:20px;
+  }
+    .book-save{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        .add-info-book{
+            &:first-child{
+                margin-top: 30px;
+            }
+            .info-block{
+                margin: 10px auto 10px 5%;
+            }
+            label{
+                display:inline-block;
+                font-size: 1.2em;  
+                vertical-align: top;
+                min-width: 60px;  
+            }
+            input{
+                width:80%;
+            }
+            .new-description-book{
+                padding: 5px  5px;
+                width: 65%;
+                font-size: 1.3em;
+            }
+        }
+        .imgBlock{
+            img{
+                width: 300px;
+                height: 250px;
+            }
+            label{
+                font-size: 2em;
+                font-weight: 500;
+                text-align:center;
+                display: block;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
     }
-    .add-book{
-    
+    .btnAddBook{
+        margin: 20px auto;
+    }
+    .admin-all-book{
+       .book-info{
+           padding: 10px;
+           display:grid;
+           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+           div{
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 1.5em;
+               font-weight: 400;
+           }
+       } 
+    }
+    .user-list,.user-list-title,.all-coments-title,.all-comments{
+        padding:10px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+        .admin-user-name{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .user-list-title,.all-coments-title{
+        border-bottom:1px solid;
+        div{
+            border-left: 1px solid;
+            border-right: 1px solid;
+        } 
+        .first{
+            border-left: none!important;
+        } 
+        .last{
+            border-right: none!important;
+        }  
+    }
+    .admin-user-block{
+        color:red;
+        &:hover{
+            cursor:pointer;
+            color:rgb(173, 3, 3);
+        }
+    }
+    .forCommentsAdmin{
+        height: 30px;
+        border-radius: 50%; 
+        margin-right: 2%;    
+    }   
+    .comment-response-btn{
+        color:rgb(28, 207, 28);    
+        font-weight: 500;
+        &:hover{
+            color:rgb(11, 163, 11);    
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+    .comment-remove-btn{
+        color:rgb(250, 53, 18);    
+        font-weight: 500;
+        &:hover{
+            color:rgb(175, 0, 23);    
+            font-weight: 600;
+            cursor: pointer;
+        }
     }
 }
