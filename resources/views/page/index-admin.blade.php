@@ -11,7 +11,7 @@
         <a href="" class="admin-comments btn-nav">Коментарі</a>
        </div>
        <div class="admin-workspace">
-           <div class="tab-stats hide">
+           <div class="tab-stats hide" data-target="Statistic">
                <div class="info-1">
                     <div class="info-block">
                         <p>Всіх користувачів</p>
@@ -47,7 +47,7 @@
                 </div>
                </div>
            </div>
-           <div class="add-book hide">
+           <div class="add-book hide " data-target="Add-Book">
                <div class="book-save">   
                     <div class="add-info-book">
                         <div class="info-block">
@@ -84,7 +84,7 @@
                </div>
                <button class ="btn-g ce btnAddBook">Зберегти книжку</button>
            </div>
-           <div class="admin-all-book hide">
+           <div class="admin-all-book hide" data-target="All-Book">
                <div class="book-info">
                    <div class="admin-book-img">
                         <img src="{{asset('img/img.jpeg')}}" class ="small-book-img"alt="">
