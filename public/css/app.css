@@ -392,8 +392,10 @@ footer * {
 
 .header-filter .filter-main-search input {
   width: 300px;
-  height: 40px;
-  border-radius: 4px;
+  height: 20px;
+  font-size: 1.2em;
+  border-radius: 9px;
+  padding: 10px;
 }
 
 .header-filter .filter-main-search span {
@@ -743,11 +745,17 @@ header .btnLogin .avatar-header {
   padding-top: 50px;
 }
 
+.admin-workspace .tab {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
 .admin-workspace .tab-stats {
   height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 20px;
 }
 
 .admin-workspace .tab-stats .info-1,
@@ -942,6 +950,7 @@ header .btnLogin .avatar-header {
 
 .hide {
   display: none !important;
+  opacity: 0;
 }
 
 .btn-g {

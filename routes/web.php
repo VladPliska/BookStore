@@ -13,7 +13,7 @@ Route::get('/buy',function(){
     return view('page/basket');
 });
 
-Route::get('/filter',function(){
+Route::get('/catalog',function(){
     return view('page/filter-page');
 });
 Route::get('/profile',function(){

@@ -4,14 +4,14 @@
 <div class="content-container">
    <div class="admin">
        <div class="admin-nav">
-        <a href="" class="admin-addBook btn-nav active">Додати книжку</a>
-        <a href="" class="admin-stats btn-nav ">Статистика</a>
-        <a href="" class="admin-allBook btn-nav">Книжки</a>
-        <a href="" class="admin-users btn-nav">Користувачі</a>
-        <a href="" class="admin-comments btn-nav">Коментарі</a>
+        <a href="javascript:;" class="admin-stats btn-nav showWork active " data-open="Statistic">Статистика</a>
+        <a href="javascript:;" class="admin-addBook btn-nav showWork" data-open="Add-Book">Додати книжку</a>
+        <a href="javascript:;" class="admin-allBook btn-nav showWork" data-open="All-Book">Книжки</a>
+        <a href="javascript:;" class="admin-users btn-nav showWork" data-open="All-User">Користувачі</a>
+        <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment">Коментарі</a>
        </div>
        <div class="admin-workspace">
-           <div class="tab-stats hide" data-target="Statistic">
+           <div class="tab-stats tab" data-target="Statistic">
                <div class="info-1">
                     <div class="info-block">
                         <p>Всіх користувачів</p>
@@ -47,7 +47,7 @@
                 </div>
                </div>
            </div>
-           <div class="add-book hide " data-target="Add-Book">
+           <div class="add-book hide tab" data-target="Add-Book">
                <div class="book-save">   
                     <div class="add-info-book">
                         <div class="info-block">
@@ -84,7 +84,7 @@
                </div>
                <button class ="btn-g ce btnAddBook">Зберегти книжку</button>
            </div>
-           <div class="admin-all-book hide" data-target="All-Book">
+           <div class="admin-all-book hide tab" data-target="All-Book">
                <div class="book-info">
                    <div class="admin-book-img">
                         <img src="{{asset('img/img.jpeg')}}" class ="small-book-img"alt="">
@@ -116,7 +116,7 @@
                     <div class="book-btn-remove">Видалити</div>
                 </div>
            </div>
-           <div class="admin-all-users hide">
+           <div class="admin-all-users hide tab" data-target="All-User">
                <div class="user-list-title">
                     <div class="admin-user-avatar first">Фото</div>
                     <div class="admin-user-name">Ім'я</div>
@@ -134,7 +134,7 @@
                    <div class="admin-user-block">Заблокувати</div>
                </div>
            </div>
-           <div class="admin-all-coments">
+           <div class="admin-all-coments hide tab" data-target ="All-Comment">
                <div class="all-coments-title">
                    <div class="comment-name-book first">Назва книги</div>
                    <div class="comment-user-info">Користувач</div>

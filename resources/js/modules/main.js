@@ -10,3 +10,31 @@ if(showAllFilter != null){
   });
 }
 
+
+
+let adminNav = document.getElementsByClassName('showWork');
+
+for(let i=0;adminNav.length>i;i++){
+  adminNav[i].addEventListener('click',showAdminWorkSpace);
+}
+
+function showAdminWorkSpace(e){
+let showArea = e.target.getAttribute('data-open'); 
+// e.target.classList.add('active')
+for(let i = 0;adminNav.length > i;i++){
+ adminNav[i].classList.remove('active');
+ if(adminNav[i].getAttribute('data-open') == showArea){
+   adminNav[i].classList.add('active');
+ }
+
+}
+
+let adminWorkSpace = document.querySelectorAll('.admin-workspace .tab');
+for(let a = 0; adminWorkSpace.length > a ; a++ ){
+  adminWorkSpace[a].classList.add('hide');
+  if(adminWorkSpace[a].getAttribute('data-target') == showArea){
+    adminWorkSpace[a].classList.remove('hide');
+  }
+}
+
+}

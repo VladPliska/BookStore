@@ -23136,6 +23136,34 @@ if (showAllFilter != null) {
   });
 }
 
+var adminNav = document.getElementsByClassName('showWork');
+
+for (var i = 0; adminNav.length > i; i++) {
+  adminNav[i].addEventListener('click', showAdminWorkSpace);
+}
+
+function showAdminWorkSpace(e) {
+  var showArea = e.target.getAttribute('data-open'); // e.target.classList.add('active')
+
+  for (var _i = 0; adminNav.length > _i; _i++) {
+    adminNav[_i].classList.remove('active');
+
+    if (adminNav[_i].getAttribute('data-open') == showArea) {
+      adminNav[_i].classList.add('active');
+    }
+  }
+
+  var adminWorkSpace = document.querySelectorAll('.admin-workspace .tab');
+
+  for (var a = 0; adminWorkSpace.length > a; a++) {
+    adminWorkSpace[a].classList.add('hide');
+
+    if (adminWorkSpace[a].getAttribute('data-target') == showArea) {
+      adminWorkSpace[a].classList.remove('hide');
+    }
+  }
+}
+
 /***/ }),
 
 /***/ "./resources/js/modules/sliders.js":
