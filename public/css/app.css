@@ -999,3 +999,50 @@ header .btnLogin .avatar-header {
   border-radius: 30%;
 }
 
+.content-reg-block {
+  min-height: 90vh;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.reg-block {
+  width: 550px;
+  height: 450px;
+  border-radius: 9px;
+  box-shadow: 0 0 20px 1px;
+}
+
+.reg-block .title-reg {
+  font-size: 1.8em;
+  text-align: center;
+  font-weight: 500;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.reg-block div {
+  padding: 10px;
+  margin: 5px;
+}
+
+.reg-block label {
+  font-size: 1.3em;
+}
+
+.reg-block input {
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 9px;
+  font-size: 1.2em;
+}
+
+.reg-block .get-reg-info div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+

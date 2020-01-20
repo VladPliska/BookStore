@@ -23,6 +23,10 @@ Route::get('/admin',function(){
     return view('page/index-admin');
 });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/signup',function(){
+    return view('page/register');
+});
