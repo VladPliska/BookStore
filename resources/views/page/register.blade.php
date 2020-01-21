@@ -7,7 +7,7 @@
                 <div class="get-reg-info">
                     <div class="get-nic">
                         <label for="nicname">Вкажіть нік: </label>
-                        <input type="text" id="nicname">
+                        <input type="text" id="nicname" placeholder="Username">
                     </div>
                     <div class="get-email">
                         <label for="email">Вкажіть email: </label>
@@ -22,8 +22,9 @@
                         <input type="password" placeholder="**********" id="repPass">
                     </div>
                 </div>
-                <button class ="btn-g ce">Зареєструватися</button>
-
-        </div>  
+                <button class ="btn-g ce">Зареєструватися</button><br>
+                <a href="/login" class = "btn-g ce loginBtn">Увійти</a>
+                
+            </div>  
     </div>
     

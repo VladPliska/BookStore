@@ -8,8 +8,9 @@
 
 .reg-block{
     width: 550px;
-    height: 450px;
+    height: auto;
     border-radius: 9px;
+    padding:20px;
     box-shadow: 0 0 20px 1px;
     .title-reg{
         font-size: 1.8em;
@@ -37,4 +38,12 @@
             grid-template-columns: 1fr 1fr;
         }
     }
+}
+
+.loginBtn{
+    background-color: #D7D2D5;
+    width: 150px;
+    line-height: normal;
+    text-align: center;
+    height: auto;
 }
