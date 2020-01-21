@@ -33,3 +33,6 @@ Route::get('/signup',function(){
 Route::get('/login',function(){
     return view('page/login');
 });
+Route::get('/user',function(){
+    return view('page/user');
+});

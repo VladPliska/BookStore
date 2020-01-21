@@ -36,13 +36,17 @@
         div{
             display:grid;
             grid-template-columns: 1fr 1fr;
+            label{
+                display:flex;
+                align-items:center;
+            }
         }
     }
 }
 
 .loginBtn{
     background-color: #D7D2D5;
-    width: 150px;
+    width: 180px;
     line-height: normal;
     text-align: center;
     height: auto;

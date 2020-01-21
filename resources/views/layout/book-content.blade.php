@@ -27,3 +27,32 @@
 <div class="recomend-book">
     @include('.layout/content',['type'=>"Popular"])
 </div>
+<div class="coment-block">
+    <div class="title-block title-all-coment">Коментарі</div>
+    <div class="all-comment-block">
+
+        <div class="user-comment-block">
+            <div class="icon-avatar">
+                <img src="{{asset('img/avatar.png')}}"  class = "avatar-for-comment" alt="">
+            </div>
+            <div class="info-comment">
+                <div class="username-comment">Вася</div>
+                <div class="text-comment">Test comment</div>
+            </div>
+        </div>
+         <div class="user-comment-block">
+            <div class="icon-avatar">
+                <img src="{{asset('img/avatar.png')}}"  class = "avatar-for-comment" alt="">
+            </div>
+            <div class="info-comment">
+                <div class="username-comment">Вася</div>
+                <div class="text-comment">Test comment</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="title-block">Коментувати</div>
+    <textarea name="comment-text textarea ce" class="comment-text" id="" cols="30" rows="10" placeholder="Текст комантаря....."></textarea>
+    <button class ="add-comment">Коментувати</button>
+    
+</div>
