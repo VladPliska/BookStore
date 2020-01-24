@@ -5,8 +5,14 @@
     <div class="user-page">
         <div class="all-order">
             <div class="title-order">Всі замовлення</div>
+            
+
+             <div class="order-item">
+
+            </div>
+
+
         </div>
-        <div class="user-main-info"></div>
         <div class="user-coments"></div>
     </div>
 </div>

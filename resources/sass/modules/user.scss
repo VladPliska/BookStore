@@ -2,13 +2,16 @@
     border:1px solid;
     min-height: 500px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     .all-order{
         border:1px solid;
+        .title-order{
+            text-align:center;
+            font-size: 1.4em;
+            font-weight: 550;
+        }
     }
-    .user-main-info{
-        border:1px solid;
-    }
+    
     .user-coments{
         border: 1px solid;
     }

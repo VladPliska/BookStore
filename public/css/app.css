@@ -1141,15 +1141,17 @@ header .btnLogin .avatar-header {
   border: 1px solid;
   min-height: 500px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .user-page .all-order {
   border: 1px solid;
 }
 
-.user-page .user-main-info {
-  border: 1px solid;
+.user-page .all-order .title-order {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 550;
 }
 
 .user-page .user-coments {
