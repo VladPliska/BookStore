@@ -950,3 +950,33 @@ header{
     max-width: 60px;
     border-radius:10px;
 }
+.title-order{
+    margin: 15px 0;    
+}
+
+.order-item,.title-for-orders{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // border:1px solid;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px 5px;
+    text-align: center; 
+    border-radius:8px;
+    vertical-align: middle;
+}
+
+.order-item{
+    cursor: pointer;
+    &:hover{
+        background-color: #eed7d7;
+    } 
+    
+}
+
+.my-coments-title{
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 550;
+    margin-top: 15px ;
+}

@@ -1018,6 +1018,37 @@ header .btnLogin .avatar-header {
   border-radius: 10px;
 }
 
+.title-order {
+  margin: 15px 0;
+}
+
+.order-item,
+.title-for-orders {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 10px 5px;
+  text-align: center;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.order-item {
+  cursor: pointer;
+}
+
+.order-item:hover {
+  background-color: #eed7d7;
+}
+
+.my-coments-title {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 550;
+  margin-top: 15px;
+}
+
 .ce {
   margin: 0 auto;
   display: block;
@@ -1138,23 +1169,19 @@ header .btnLogin .avatar-header {
 }
 
 .user-page {
-  border: 1px solid;
+  margin-top: 30px;
   min-height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .user-page .all-order {
-  border: 1px solid;
+  border-right: 1px solid;
 }
 
 .user-page .all-order .title-order {
   text-align: center;
   font-size: 1.4em;
   font-weight: 550;
-}
-
-.user-page .user-coments {
-  border: 1px solid;
 }
 

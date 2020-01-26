@@ -1,10 +1,10 @@
 .user-page{
-    border:1px solid;
+    margin-top: 30px;
     min-height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     .all-order{
-        border:1px solid;
+        border-right: 1px solid;
         .title-order{
             text-align:center;
             font-size: 1.4em;
@@ -12,7 +12,5 @@
         }
     }
     
-    .user-coments{
-        border: 1px solid;
-    }
+   
 }

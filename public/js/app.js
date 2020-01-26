@@ -23267,8 +23267,8 @@ var controllerSlider = document.getElementsByClassName(".tns-controls");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\webPortfolio\bookStore\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! c:\webPortfolio\bookStore\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/vlad/Portfolio/BookStore/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/vlad/Portfolio/BookStore/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
