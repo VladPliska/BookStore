@@ -1185,3 +1185,9 @@ header .btnLogin .avatar-header {
   font-weight: 550;
 }
 
+.select-post {
+  margin: 0 auuto;
+  border: 1px solid;
+  text-align: center;
+}
+
