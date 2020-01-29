@@ -1,5 +1,47 @@
+
+
+.buy-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px; 
+}
+
 .select-post{
 margin: 0 auuto;
-border:1px solid;
-text-align:center;    
+text-align:center;  
+    form{
+        margin: 80px auto;
+        width: auto;
+    }
+    div{
+      text-align: left;
+      margin: 20px;
+    }
+    input{
+        margin-right: 10px;
+    }
+    label{
+        vertical-align: top;
+        font-size: 1.4em;
+    }
 }
+
+.title-select-post{
+    font-size: 1.5em;
+}
+
+.info-client{
+    display: block;
+    p{
+        text-align: center;
+    }
+    input{
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        font-size: 1em;
+        border-radius:10px;   
+    }
+}
+
+
