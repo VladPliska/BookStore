@@ -2,15 +2,15 @@
 
 .buy-page{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr[];
+    grid-template-columns: 1fr 1fr ;
     margin-top: 20px; 
 }
 
-.select-post{
-margin: 0 auuto;
-text-align:center;  
+.select-post,.select-type-pay{
+    margin: 0 auuto;
+    text-align:center;  
     form{
-        margin: 80px auto;
+        margin: 30px auto;
         width: auto;
     }
     div{
@@ -32,8 +32,12 @@ text-align:center;
 
 .info-client{
     display: block;
-    p{
+    h2{
         text-align: center;
+        padding: 0;
+        font-size: 1.5em;
+        margin: 0;
+        margin-bottom: 50px;
     }
     input{
         display: block;
@@ -45,3 +49,14 @@ text-align:center;
 }
 
 
+.post-order-info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.type-pay{
+    text-align: left!important;
+}
+.btnCreateOrder{
+    margin-top: 40px;
+}
