@@ -155,6 +155,7 @@
            </div>
 
        </div>
+       <button class ="btn-g ce addNews">Додати новину</button>
     </div>
 
 </div>

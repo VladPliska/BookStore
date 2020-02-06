@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="canonical" href="https://www.bookclub.ua/catalog/ekskluziv/forhealth/">
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+<meta http-equiv="Cache-control" content="no-transform">
+    <meta content="Красота и здоровье. Товары для здоровья, украшения, аксессуары. Товары для вашего здоровья и красоты помогут вам всегда быть в отличной форме и выглядеть на все 100%." name="description">
+<meta content="Красота и здоровье, украшения, аксессуары, Для здоровья и красоты, Для здоровья, подарок" name="keywords">
+<meta name="google-site-verification" content="JbShjWQ1qHUjNQ8EGC3rtPT3kvw6iHjIpsqOufGSjlY" />
+<meta http-equiv="pragma" content="no-cache">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="expires" content="Tue, 4 Feb 2020 22:26:19 GMT">
+<title>
+Красота и здоровье - Книжный Клуб. Клуб Семейного Досуга. Книжный интернет-магазин. КСД</title>
+
+<link href="/style/style.css?lstmdf=202001281456" rel="stylesheet" type="text/css" media="all">
+<link href="/style/main_columns.css?lstmdf=201911251504" rel="stylesheet" type="text/css" media="all">
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="/style/styleie.css"><![endif]-->
+<!--[if lt IE 7 ]><link rel="stylesheet" type="text/css" href="/css/mylt7.css"><![endif]-->
+<!--[if lte IE 8 ]><link rel="stylesheet" type="text/css" href="/css/mylte8.css"><![endif]-->
+<!--[if  IE ]><link rel="stylesheet" type="text/css" href="/style/myIE.css"><![endif]-->
+<link type="text/css" rel="stylesheet" href="/.bin/js/slidemenu/jqueryslidemenu.css?lstmdf=202001281034" media="all">
+
+<script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+<script type="text/javascript" src="/.bin/js/es6-promise.auto.min.js" async></script>
+<!--[if lt IE 7]><script type="text/javascript">try {document.execCommand('BackgroundImageCache', false, true); } catch(e) {}</script><![endif]-->
+<link href="/.bin/js/lightbox/lightbox.css" rel="stylesheet" type="text/css">
+
+
+
+	
+		
+	<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='10040872-88',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
+		
+	
+<!-- google analitics -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-4982912-1', 'bookclub.ua');
+	ga('require', 'linkid', 'linkid.js');
+	ga('require', 'ec');
+		
+ 
+			ga('ec:addPromo', {            
+			  'name': '',       
+			  'position': 'Global Background' 
+			});	
+	ga('send', 'pageview');
+	
+					function onPromoClick (name, position) {
+	  ga('ec:addPromo', {
+		'name': name,
+		'position': position
+	   });
+	  ga('ec:setAction', 'promo_click');
+	  ga('send', 'event', 'Internal Promotions', 'click', name);
+	};	
+</script>
+<!-- end google analitics --><!-- Global site tag (gtag.js) - Google Ads: 985116171 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-985116171"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-985116171');
+</script><script type="text/javaScript">
+var SITEURL = 'https://www.bookclub.ua/';
+function wresize() {
+	var lft = parseInt(($(window).width() - $('#shadowmain').width())/2 - 16);
+	$('#shadowmain').css('left', lft + 'px');
+} 
+function ban_rus(email) {
+	var pattern = /@(mail.ru|bk.ru|list.ru|yandex.ru|yandex.ua|yandex.com|mail.ua|vk.com|ok.ru|ya.ru|inbox.ru)$/i;
+	return email.match(pattern);
+}
+$(function() {
+//	$('.email_aiem, input[name=emailUser], input[name^=auemail]').on('input keyup', function() {
+	$('._forbrus_temp').on('input keyup', function() {
+		var em = $(this).val();
+		if (ban_rus(em)) {
+			alert('Просим указать другой email. Согласно Указу Президента №133/2017 с 1 июня 2017 года доступ к «Яндекс» и Mail.Ru будет ограничен по всей территории Украины.');
+		}
+	});
+    /*$(window).resize(function () { 
+		wresize();
+    });*/
+	var bodyheight = $('#dbodytop').height();
+	var imagebackgrheight = $('#dbodytop_link').height();
+	if (bodyheight < imagebackgrheight){$('#dbodytop_link').css('height', bodyheight+'px')}
+	
+	var lft = parseInt(($(window).width() - $('#helpCartForm').width())/2 - 16);
+	$('#helpCartForm').css('left', lft + 'px');	
+	$('input.search').placeholder();
+	//wresize();
+	$('.imitation_ahref').bind('mouseover mouseout', function() {
+		$(this).toggleClass('activ');
+	});
+});
+</script>
+<style type="text/css" rel="stylesheet">
+
+
+	
+	body{background-color: #edc860;}
+		#dbodytop_link{
+		background-image: url("/img/headerImg/8/ac56235eda1ed81bbbef2f45f91d53dd.jpg");
+				height: 1059px;
+	}	
+	
+
+</style>
+
+</head>
+
+<body class="not-loged-member">
+<script>
+			gtag('event', 'page_view', {
+				'send_to': 'AW-985116171',
+				'dynx_itemid': '',
+				'dynx_pagetype': '',
+				'ecomm_pagetype': 'category',
+				'ecomm_prodid': '',
+				'ecomm_totalvalue': '',
+			});</script><script>
+			var google_tag_params = {
+				ecomm_prodid: '',
+				ecomm_pagetype: 'category',
+				ecomm_totalvalue: '',
+			};
+			</script><div id="fb-root"></div>
+<script>
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+	$().ready(function() {
+	
+		$(".logpopup #nncField").bind('keyup keydown blur focus', function() {
+			$(this).val($(this).val().replace(/[^0-9]/g, ''));
+			if ($(this).val().length > 0) {
+				$(this).addClass('has-value');
+			} else {
+				$(this).removeClass('has-value');
+			}
+		});
+	
+		$("#nncField").keyup(function() {	
+			if ($("#nncField").val().length > 0 && !/^\d+$/.test($("#nncField").val())) {
+				if (!$("#errorToolTipNNC").is('div')) {
+					var tooltip = '<div id="errorToolTipNNC" align="center"><p>Только цифры!</p></div>';
+					var pageX = $('#nncField').offset().left;
+					var pageY = $('#nncField').offset().top;
+					
+					$('body').append(tooltip);
+					$("#errorToolTipNNC").hide();
+					$("#errorToolTipNNC").css('top', pageY + 'px').css('left', (pageX - 200) + 'px').fadeIn(500);
+				}
+				$(this).val($(this).val().replace(/[^0-9]/g, ''));
+				$("#errorToolTipNNC").fadeOut(500).delay(500).queue(function() {	
+					$(this).remove();
+				});				
+			} else {
+				$("#errorToolTipNNC").fadeOut(500).delay(500).queue(function() {
+					$(this).remove();
+				});				
+			}			
+		});
+
+		$("#snameField").keyup(function() {
+			if ($("#snameField").val().length > 0 && !/^[абгвдеёжзийклмнопрстуфхцчшщъыьэюя\-]+$/i.test($("#snameField").val())) {
+				if (!$("#errorToolTipName").is('div')) {
+					var tooltip = '<div id="errorToolTipName" align="center"><p>Только кириллица!</p></div>';
+					var pageX = $('#snameField').offset().left;
+					var pageY = $('#snameField').offset().top;
+					
+					$('body').append(tooltip);
+					$("#errorToolTipName").hide();
+					$("#errorToolTipName").css('top', pageY + 'px').css('left', (pageX - 200) + 'px').fadeIn(500);
+				}
+			} else {
+				$("#errorToolTipName").fadeOut(500).delay(500).queue(function() {
+					$(this).remove();
+				});				
+			}
+		});
+    $('input[name="getusr"]').on('input invalid', function() {
+			this.setCustomValidity('');
+      if (this.validity.valueMissing) {
+        this.setCustomValidity("Введите ваш клубный номер");
+      }
+    	if (this.validity.typeMismatch) {
+      	this.setCustomValidity("Не соответствует типу");
+    	}
+    	if (this.validity.patternMismatch) {
+      this.setCustomValidity("Номер набран неправильно");
+    	}
+    });
+		$('input[name="getwrd"]').on('input invalid', function() {
+			this.setCustomValidity('');
+      if (this.validity.valueMissing) {
+        this.setCustomValidity("Введите вашу фамилию");
+      }
+    	if (this.validity.typeMismatch) {
+      	this.setCustomValidity("Не соответствует типу");
+    	}
+    	if (this.validity.patternMismatch) {
+      this.setCustomValidity("Введите минимум 2 буквы");
+    	}
+    });
+	if (window.location.hash && window.location.hash == '#_=_') 
+	{
+        window.location.href = window.location.href.split('#_=_')[0];
+    }
+});
+    
+</script>
+
+<div id="zanaves" class="hidden" onclick="return hiddenzanaves();"></div>
+<style type='text/css' rel='styleshett'>
+/* dform_reanim */
+	.f_left { float: left }
+	.pointer { cursor: pointer }
+	.dform_reanim {z-index :20; position: fixed; height: 440px; width: 610px; 
+				background-color: white; top: 120px; left: 315px}
+	.shadow_reanim {z-index :19; position: fixed; height: 100%; width: 100%; opacity: 0.37;
+		background-color: black; 
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=37);
+		}
+	.dform_reanim, .shadow_reanim {	display:
+none		
+	} 
+	.dform_reanim .dr1 { background-color: #ebf5fa; font-size: 18px; color: #007694; height: 45px; padding: 20px 0 0 40px; 
+		position: relative }
+	.dform_reanim .dr11 { position: absolute; left: 590px; top:9px }
+	.dform_reanim .dr2 { padding: 10px 0 10px 40px; font-size: 13px; font-weight: bold }
+	.dform_reanim .dr3 { padding: 10px 20px 10px 40px; font-size: 12px }
+	.dform_reanim .dr4 { padding: 10px 50px 10px 40px; font-size: 11px }
+	.dform_reanim .dr5 { padding: 10px 0 0 45px; background-color: #ebf5fa; height: 85px }
+	.dform_reanim .dr52 { /*width: 306px;*/ padding: 22px 30px 40px 20px; }
+	.dform_reanim .dr521 { background-color: white; font-size: 10px; border: 1px solid #d4e1e7; height: 35px; padding: 3px 10px 5px }
+	.dform_reanim .dr6 { padding: 0 50px 0 40px;}
+	.dform_reanim .dr61 {font-size: 12px; font-weight: bold; width: 200px }
+	.dform_reanim .dr611 { padding-bottom: 10px }
+	.dform_reanim .dr62 { width: 180px; font-size: 12px; padding-left: 40px }
+	.dform_reanim .dr621 { text-decoration: underline; padding-left: 268px; font-weight: bold }
+	.dform_reanim .dr621 a { color: black }
+	.headerMain a#reanim_member { color: #008c9f}
+	.headerMain a#reanim_member:hover { color: #22a5b7;}
+</style>
+<script>
+	$(function() {
+		$('#reanim_member').click(function() {
+			$('div.shadow_reanim').show();
+			$('div.dform_reanim').show();
+			return false;
+		});
+		$('.close_fr').click(function() {
+			$('div.dform_reanim').hide();
+			$('div.shadow_reanim').hide();
+			return false;
+		});
+	})
+</script>
+<div class='shadow_reanim'>
+</div>
+<div class='dform_reanim'>
+	<div class='dr1'>
+		<div class='dr11'>
+			<a href='./'><img class='close_fr pointer' src='/images/close_reanim_form.jpg' title='Закрыть' alt='Закрыть' /></a>
+		</div>
+		Восстановите членство в Клубе!	</div>
+	<div class='dr2'>
+		Мы очень рады, что Вы решили вернуться в нашу клубную семью!
+	</div>
+	<div class='dr3'>
+		Чтобы восстановить свое членство в Клубе – воспользуйтесь формой авторизации: введите номер своей клубной карты и фамилию.	</div>
+	<div class='dr4'>
+		<span style='font-size: 11px; color: #d31f1f; font-weight: bold'>Важно!</span> С восстановлением членства в Клубе Вы востанавливаете и все свои клубные привилегии.
+	</div>
+	<div class='dr5'>
+		<div class='f_left' style='float: left'>
+			
+<!--				<form action="" name="authform" method="post" onSubmit="return frmsbmt4auth(this);">-->
+				<form action="/?noreenformula=1" name="authform" method="post" onSubmit="return frmsbmt4auth(this);">
+										<table>
+					<tr><td class="headerAuth" style="font-size: 10px;" colspan="3">Авторизация членов Клуба:</td></tr>
+					<tr><td style="white-space:nowrap;" class="inpAuth">№ карты:</td><td colspan="2" class="inpAuth"><input type="text" size="9" name="getusr" id="nncField" /></td></tr>
+					<tr><td class="inpAuth">Фамилия:</td><td class="inpAuth"><input type="text" size="9" name="getwrd" id="snameField" /></td><td class="inpAuth" ><input type="image" src="/img/enter.png" value=" " class="botton" alt=" "/></td></tr>
+					</table>
+				</form>
+			
+		</div>
+		<div class='f_left dr52'>
+			<div class='dr521'>
+				Узнать номер своей клубной карты Вы<br />можете, позвонив в информационную службу<br />Клуба или  получив помощь он-лайн..
+			</div>
+		</div>
+	</div>
+	<div class='dr6'>
+		<div class='dr61 f_left'>
+			<div class='dr611'>
+				Информационная служба :
+			</div>
+			<div>
+							(067) 332-93-93<br />
+				(050) 113-93-93<br />
+				(093) 170-03-93<br />
+				(057) 783-88-88
+				
+			</div>
+		</div>
+		
+		<div class='dr62 f_left'>
+			Если Вы еще не были зарегистрированы в Книжном Клубе, но хотите присоединиться к клубной семье – перейдите по <br />
+			<a href='/catalog/join/'>этой ссылке</a>!
+			<div class='dr621'>
+				<a href='./'><span class='pointer close_fr'>Закрыть</span></a>
+			</div>
+		</div>
+		</div>
+</div><div id="dbodytop_link">
+	<a class="dbodytop_link_a" href="https://www.bookclub.ua/catalog/books/" target="_blank" onclick="onPromoClick('', 'Global Background');"></a>
+ 
+</div>
+<div id="dbodytop">
+	<div id="dbody">
+<!-- banner akcii -->	
+		
+	<style type="text/css" rel="stylesheet">
+		#head_info {
+			height: 204px;
+			position: relative;
+			font-family: "RobotoCondensed-Regular";	
+		}
+		#head_info .close_bl_rec {
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			font-size: 25px;
+			color: #a4a4a4;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+		}
+		#head_info.numstep1{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/recr_200_step1_1.jpg);
+		}
+		#head_info.numstep2{
+			background-color: #e9e9e9;
+		}
+		#head_info.numstep3{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/recr_200_step3_1.jpg);
+		}
+/* добавлено для 2 этапа 14.03.2018 */	
+		#head_info .bl_header_txt{
+			position: absolute;
+			top: 22px;
+			left: 50px;
+			font-size: 18px;
+			color: #2f2734;
+		}
+		#head_info .bl_header_txt > span{
+			color:#e15906;
+			font-family: "RobotoBoldCondenced";
+		}
+		#head_info .bl_product_all {
+			height: 100%;
+			margin-left: 40px;
+			max-width: 495px;
+			float: left;
+		}
+		#head_info .bl_product_itms {
+			display: flex;
+			height: 100%;
+			align-items: flex-end;
+			width: 472px;
+		}
+		#head_info .bl_product {
+			width: 118px;
+			height: 142px;
+			margin: 0 2px 15px;
+			text-align: center;
+		}
+		#head_info .bl_product.num_product1{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/product1.png);
+		}
+		#head_info .bl_product.num_product2{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/product2.png);
+		}
+		#head_info .bl_product.num_product3{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/product3.png);
+		}
+		#head_info .bl_product.num_product4{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/product4.png);
+		}
+		#head_info .bl_product.bl_product_real{
+			background-color: #ffffff;
+			width: 104px;
+			height: 128px;
+			margin: 6px 6px 24px;
+			border: 1px solid #d1d1d1;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-end;		
+		}
+		#head_info .bl_product_itms img{
+			display: inline;
+		}
+		#head_info .bl_product_itm {
+			padding-bottom: 10px;
+		}
+		#head_info .bl_product_prs {
+			padding-top: 10px;
+			color:#e15906;
+			font-family: "RobotoBoldCondenced";
+			font-size: 16px;			
+		}		
+		#head_info .bl_headcart {
+			margin-left: 300px;
+			display: flex;
+            justify-content: center;
+			align-items: flex-end;
+			height: 100%;
+		}
+		#head_info .bl_headcart2 {
+			margin: 15px 17px;
+			text-align: center;
+            margin-right: 45px;
+		}
+		#head_info .bl_headcart2 .bl_headcart_img_money{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/200grn.png);
+			width: 202px;
+			height: 106px;
+		}
+		#head_info .bl_headcart2 .bl_headcart_img_card{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/card.png);
+			width: 157px;
+			height: 108px;
+		}
+		#head_info .bl_headcart2 .bl_headcart_img_catalog{
+			background-image: url(/images/join/img_catalog/cat_razv_204.png?lstmdf=20191226121743);
+			width: 201px;
+			height: 129px;
+		}
+		#head_info .bl_header_prcs {
+			text-align: right;
+			margin-right: 60px;
+			padding-top: 50px;
+		}
+		#head_info .bl_header_prcst > div {
+			display: inline-block;
+		}
+		#head_info .bl_header_prcsfin{
+			margin-left: 25px;
+			font-size: 36px;
+			color: #e35c06;
+		}
+		#head_info .bl_header_prcsper{
+			color:#2f2734;
+			font-size: 30px;
+		}
+		#head_info .bl_header_prcsper .pr_orng_line{
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/line_org.png);
+			background-repeat: no-repeat;
+			background-position-y: center;			
+		}
+		#head_info .bl_header_bon {
+			color:#4f4f4f;
+			font-size: 16px;
+			padding-top: 5px;
+			padding-bottom: 10px;
+		}
+		#head_info .bl_header_bttn > a {
+			display: block;
+			height: 34px;
+			width: 170px;
+			float: right;
+			background-color: #e35d06;
+			color: #ffffff;
+			text-decoration: none;
+			text-align: center;
+			font-size: 18px;
+			padding: 5px 0;
+			box-sizing: border-box;
+		}
+		#head_info .bl_header_bttn > a:hover {
+			opacity: 0.8;
+		}
+		#head_info .bl_header_bttn > a:hover{
+			text-decoration: none!important;
+		}
+		#head_info .bl_header_bttn > a > span{
+			position: relative;
+			padding-right: 15px;
+		}
+		#head_info .bl_header_bttn > a > span:after{
+			display: block;
+			content: '';
+			width: 7px;
+			height: 14px;
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/arr_w.png);
+			position: absolute;
+			right: 0;
+			top: 6px;
+		}
+		#head_info .bl_product_itms .slick-arrow{
+			width: 25px;
+			height: 100%;
+			background-image: url(/img/recrut/recrutSite/head/bonus/recr_bonus_200_var2/arr_or.png);
+			background-repeat: no-repeat;
+			position: absolute;
+			background-color: transparent;
+			background-attachment: scroll;
+			font-size: 0;
+			line-height: 0;
+			padding: 0;
+			cursor: pointer;
+			color: transparent;
+			border: none;
+			outline: none;
+			opacity: 1;
+			visibility: visible;
+			transition-delay: 0s;
+			top: 50%;			
+		}
+		#head_info .slick-disabled {
+			display: none !important;
+		}		
+		#head_info .bl_product_itms .slick-arrow:hover{
+			opacity: 0.6;
+		}
+		#head_info .bl_product_itms .slick-prev{
+			transform: rotate(180deg);
+			transform-origin: 50% 25%;
+			left: -25px;
+			background-position: right 45%;
+		}
+		#head_info .bl_product_itms .slick-prev::before,
+		#head_info .bl_product_itms .slick-next::before {
+			font-size: 0; 
+		}
+		#head_info .bl_product_itms .slick-next{
+			right: -25px;
+			background-position: right 55%;
+		}
+		#head_info .bl_headcart_txt{
+			font-size: 18px;
+			color: #2f2734;
+			padding-top: 7px;
+			padding-bottom: 7px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		changeHeadInfo = function(param) {
+			var show = 1;
+			var ga_block = ga_banner = '';
+			if ($('#head_info').is(':visible')) { 
+				if (param != 2) {
+					$('#head_info').hide('slow');
+					$('#info_action_help .ai_bl_open').show('slow');
+					show = 0;
+					ga_block = 'Close Block';
+				} else {
+					ga_block = 'Go to top';
+				}
+			} else {
+				$('#head_info').show('slow');
+				$('#info_action_help .ai_bl_open').hide('slow');
+				ga_block = 'Open Block';
+			}
+			switch(param) {
+				case 1 :
+					ga_banner = 'Header Banner';
+					break;
+				case 2 :
+					ga_banner = 'Middle Banner';
+					$('html,body').animate({scrollTop : 0}, 1000);
+					break;
+				case 3 :
+					ga_banner = 'Info Block';
+					break;
+			}
+			if(typeof(ga)!='undefined' && ga_block) {
+				ga('send','event','Recrutment',ga_banner,'-0 ' + ga_block);
+			}
+			if (ga_block) {
+				$.ajax({
+					url: '/cart/bloks/recrutSite/_ajax_set_sidebar_show.php',
+					type: "POST",
+					data: {show : show}
+				});
+			}
+		}
+		$(function() {
+			$('#dbody').on('click', '.change_activ_offer', function() {
+				if ($(this).hasClass('activ0')) {
+					if(typeof(ga)!='undefined') {
+						ga('send','event','Recrutment','Info Block','-0 ' + 'Close block and diactivate');
+					}
+					changeActivOffer(0);
+				} else if ($(this).children('.ref_join').length) {
+					var param = $(this).children('.ref_join').text();
+					sendToJoin(param);
+				} else {
+					if(typeof(ga)!='undefined') {
+						if ($(this).hasClass('cao_top')) {
+							ga('send','event','Recrutment','Info Block','-0 ' + 'Activate discount');
+						}
+						if ($(this).hasClass('cao_card')) {
+							ga('send','event','Recrutment','Product page banner','-0 ' + 'Activate discount');
+						}
+					}
+					changeActivOffer(1);
+				}
+			});
+			$('.close_bl_noact').on('click', function() {
+				changeHeadInfo(3);
+				event.stopPropagation();
+			});
+		})
+		sendToJoin = function(ref) {
+			var htmlForm = '<form id="send_to_join" method="post" action="/catalog/join/' + ref + 
+				'"><input type="hidden" name="join_add_url" value="order_done=50" />';
+			htmlForm += '</form>';
+			$('#dbody').append(htmlForm);
+			$('#send_to_join').submit();
+		}
+		changeActivOffer = function(activ) {
+			var htmlForm = '<form id="recrutment_site" method="post"><input type="hidden" name="recrutment_site_activ" value="' + activ + '" />';
+			htmlForm += '</form>';
+			$('#dbody').append(htmlForm);
+			$.ajax({
+				url: '/cart/bloks/recrutSite/_ajax_set_sidebar_show.php',
+				type: "POST",
+				data: {show : activ},
+				success: function() {
+					$('#recrutment_site').submit();
+				}
+			});
+		}
+	</script>
+	<style>
+		#info_action_help {
+			position:relative;
+		}
+		#info_action_help .ai_bl_super_tooltip {
+			position: absolute;
+			width: 190px;
+			right: 12px;
+			top: -58px;
+			z-index: 10;
+			display:none;
+		}
+		#info_action_help .ai_open_but:hover .ai_bl_super_tooltip {
+			display: block;
+		}
+		#info_action_help .ai_bl_super_tooltip .ai_text_super_tooltip {
+			padding: 10px 20px;
+			background-color: #f5f5f5;
+			border: 1px solid #dcdcdc;
+			font-size: 10px;
+		}
+		#info_action_help .ai_bl_super_tooltip .ai_tr_super_tooltip {
+			position: absolute;
+			width: 15px;
+			height: 13px;
+			right: 10px;
+			bottom: -12px;
+			background-image: url(/img/akcii/image/ico_trtooltip_r.png);
+		}	
+		#info_action_help .ai_bl_open {
+			background-image: url('/img/recrut/recrutSite/head/rekr_close.png');
+			background-repeat: no-repeat;
+			height: 51px ;
+			margin: 0;
+		}
+		#info_action_help .ai_bl_open .ai_open_but {
+			height: 20px;
+			background-color: #c0c0c0;		
+			position: relative;
+		}
+			
+		/*
+		#info_action_help .ai_bl_open .ai_open_but::before {
+			border-bottom: 10px solid transparent;
+			border-left: 8px solid #fff;
+			border-top: 10px solid transparent;
+			content: "";
+			display: block;
+			height: 20px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 10px;
+			box-sizing: border-box;
+			border-right: none;
+			background-color: transparent;
+		}	
+		*/
+		#info_action_help .ai_bl_open .ai_open_but .ai_open_but_text {
+			width: 100%;
+			text-align: left;
+			height: 18px;
+			padding: 2px 12px 0 20px;
+			color: #ffffff;
+			font-size: 11px;
+			position: relative;
+			box-sizing: border-box;
+		}
+		.buts_recr #state.button3th .text_s_p {
+			color: #e6402d;
+		}
+		
+		
+	</style>
+
+		<style type="text/css" rel="stylesheet">
+		.recsite_head {
+			height: 204px;
+			position: relative;
+							background-image: url(/img/recrut/recrutSite/head/bonus/tst/rekr_200_mnhead_v1_1.png?lstmdf=20191010153255);
+					}
+		.recsite_head .close_bl_noact {
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			font-size: 20px;
+			color: #a4a4a4;
+		}
+		inspector-stylesheet:1
+		</style>
+			<div id="head_info" class="recsite_head lazy change_activ_offer activ1 pointer disp_n">
+							<div class="fleft close_bl_noact pointer">&#x274C;</div>
+			</div>
+			<div id="info_action_help">
+				<div class="ai_bl_open ">
+					<div class="ai_open_but " onclick="javascript:changeHeadInfo(1);">
+						<div class="main-halper ai_bl_open ai_open_but">
+							Вступай в Клуб! Покупай книги выгодно. Используй <span class="text--bold">БОНУСЫ</span> »						</div>
+							<!--<span>Стать членом Клуба</span> -->
+						</div>				
+				</div>
+			</div>	
+	
+		<!-- end banner akcii -->
+		<section id="allcontent">
+		
+<!--новый дизайн-->
+<header id="headmain">
+    <div id="language">
+			<div class="fleft lng_tlan"><span class="lngveract" title="Русская версия">РУС</span> <span style="color: #CCCCCC;">|</span> 
+	<a href="/ukr/catalog/ekskluziv/forhealth/" class="lngver lng_ua" title="Украинская версия">УКР</a></div>
+	</div>
+	<div id="head1" class="fleft">
+		<div id="logo">
+					<a href="/"><img alt="Клуб Семейного Досуга" src="/img/icons/svg/logo1.svg?lstmdf=20190827085106" /></a>
+				</div>
+	</div>
+	<div id="hmain" class="fright">
+		<div id="head2">
+			<div class="search-in-head">
+				<div class="fleft searchform">
+    <form name="searchform" method="get" action="/search/">
+	<input type="text" placeholder="Я ищу..." size="21" class="search" name="search" />
+    <input type="image" alt=" " value="" title="" class="bsearch mobile_hide" src="/imgmail/1.gif">
+    <div class="bsearch_m mobile_show"></div>
+    
+    </form>
+</div>
+			</div>
+			<div class="links-in-head">
+				<div class="mobile-logo mobile_show disp_n">
+							
+					<a href="/">
+						<img src="/img/icons/svg/mobile/logo_mobile_new1.svg?lstmdf=20191203094335" alt="Клуб Семейного Досуга">
+					</a>
+									</div>
+				<div class="mobile-search mobile_show disp_n">
+					<a href="#"></a>
+				</div>
+				<div class="mobile-important mobile_show disp_n">
+					<a href="#"></a>
+					<div class="mobile-important-cont">
+						<ul>
+							<li>
+								<a href="https://www.bookclub.ua/infocenter/clubnews/" title="Новости Клуба" >
+								Новости Клуба								</a>
+							</li>
+							<li>
+								<a href="https://www.bookclub.ua/infocenter/actions/" title="Акции Клуба" >
+								Акции Клуба								</a>
+							</li>
+							<li>
+								<a href="https://www.bookclub.ua/infocenter/currentdrawings/" title="Розыгрыши" >
+								Розыгрыши								</a>
+							</li>
+							<li>
+								<a href="https://www.bookclub.ua/help/" title="Помощь" >
+								Помощь								</a>
+							</li>
+						</ul>
+					</div>	
+				</div>
+				<div class="enter-in-akk outt fleft">
+					<a href="#">
+						<div class="login-icon"></div>
+						<span>Вход на сайт</span>
+					</a>
+					<div class="logpopup">
+												
+							
+						<div class="logpopupblock">
+							<h1 class="log-header">Вход на сайт</h1>
+							<div class="closeblock"></div>
+							<div class="enterinsite">
+								<form action="/catalog/ekskluziv/forhealth/" name="authform" method="post">
+																		<div class="inpcard inpfield">
+										<label for="nncField">Ваш клубный номер</label>
+										<input type="tel" name="getusr" id="nncField" value="" autofocus required pattern="[0-9]{5,}"  />
+									</div>
+									<div class="inpname inpfield">
+										<label for="snameField">Ваша фамилия</label>
+										<input type="text" name="getwrd" id="snameField" value="" required pattern="[-A-Za-zА-Яа-яЁёІіЇї,';\.\[\]]{2,}"/>
+									</div>
+									<div class="inpbutton">
+										<input type="submit" title="Войти" value="Войти" class="logbutton" />
+										
+									</div>
+								</form>							
+							</div>
+							<h2 class="social-header">или через</h2>
+							<div class="social-login">
+								<a href="https://www.facebook.com/dialog/oauth?client_id=399009944200403&redirect_uri=https://www.bookclub.ua/.emails/fb.html&response_type=code&scope=email" class="fb-login"><img src="/img/icons/svg/social/Facebook_G__Logo.svg" alt="FaceBook"></a>
+								<a href="https://accounts.google.com/o/oauth2/auth?redirect_uri=https://www.bookclub.ua/.emails/gg.html&response_type=code&client_id=333464343261-3u8e68jn8fue9mu90pff41cp7aerqdae.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile" class="google-login"><img src="/img/icons/svg/social/Google__G__Logo.svg" alt="Google"></a>
+							</div>
+														<div class="needhelp-popup"><a href="/help/makeorder/#authorization" target="_blank">Нужна помощь?</a></div>
+						</div>
+						
+																	</div>
+					<script>
+						$(function() {
+							$('.enter-in-akk.outt > a').on('click', function (){
+								$('.logpopup').fadeIn(300).css({'display':'-webkit-flex','display':'flex'});
+								return false
+							});
+							
+														
+							
+							$('.logpopup').click(function (e) {
+								var container = $('.logpopup');
+								// if (e.target !== $('.logpopupblock') && container.has(e.target).length === 0)
+								if (container.has(e.target).length === 0){
+									container.fadeOut(400);
+								}
+								
+							});
+							//$('.logpopup .closeblock').on('click', function (){
+							$('.closeblock').on('click', function (){
+								$('.logpopup').fadeOut(400);
+								//need remove cookie
+								var d = new Date(0);
+								document.cookie = "fbe=; path=/; expires="+d.toUTCString();
+								document.cookie = "gge=; path=/; expires="+d.toUTCString();
+								//console.log('w='+window.location);
+								if(window.location.search == '?tl=3')
+								{
+									//$('.logpopupblock').hide();
+								}
+								else
+								{
+									var reloadpar = false;
+									reloadpar = location.pathname.split('/').filter(function(item, i, mas){if(item == 'login') return true;});
+									if(reloadpar)
+									{
+									}
+									else
+									{
+										location.reload();				
+									}
+									
+								}
+								
+								
+							});
+							$('.inpfield #snameField').change(function(){
+								if($(this).val() == ''){
+									$(this).removeClass('has-value');
+								} else {
+									$(this).addClass('has-value');									
+								}
+							});
+							
+						});
+					</script>
+				</div>
+				<script type="text/javascript">
+	// jQuery.fn.centerHelp = function() {
+	// 	var w = $(window);
+	// 	this.css("top", (w.height() - this.height()) / 2 + w.scrollTop() - 100 + "px");
+	// 	this.css("left", (w.width() - this.width()) / 2 + w.scrollLeft() + "px");
+	// 	return this;
+	// }
+	$(function() {
+		// $("#helpsumcart").centerHelp();
+		pic = new Image();
+		pic.src="/img/cart/delivery/card_a.jpg";
+		$('a._head_bl_free_deliv').on('click', function (){
+		$('#zanavesHelpCartFreeDeliv').fadeIn(300).css({'display':'-webkit-flex','display':'flex'});
+		return false;
+	});
+	$('#zanavesHelpCartFreeDeliv').click(function (e) {
+		//$('#zanavesHelpCartFreeDeliv').fadeOut(400);
+		//e.preventDefault();
+		var container = $('#zanavesHelpCartFreeDeliv');
+		if (container.has(e.target).length === 0){
+			container.fadeOut(400);
+		}
+		
+	});	
+	$('#zanavesHelpCartFreeDeliv .close').click(function (e) {
+		//alert(container.has(e.target).length);
+		$('#zanavesHelpCartFreeDeliv').fadeOut(400);
+		//e.preventDefault();
+		var container = $('#zanavesHelpCartFreeDeliv');
+		if (container.has(e.target).length === 0){
+			container.fadeOut(400);
+		}
+		
+	});		
+	})
+</script>
+<style type="text/css" rel="stylesheet">
+#helpsumcart {
+    position: fixed;
+    width: 430px;
+		z-index: 19;
+		background: #fff;
+		box-sizing: border-box;
+}
+#helpsumcart .podr_podsk{
+	float: none;
+}
+#helpsumcart .podr_podsk a {
+	text-align: center;
+}
+#helpsumcart .podr_podsk1{
+	float: none;
+}
+#helpsumcart .t13{
+	font-size: 13px;
+}
+#helpsumcart .t12{
+	font-size: 12px;
+	color: #626262;
+}
+#helpsumcart .blue, #helpsumcart a.blue{
+	color: #0090c6;
+}
+#helpsumcart a.blue{
+	display: inline;
+}
+
+#helpsumcart .bordo{
+	color: #dd012a;
+}
+#helpsumcart .helpsumcart_btn_wrap .close a,
+#helpsumcart .helpsumcart_btn_wrap .cart_btn{
+	padding: 10px 20px;
+	background: #e9e9e9;
+}
+#helpsumcart .close{
+	display: inline;
+	font-size: 12px;
+	font-weight: bold;
+}
+#zanavesHelpCartFreeDeliv {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 300;
+	justify-content: center;
+	align-items: center;	
+}
+#helpsumcart .helpsumcart_header,
+#helpsumcart .helpsumcart_btn_wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#helpsumcart .helpsumcart_btn_wrap {
+	margin: 40px 0 20px 0;
+}
+#helpsumcart .helpsumcart_header h3 {
+	margin: 0;
+}
+#helpsumcart .helpsumcart_header {
+	background: #e9e9e9;
+	margin-bottom: 20px;
+	padding: 20px 0;
+}
+#helpsumcart .helpsumcart_btn_wrap a {
+	height: initial;
+	display: inline;
+}
+#helpsumcart .helpsumcart_hint {
+	font-size: 10px;
+}
+#helpsumcart .helpsumcart_header,
+#helpsumcart .t13,
+#helpsumcart .t12,
+#helpsumcart .helpsumcart_btn_wrap,
+#helpsumcart .helpsumcart_close_btn {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#helpsumcart .helpsumcart_close_btn {
+	text-align: right;
+	padding: 10px 20px 10px 0;
+}
+#head2 .to-be-chk {
+	width: 231px;
+}
+/*акции*/	
+	#helpsumcart .akcia602 {
+		color: #ff4f11;
+		font-weight: bold;
+	}
+	#helpsumcart .hint_akcii {
+		color: #626262;
+		font-size: 10px;
+	}
+@media screen and (max-width: 500px) {
+	#head2 .to-be-chk {
+	width: initial;
+	height: initial;
+	}
+	#helpsumcart {
+		width: 840px;
+		position: initial;
+	}
+	#helpsumcart .helpsumcart_header {
+		margin-bottom: 40px;
+    padding: 40px 0;
+		font-size: 40px;
+	}
+	#helpsumcart .t13 {
+		font-size: 30px;
+	}
+	#helpsumcart .t12 {
+		font-size: 28px;
+	}
+	#helpsumcart .helpsumcart_hint {
+		margin-top: 30px;
+	}
+	#helpsumcart .helpsumcart_hint span {
+		font-size: 24px;
+	}
+	#helpsumcart .helpsumcart_btn_wrap .close a,
+	#helpsumcart .helpsumcart_btn_wrap .cart_btn {
+		padding: 20px 40px;
+		font-size: 32px;
+	}
+	#helpsumcart .helpsumcart_btn_wrap .cart_btn a {
+		font-size: 32px;
+	}
+	#helpsumcart .helpsumcart_close_btn {
+		padding: 20px 40px 20px 0;
+	}
+	#helpsumcart .close {
+		font-size: 28px;
+	}
+	#helpsumcart .helpsumcart_header,
+	#helpsumcart .t13,
+	#helpsumcart .t12,
+	#helpsumcart .helpsumcart_btn_wrap,
+	#helpsumcart .helpsumcart_close_btn {
+		padding-left: 40px;
+    padding-right: 40px;
+	}
+	#helpsumcart .helpsumcart_btn_wrap {
+		margin: 80px 0 40px 0;
+	}
+	.helpsumcart_header img {
+		width: 50px;
+		height: 50px;
+	}
+}
+@media screen and (max-width: 340px) {
+	#helpsumcart .helpsumcart_btn_wrap .close a,
+	#helpsumcart .helpsumcart_btn_wrap .cart_btn {
+		padding: 15px 30px;
+    font-size: 26px;
+	}
+}
+</style>
+<div class="to-be-chk fleft">
+	<a class="_head_bl_free_deliv pointer">
+				<div class="presfriends-icon free_yes"></div>
+		<span style="font-size: 13px">
+		Бесплатно* от 590&nbsp;грн		</span>
+	</a>
+</div>
+
+<div id="zanavesHelpCartFreeDeliv" class="disp_n">
+	<div id="helpsumcart">
+		
+		<div class="helpsumcart_header">
+			<h3>Подсказка!</h3>	
+					
+			<img class="close" style="cursor:pointer;" src="/img/icons/svg/mobile/x.svg" border="0" alt="закрыть" title="закрыть" />
+		</div>
+
+			
+			
+		<div class="t13">Закажите любые товары на сумму от						<span class="blue"><strong>590&nbsp;грн</strong></span>
+						и воспользуйтесь любым видом доставки <strong>бесплатно</strong>.
+						<br /><br />
+						<strong>Ваш заказ: 
+						<span class="bordo">80151.50&nbsp;грн</span></strong>
+		</div>
+				<div class="t12">	
+									Вы выполнили условие!
+												
+			<p class="helpsumcart_hint"><span class='hint_akcii'>*Под бесплатной доставкой подразумевается доставка заказа за 1 грн.
+			<br />Акция действует для членов Клуба или при вступлении/восстановлении в Клубе.</span></p>
+		</div>
+			
+				
+		<div class="helpsumcart_btn_wrap">
+			
+				<div class="close pointer" ><a style="color:#dd012a;text-decoration:none;" href="javascript:void(0)"><b>Продолжить покупки</b></a>
+				</div>
+			
+			
+				<div class="pointer cart_btn blue">
+				<strong>В &laquo;</strong><a style="text-decoration:none;" class="blue" href="/cart/"><b>Корзину</b></a>&raquo;
+				</div>
+			
+		</div>
+			
+					
+	</div>
+</div>
+				
+				<div class="cart-in-head fleft">
+					<a href="/cart/">
+							<div class="cart-icon cart-icon-4"></div>
+							<span>
+								Корзина<b class="pluss">99</b>							</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<nav id="slmenu_find">
+			<div id="myslidemenu" class="jqueryslidemenu fleft">
+		<ul class="menulist" id="mainMenuRoot">
+<li class="gmenu gm1 ">
+		<a class="m_bv" href="/catalog/books/">Все книги</a><ul><li><div class="menuTopRepeat"><a class="m_bv" href="/catalog/books/">Все книги</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="menuDevider">
+					<a href="/catalog/books/?ganre=2">Художественные</a><a class="mobile-ganre" href="/catalog/books/?ganre=2"></a></div>
+				<div class="menu_childlink">
+			<a href="/catalog/books/pop/">Современные авторы</a></div><div class="menu_childlink">
+			<a href="/catalog/books/love/">Романы о любви</a></div><div class="menu_childlink">
+			<a href="/catalog/books/adventure/">Историко-приключенческие</a></div><div class="menu_childlink">
+			<a href="/catalog/books/detective/">Детективы</a></div><div class="menu_childlink">
+			<a href="/catalog/books/fantasy_books/">Фантастика, фэнтези</a></div><div class="menu_childlink">
+			<a href="/catalog/books/thriller_horror_books/">Триллеры, ужасы</a></div><div class="menu_childlink">
+			<a href="/catalog/books/classic/">Классика</a></div><div class="menu_childlink">
+			<a href="/catalog/books/teenagers/">Книги для подростков</a></div><div class="menu_childlink">
+			<a href="/catalog/books/comics/">Комиксы</a></div><div class="menuDevider">
+					<a href="/catalog/books/?ganre=1">Прикладные</a><a class="mobile-ganre" href="/catalog/books/?ganre=1"></a></div>
+				<div class="menu_childlink">
+			<a href="/catalog/books/cooking/">Кулинария</a></div><div class="menu_childlink">
+			<a href="/catalog/books/advices/">Советы</a></div><div class="menu_childlink">
+			<a href="/catalog/books/health/">Здоровье и красота</a></div><div class="menu_childlink">
+			<a href="/catalog/books/skillfulhands/">Умелые руки</a></div><div class="menu_childlink">
+			<a href="/catalog/books/psychology/">Психология</a></div><div class="menu_childlink">
+			<a href="/catalog/books/busines/">Бизнес и саморазвитие</a></div><div class="menu_childlink">
+			<a href="/catalog/books/magic/">Эзотерика</a></div><div class="menu_childlink">
+			<a href="/catalog/books/entrainment/">Мир увлечений</a></div><div class="menu_childlink">
+			<a href="/catalog/books/spirit/">Духовная литература</a></div><div class="menu_childlink">
+			<a href="/catalog/books/facts/">История и факты</a></div><div class="menu_childlink">
+			<a href="/catalog/books/unknown/">Мир тайн и загадок</a></div><div class="menu_childlink">
+			<a href="/catalog/books/learning/">Учебная  литература</a></div><div class="menuDevider">
+					<a href="/catalog/books/?ganre=3">Детские</a><a class="mobile-ganre" href="/catalog/books/?ganre=3"></a></div>
+				<div class="menu_childlink">
+			<a href="/catalog/books/childbooks3/">Детям до 4-х лет</a></div><div class="menu_childlink">
+			<a href="/catalog/books/childbooks_4_6_years/">Детям 4-6 лет</a></div><div class="menu_childlink">
+			<a href="/catalog/books/childbooks_7_12_years/">Детям 7-12 лет</a></div><div class="menu_childlink">
+			<a href="/catalog/books/childbooks_from_12_years/">Детям от 12 лет</a></div></li></ul><div class="vert_white_line"></div></li><li class="gmenu gm2 ">
+		<a class="m_bv" href="/catalog/privilegii/">Привилегии</a><div class="vert_white_line"></div></li><li class="agmenu gm3 "><a class="m_bv" href="/catalog/ekskluziv/">Товары</a><ul><li><div class="menuTopRepeat"><a class="m_bv" href="/catalog/ekskluziv/">Товары</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="menuDevider"><a href="/catalog/ekskluziv/?ganre=6">Товары от Клуба</a></div>
+				<div class="menu_childlink">
+			<a href="/catalog/ekskluziv/housappliances/">Бытовая техника</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/homecottage/">Дом и дача</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/tools/">Инструменты</a></div><div class="menu_childlink"><a href="/catalog/ekskluziv/forhealth/">Красота и здоровье</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/recreation/">Отдых, рыбалка, туризм</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/gardening/">Сад и огород</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/bags/">Сумки и аксессуары</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/forchildren/">Товары для детей</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/forkitchen/">Товары для кухни</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/esoteric/">Эзотерические товары</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/jewelry/">Украшения, бижутерия, обереги</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/needlework/">Рукоделие</a></div><div class="menu_childlink">
+			<a href="/catalog/ekskluziv/zoogoods/">Зоотовары</a></div></li></ul><div class="vert_white_line"></div></li><li class="gmenu gm4 ">
+		<a class="m_bv" href="/catalog/special/">Спецпредложения</a><ul><li><div class="menuTopRepeat"><a class="m_bv" href="/catalog/special/">Спецпредложения</a></div>
+
+
+
+
+<div class="for_spec_prop"><a href="/catalog/special/?special=7">Лидеры продаж</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=4">Привилегии</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=2">Книжные новинки</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=8">Книги КСД</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=5">Подарочные книги</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=9">Книги на украинском языке</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=12">Книги на русском языке</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=74">Комплекты со скидками</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=13">Спецпредложения</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=10">Бестселлеры</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=15">Распродажа</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=58">Выгодные цены</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=49">Скоро в продаже</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=77">Товар заканчивается</a></div><div class="for_spec_prop"><a href="/catalog/special/?special=50">Временно нет в продаже</a></div>
+
+
+
+
+
+
+</li></ul><div class="vert_white_line"></div></li><li class="gmenu gm5 ">
+		<a class="m_bv" href="/catalog/series/">Серии</a><ul><li><div class="menuTopRepeat"><a class="m_bv" href="/catalog/series/">Серии</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="menu_childlink">
+			<a href="/catalog/series/Diamondmosaic/">Алмазна мозаїка </a></div><div class="menu_childlink">
+			<a href="/catalog/series/legendarypoirot/">Аґата Крісті</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Collectionoffairytales/">Колекція улюблених казок</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Fatum/">Фатум</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Witchingworlds/">Колдовские миры</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Delicioushomestyle/">Вкусно по-домашнему</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Captivatedbypassion/">Плененные страстью</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Readlanguage/">Читай рідною мовою</a></div><div class="menu_childlink">
+			<a href="/catalog/series/beadwork/">Вишивка бісером</a></div><div class="menu_childlink">
+			<a href="/catalog/series/romance19/">Романтика XIX века</a></div><div class="menu_childlink">
+			<a href="/catalog/series/funnygames/">Веселі забавки для дошкільнят</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Pearlsukrainian/">Перлини української класики</a></div><div class="menu_childlink">
+			<a href="/catalog/series/loveages/">Любовь сквозь века</a></div><div class="menu_childlink">
+			<a href="/catalog/series/ofpassion/">В огне страсти</a></div><div class="menu_childlink">
+			<a href="/catalog/series/cuisinesoftheworld/">Кухни народов мира</a></div><div class="menu_childlink">
+			<a href="/catalog/series/academyofmagic/">Академия магии</a></div><div class="menu_childlink">
+			<a href="/catalog/series/goldenage/">Золотой век детектива</a></div><div class="menu_childlink">
+			<a href="/catalog/series/painting/">Малювання за номерами</a></div><div class="menu_childlink">
+			<a href="/catalog/series/Greatandlegendary2/">Великие и легендарные</a></div><div class="menu_childlink">
+			<a href="/catalog/series/masterpiecesofworldclassics/">Шедевры мировой классики</a></div></li></ul><div class="vert_white_line"></div></li><li class="gmenu gm6 ">
+		<a class="m_bv" href="/catalog/e-books/">eBooks</a><ul><li><div class="menuTopRepeat"><a class="m_bv" href="/catalog/e-books/">eBooks</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="menuDevider"><a href="/catalog/e-books/?ganre=9">Художественные</a><a class="mobile-ganre" href="/catalog/e-books/?ganre=9"></a></div>
+				<div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-modern/">Современные авторы</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-female/">Романы о любви</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-adventure/">Историко-приключенческие</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-detective/">Детективы</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-fantasy/">Фантастика, фэнтези</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-thriller/">Триллеры, ужасы</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-classic/">Классика</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-teenagers/">Книги для подростков</a></div><div class="menuDevider"><a href="/catalog/e-books/?ganre=8">Прикладные</a><a class="mobile-ganre" href="/catalog/e-books/?ganre=8"></a></div>
+				<div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-cooking/">Кулинария</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-advices/">Советы</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-health/">Здоровье и красота</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-skillfulhands/">Умелые руки</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-busines/">Бизнес и саморазвитие</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-psychology/">Психология</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-magic/">Эзотерика</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-entrainment/">Мир увлечений</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-spirit/">Духовная литература</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-facts/">История и факты</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-unknown/">Мир тайн и загадок</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-learning/">Учебная литература</a></div><div class="menuDevider"><a href="/catalog/e-books/?ganre=10">Детские</a><a class="mobile-ganre" href="/catalog/e-books/?ganre=10"></a></div>
+				<div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-child_4_6_years/">Детям 4-6 лет</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-child_7_12_years/">Детям 7-12 лет</a></div><div class="menu_childlink">
+			<a href="/catalog/e-books/e-books-child_12_years/">Детям от 12 лет</a></div></li></ul><div class="vert_white_line"></div></li><li class="gmenu gm7 bottegaverde-menu">
+		<a class="m_bv" href="/catalog/bottegaverde/">Bottega Verde</a></li></ul>
+</div>
+<script>
+$(document).ready(function(){
+	var html = $('#myslidemenu').html();
+	html = html.replace(/mainMenuRoot/, 'mainMenuRoot2');
+	html = html.replace(/myslidemenu/, 'myslidemenu2');
+	$('#hmain').append('<nav id="slmenu_find2"><div id="myslidemenu2" class="jqueryslidemenu fleft">' + html + '</div></nav>');
+	$('#slmenu_find2 #mainMenuRoot2 ul').remove();
+	
+$("#myslidemenu2 ul#mainMenuRoot2 li:not('.gm2, .gm7') > a").on('click', function(event){
+if (window.outerWidth <= 500){
+	event.preventDefault();
+	// var slideMenu = $("#slmenu_find2");
+	// var menuPos = $(slideMenu).offset().top;
+	// var dropMenu = $(".jqueryslidemenu ul li ul").offset().top;
+	// console.log(menuPos, dropMenu);
+	// console.log(slideMenu.height());
+	 
+	
+
+	var target = event.target;
+		var targetPos = target.offsetLeft;
+		var targetWidth = target.offsetWidth;
+		var gm_cur = $(this).parent().attr('class').match(/gm\d/g);
+		if (targetPos > 880) {
+			$("#slmenu_find2").scrollLeft(targetPos - 770 );
+			$("#myslidemenu ul li." + gm_cur[0] + " ul").addClass("right_side");
+			
+		} else {
+		$("#slmenu_find2").scrollLeft(targetPos - 50);
+		//$("#myslidemenu ul#mainMenuRoot ul li ul").removeClass("right_side");
+			
+		}
+	//if (target == this) {
+		if ($("#myslidemenu ul#mainMenuRoot li.gmenu > a, #myslidemenu ul#mainMenuRoot li.agmenu > a").next(".current_slide").length) {
+			var gm_past = $("#myslidemenu ul#mainMenuRoot li.gmenu > a, #myslidemenu ul#mainMenuRoot li.agmenu > a").next(".current_slide").parent().attr('class').match(/gm\d/g);
+			$("#myslidemenu ul#mainMenuRoot li.gmenu > a, #myslidemenu ul#mainMenuRoot li.agmenu > a").next('.current_slide').slideUp(jqueryslidemenu.animateduration.out);
+			$("#myslidemenu ul#mainMenuRoot li.gmenu > a, #myslidemenu ul#mainMenuRoot li.agmenu > a").next('.current_slide').removeClass('current_slide');
+			// $("body, html").css({"position":"initial"});
+		}
+		if (typeof gm_past == 'undefined' || gm_past[0] != gm_cur[0]) {
+			if ($("#myslidemenu ul#mainMenuRoot li." + gm_cur[0] + " > a").next(':not(\'.current_slide\')').length) {
+				$("#myslidemenu ul#mainMenuRoot li." + gm_cur[0] + " > a").next(':not(\'.current_slide\')').slideDown(jqueryslidemenu.animateduration.over).addClass('current_slide');
+				// $(".jqueryslidemenu ul li ul").offset({top: menuPos+slideMenu.height()});
+				// $("body, html").css({"position":"fixed", "width":"100%", "height":"100%"});
+			}
+		}
+	//}
+} 
+})
+	
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		if (window.outerWidth <= 500){
+			var ar = new Array();
+			$("#myslidemenu ul#mainMenuRoot li.gmenu ul, #myslidemenu ul#mainMenuRoot li.agmenu ul, #myslidemenu2 ul#mainMenuRoot2 li:not('.gm2, .gm7') > a").each(function(i) {
+				ar[i] = $(this);
+			})
+			var bClick = false;
+			for (var k = 0; k < ar.length; k ++) {
+				if (ar[k].is(e.target) // если клик был не по нашему блоку
+					|| ar[k].has(e.target).length !== 0) { // и не по его дочерним элементам
+					bClick = true;
+					break;
+				}
+			}
+			if (!bClick) {
+				if ($("#myslidemenu ul#mainMenuRoot li.gmenu > a, #myslidemenu ul#mainMenuRoot li.agmenu > a").next('.current_slide').length) {
+					$("#myslidemenu ul#mainMenuRoot li.gmenu > a, #myslidemenu ul#mainMenuRoot li.agmenu > a").next('.current_slide').slideUp(jqueryslidemenu.animateduration.out);
+					$("#myslidemenu ul#mainMenuRoot li.gmenu > a, #myslidemenu ul#mainMenuRoot li.agmenu > a").next('.current_slide')
+						.removeClass('current_slide');
+				}
+				// $("body, html").css({"position":"initial"});
+			}
+		}
+	});	
+	
+if (window.outerWidth <= 500){	
+	$('ul#mainMenuRoot.menulist li.gm1 ul li .menuDevider, ul#mainMenuRoot.menulist li.gm6 ul li .menuDevider').nextUntil('.menuDevider').hide();
+}
+$('ul#mainMenuRoot.menulist li.gm1 ul li .menuDevider > a:not(".mobile-ganre"), ul#mainMenuRoot.menulist li.gm6 ul li .menuDevider > a:not(".mobile-ganre")').on('click', function(event){
+	if (window.outerWidth <= 500){
+		event.preventDefault();
+		// var booksLink = $("ul#mainMenuRoot.menulist li.gmenu.gm1 ul li .menuDevider, ul#mainMenuRoot.menulist li.gmenu.gm5 ul li .menuDevider");
+		var target = event.target;
+		if (target == this) {
+		$(this).parent().nextUntil('.menuDevider').toggle();
+		// $(this).toggleClass("btn-arrow-down");
+		}
+	}
+})
+
+/* Мобильное меню эфект движения по горизонтали */
+$(".jqueryslidemenu #mainMenuRoot2").animate({"margin-left": "-15%"}, 500).animate({"margin-left": "0"}, 500);
+/* Выпадающее меню фиксед */
+
+/*Блок поиска для мобильной версии*/
+$(".mobile-search a").on('click', function(event){
+	event.preventDefault();
+	$("#head2 .search-in-head").toggleClass("search-mobile-show");
+})
+$("#head2 .search-in-head .searchform form > div").on('click', function(){
+	$(".search-in-head").removeClass('search-mobile-show');
+})
+$(document).on('mouseup', function(e){
+		var cont = $(".search-in-head");	
+		if(!cont.is(e.target) && cont.has(e.target).length === 0) {
+			$(".search-in-head").removeClass('search-mobile-show');
+		}
+	})
+/*Блок важное для мобильной версии */
+$(".mobile-important > a").on('click', function(event){
+	event.preventDefault();
+	$(".mobile-important-cont").toggleClass("mobile-important-show");
+	
+})
+$(document).on('mouseup', function(e){
+		var cont = $(".mobile-important");	
+		if(!cont.is(e.target) && cont.has(e.target).length === 0) {
+			$(".mobile-important-cont").removeClass('mobile-important-show');
+		}
+	})
+	
+})
+// var objCur = $('ul#mainMenuRoot.menulist li.gmenu.gm1 ul li div.menuDevider:eq(1)');
+
+// hideMainMenu = function(obj) {
+// 	obj = obj.prev();
+
+// 	if (obj.hasClass('menu_childlink')) {
+// 		obj.slideToggle(10, function() {
+// 			hideMainMenu(obj);
+// 		});
+// 	} else {
+// 		return;
+// 	}
+// }
+// $('.hideMenu').on('click', function() {
+// 	hideMainMenu(objCur);
+// });
+
+//var cntMenuDevider = $('ul#mainMenuRoot.menulist li.gmenu.gm1 ul li div.menuDevider').length;
+
+
+//	if ($(this).hasClass('menu_childlink')) {
+
+
+</script>		</nav>
+	</div>
+</header>
+<div id="bread_crumbs">
+<!-- Nav --><!--UdmComment-->
+<section><!-- nav4prn --><a href="/" class="nav">Главная</a>&nbsp;&raquo; <a href="/catalog/ekskluziv/" class="nav">Товары</a>&nbsp;&raquo; Красота и здоровье<!-- /nav4prn -->
+</section><!--/UdmComment--><!-- /Nav --></div>
+<!-- /Head -->
+<!--/UdmComment-->
+
+<link type="text/css" href="/style/books-box.css" rel="stylesheet" />
+<script type="text/javascript" src="/.bin/js/imgshow.js"></script>
+<section class="smiddle">
+	<section class="mainpagecontent">
+		<aside class="fleft leftside">
+<div class="leftnav-in-main">
+
+
+<link href="/style/shop_leftnav.css" rel="stylesheet" type="text/css" media="all"/>
+<!--UdmComment-->
+
+<div class="leftmenu-books"><div class="menuDevider"><a href="/catalog/ekskluziv/?ganre=6">Товары от Клуба</a></div>
+				</div>
+				<div class="cat-count">451 товар</div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/housappliances/">Бытовая техника</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/homecottage/">Дом и дача</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/tools/">Инструменты</a></div>
+<div class="sec-podpunkt-act">Красота и здоровье</div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/recreation/">Отдых, рыбалка, туризм</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/gardening/">Сад и огород</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/bags/">Сумки и аксессуары</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/forchildren/">Товары для детей</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/forkitchen/">Товары для кухни</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/esoteric/">Эзотерические товары</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/jewelry/">Украшения, бижутерия, обереги</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/needlework/">Рукоделие</a></div>
+<div class="sec-podpunkt">
+			<a class="sec-menu-link" href="/catalog/ekskluziv/zoogoods/">Зоотовары</a></div>
+</div>
+	<div class="aside-butt-totop">
+	<div class="scr-to-top-btn">
+		<a href="#" class="well-totop" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+			<span>Наверх</span>
+		</a>
+	</div>	
+	<script>
+		$(document).ready(function(){
+			cFh = $('.centerside').outerHeight(true);
+			mFh = $('.leftnav-in-main').outerHeight(true);
+			hghtWind = $(window).height();
+			sideFullHeight = mFh + hghtWind;
+			if(sideFullHeight > cFh){
+				$('.aside-butt-totop').hide();
+				$('.leftnav-in-main').css('padding-bottom','20px');
+			} else {
+				$('.well-totop').height(hghtWind);
+				
+				$(function(){
+				 topPos = $('.aside-butt-totop').offset().top;
+				 $(window).scroll(function() {
+				  var top = $(document).scrollTop();
+				  if (top > topPos - 350) { $('.scr-to-top-btn').css('opacity', '1');}
+				  else {$('.scr-to-top-btn').css('opacity', '0');}
+					});
+				});
+				(function(){
+				var a = document.querySelector('.scr-to-top-btn'), b = null, P = 0;
+				window.addEventListener('scroll', Ascroll, false);
+				document.body.addEventListener('scroll', Ascroll, false);
+				function Ascroll() {
+				  if (b == null) {
+					var Sa = getComputedStyle(a, ''), s = '';
+					for (var i = 0; i < Sa.length; i++) {
+					  if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+						s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+					  }
+					}
+					b = document.createElement('div');
+					b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+					a.insertBefore(b, a.firstChild);
+					var l = a.childNodes.length;
+					for (var i = 1; i < l; i++) {
+					  b.appendChild(a.childNodes[1]);
+					}
+					a.style.height = b.getBoundingClientRect().height + 'px';
+					a.style.padding = '0';
+					a.style.border = '0';
+				  }
+				  var selNow;
+				  if ($('.slider_block_earlylook').length > 0) {
+						selNow = document.querySelector('.slider_block_earlylook').getBoundingClientRect().top;
+				  } else {
+						selNow = document.querySelector('.footer').getBoundingClientRect().top - 30;
+				  }
+				  var Ra = a.getBoundingClientRect(),
+					  R = Math.round(Ra.top + b.getBoundingClientRect().height - selNow);
+				  if ((Ra.top - P) <= 0) {
+					if ((Ra.top - P) <= R) {
+					  b.className = 'buttstop';
+					  b.style.top = - R +'px';
+					  $('.aside-butt-totop .well-totop span').addClass('txt-btn-bottom');
+					  
+					} else {
+					  b.className = 'buttsticky';
+					  b.style.top = P + 'px';
+					  $('.aside-butt-totop .well-totop span').removeClass('txt-btn-bottom');
+					}
+				  } else {
+					b.className = '';
+					b.style.top = '';
+				  }
+				  window.addEventListener('resize', function() {
+					a.children[0].style.width = getComputedStyle(a, '').width
+				  }, false);
+				}
+				})()
+			}
+		});
+	</script>
+</div>	</aside>
+	<section class="fleft centerside">
+	<article class="cat-descript">
+		<header>
+			<h1>
+				Красота и здоровье			</h1>
+		</header>
+		
+	
+		
+				<div class="cat-descr" style="color:#333333;">
+					
+		
+				Разнообразные аксессуары для косметических процедур: плойки, стайлеры, наборы для маникюра. Также в этом разделе вы сможете найти различные приборы для оздоровления: пояса для похудения, электромассажеры, магнитные аппликаторы и другие товары. <div id="zanaves_for_bottega" class="visibility" style="display: none;"></div>
+		<script type="text/javascript">
+			$(function() {
+				jQuery.fn.centerItPopUp = function() {
+					var w = w_w = $(window);
+					var dbody_w = $('#dbody').width();
+					if (dbody_w < w.width()) {
+						w_w = $('#dbody');
+					}
+					this.css("position", "absolute");
+					this.css("top", (w.height() - this.height()) / 2 + parseInt(w.scrollTop()) - 1 + "px");
+					this.css("left", (w_w.width() - this.width()) / 2 - 1 + "px");				
+					return this;
+				}
+				$('.popup').addClass('disp_n');
+				$('.open_window').addClass('pointer');
+				$('.open_window').click(function() {
+					$('#zanaves_for_bottega').show();
+					$(this).parent().find('.popup').centerItPopUp().show();
+				});
+				$('#zanaves_for_bottega, .popup .close').click(function() {
+					$('.popup').hide();
+					$('#zanaves_for_bottega').hide();
+				});
+			});
+		</script>
+		<style type="text/css">
+			#zanaves_for_bottega {
+				background-color: #000000;
+				height: 100%;
+				left: 0;
+				opacity: 0.5;
+				position: fixed;
+				width: 100%;
+				z-index: 18;
+				margin: 0;
+				top: 0;
+			}
+			.popup {
+				z-index: 20;
+				background-color: white;
+				padding: 10px;
+			}
+		</style>		</div>
+	</article>
+<script type="text/javascript">
+function moreinfo() {
+	var dopinfo = document.getElementById('specialdelivery');
+	var links  = document.getElementById('linkmoreinfo'); 
+	if(dopinfo.className=='hidden') {
+		dopinfo.className='visibility';
+		links.innerHTML = '<span style="text-decoration:underline;">Скрыть</span> <img border="0" src="/images/sws_ygolok_svern.gif" alt="скрыть" />';
+	} else { 
+		dopinfo.className='hidden';
+		links.innerHTML = '<span style="text-decoration:underline;">Подробнее</span> <img border="0" src="/images/sws_ygolok_razvern.gif" alt="подробнее" />';
+	}
+}
+</script>
+	<!--<form name=\"listform\" action=\"".$_SERVER['PHP_SELF']."\" method=\"get\">-->
+			<section class="sort-listing">
+			<div class="block-slisting">
+				<div class="head-slisting">
+					Показывать:				</div>
+				<!-- 20 -->
+				<div class="slisting">
+									<a href="./?gc=20">
+						<div class="sl-noact">
+							20
+						</div>
+					</a>
+								</div>
+				<!-- 50 -->
+				<div class="slisting">
+									<a href="./?gc=50">
+						<div class="sl-noact">
+							50
+						</div>
+					</a>
+								</div>
+				<!-- 100 -->
+				<div class="slisting">
+									<div class="sl-act">
+						100
+					</div>
+								</div>
+			</div>
+			<div class="block-slisting">	
+				<div class="head-slisting">
+					Сортировать по:				</div>			
+				<!-- по дате добавлени¤ -->
+				<div class="slisting">
+									<a href="./?by=9">
+						<div class="sl-noact">
+							дате						</div>
+					</a>
+								</div>
+				<!-- по попул¤рности -->
+				<div class="slisting">
+									<div class="sl-act">
+						популярности					</div>
+								</div>
+				<!-- по алфавиту -->
+								<!-- sort by price -->
+				<div class="slisting sl-price">
+										<a href="./?by=7">
+							<div class="sl-noact">
+								цене							</div>
+						</a>
+									</div>
+				<!-- end sort by price -->
+			</div>
+		</section> 	
+		
+					<section class="goodsList">
+								
+<section class="book-inlist">
+	<div class="book-inlist-img">
+				<a onclick="" title="Шапочка банная - . Подробнее о товаре" href="/catalog/ekskluziv/forhealth/product.html?id=50088">
+				
+		<img src="/images/db/goods/d/50088_85851_d.jpg" border="0" width="144" height="144" style="width:144px; height:144px" alt="Шапочка банная. Подробная информация, цены, характеристики, описание." />			<!-- блок вывода картинки суперразмер -->
+						<!-- окончание блока вывода картинки суперразмер -->		
+					
+		</a>
+		<script type="text/javascript">ga('ec:addImpression', {       
+'id': '4072019', 
+'name': 'Шапочка банная',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'list': 'Красота и здоровье',
+'position': '1',
+});</script>	
+	</div>
+	<div class="book-inlist-descr">
+				<div class="book-inlist-name">
+							<a onclick="ga('ec:addProduct', {       
+'id': '4072019', 
+'name': 'Шапочка банная',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'position': '1',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Шапочка банная" href="/catalog/ekskluziv/forhealth/product.html?id=50088">Шапочка банная			</a>
+					</div>	
+		<div class="prod-adult">
+					</div>
+					<div class="mainGoodContent">Тюрбан для сушки волос из микрофибры представляет собой шапочку, выполненную из микрофибры. Шапочка по окружности головы имеет резинки, которые делают процесс эксплуатации удобным и эффективным							&nbsp;<span title="Подробнее..."> <a href="/catalog/ekskluziv/forhealth/product.html?id=50088">Читать&nbsp;далее&nbsp;»</a></span></div>
+						</div>
+	<div class="book-inlist-prbut">
+				
+			<!-- block free delivery -->
+			<div class="book-inlist-deliv">
+							</div>
+			<!-- End block free delivery -->
+			<div class="book-inlist-price">
+				<tr><td class="price"><div style="position:relative"><span>161.30</span><img  class="discont_crossed_price" alt="line"
+									src="/img/lh_price.png"></div></td><td style="width: 5px;"></td><td class="priceAct">129.00</td><td class="pricevalute">&nbsp;грн</td></tr>			</div>
+			<div class="book-inlist-button">
+			<noindex><a rel="nofollow" href="/cart/"><div class="cartimg--text"><img class="cartimg" style="margin-top:5px;" src="/img/icons/svg/buttons/button_card_gray.svg" width="140" alt="В корзине" /></div></a></noindex>			</div>
+			</div>
+	</section>
+
+
+
+	
+<section class="book-inlist">
+	<div class="book-inlist-img">
+				<a onclick="ga('ec:addProduct', {       
+'id': '4072019', 
+'name': 'Шапочка банная',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'position': '1',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Коробка для хранения медикаментов - . Подробнее о товаре" href="/catalog/ekskluziv/forhealth/product.html?id=49819">
+				
+		<img src="/images/db/goods/d/49819_84615_d.jpg" border="0" width="144" height="144" style="width:144px; height:144px" alt="Коробка для хранения медикаментов. Подробная информация, цены, характеристики, описание." />			<!-- блок вывода картинки суперразмер -->
+						<!-- окончание блока вывода картинки суперразмер -->		
+					
+		</a>
+		<script type="text/javascript">ga('ec:addImpression', {       
+'id': '4068012', 
+'name': 'Коробка для хранения медикаментов',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'list': 'Красота и здоровье',
+'position': '2',
+});</script>	
+	</div>
+	<div class="book-inlist-descr">
+				<div class="book-inlist-name">
+							<a onclick="ga('ec:addProduct', {       
+'id': '4068012', 
+'name': 'Коробка для хранения медикаментов',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'position': '2',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Коробка для хранения медикаментов" href="/catalog/ekskluziv/forhealth/product.html?id=49819">Коробка для хранения медикаментов			</a>
+			<div><svg width="90" height="16" viewBox="0 0 90 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0)">
+								<rect width="89.5" height="16" fill="black" fill-opacity="0"/>
+								<path d="M26.621 0L29.8032 4.62839L35.2419 6.11146L31.7264 10.4405L31.949 16L26.621 14.1513L21.2929 16L21.6258 10.4405L18 6.11146L23.5874 4.62839L26.621 0Z" fill="#D8D8D8"/>
+<path d="M44.621 0L47.8032 4.62839L53.2419 6.11146L49.7264 10.4405L49.949 16L44.621 14.1513L39.2929 16L39.6258 10.4405L36 6.11146L41.5874 4.62839L44.621 0Z" fill="#D8D8D8"/>
+<path d="M62.621 0L65.8032 4.62839L71.2419 6.11146L67.7264 10.4405L67.949 16L62.621 14.1513L57.2929 16L57.6258 10.4405L54 6.11146L59.5874 4.62839L62.621 0Z" fill="#D8D8D8"/>
+<path d="M80.621 0L83.8032 4.62839L89.2419 6.11146L85.7264 10.4405L85.949 16L80.621 14.1513L75.2929 16L75.6258 10.4405L72 6.11146L77.5874 4.62839L80.621 0Z" fill="#D8D8D8"/>
+<path d="M8.62097 0L11.8032 4.62839L17.2419 6.11146L13.7264 10.4405L13.949 16L8.62097 14.1513L3.29292 16L3.62585 10.4405L0 6.11146L5.58742 4.62839L8.62097 0Z" fill="#D8D8D8"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="90" height="16">
+<path d="M26.621 0L29.8032 4.62839L35.2419 6.11146L31.7264 10.4405L31.949 16L26.621 14.1513L21.2929 16L21.6258 10.4405L18 6.11146L23.5874 4.62839L26.621 0Z" fill="#D8D8D8"/>
+<path d="M44.621 0L47.8032 4.62839L53.2419 6.11146L49.7264 10.4405L49.949 16L44.621 14.1513L39.2929 16L39.6258 10.4405L36 6.11146L41.5874 4.62839L44.621 0Z" fill="#D8D8D8"/>
+<path d="M62.621 0L65.8032 4.62839L71.2419 6.11146L67.7264 10.4405L67.949 16L62.621 14.1513L57.2929 16L57.6258 10.4405L54 6.11146L59.5874 4.62839L62.621 0Z" fill="#D8D8D8"/>
+<path d="M80.621 0L83.8032 4.62839L89.2419 6.11146L85.7264 10.4405L85.949 16L80.621 14.1513L75.2929 16L75.6258 10.4405L72 6.11146L77.5874 4.62839L80.621 0Z" fill="#D8D8D8"/>
+<path d="M8.62097 0L11.8032 4.62839L17.2419 6.11146L13.7264 10.4405L13.949 16L8.62097 14.1513L3.29292 16L3.62585 10.4405L0 6.11146L5.58742 4.62839L8.62097 0Z" fill="#D8D8D8"/>
+</mask>
+<g mask="url(#mask0)">
+<rect width="18" height="18" fill="#F1A909"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="89.5" height="16" fill="white"/>
+</clipPath>
+</defs>
+							</svg></div>
+							<div style="line-height:20px; width:80px; position:relative;"><p class="reit-count">2 <span>оценки</span></p></div>		</div>	
+		<div class="prod-adult">
+					</div>
+					<div class="mainGoodContent">Таблетница для лекарств представляет собой небольшой пластиковый бокс. Такое устройство без труда поместится в сумочке, бардачке автомобиля или рюкзаке туриста. Прозрачная крышка устройства придает практичности боксу							&nbsp;<span title="Подробнее..."> <a href="/catalog/ekskluziv/forhealth/product.html?id=49819">Читать&nbsp;далее&nbsp;»</a></span></div>
+						</div>
+	<div class="book-inlist-prbut">
+				
+			<!-- block free delivery -->
+			<div class="book-inlist-deliv">
+							</div>
+			<!-- End block free delivery -->
+			<div class="book-inlist-price">
+				<tr><td class="price"><div style="position:relative"><span>123.50</span><img  class="discont_crossed_price" alt="line"
+									src="/img/lh_price.png"></div></td><td style="width: 5px;"></td><td class="priceAct">49.90</td><td class="pricevalute">&nbsp;грн</td></tr>			</div>
+			<div class="book-inlist-button">
+			<noindex><a rel="nofollow" href="/cart/"><div class="cartimg--text"><img class="cartimg" style="margin-top:5px;" src="/img/icons/svg/buttons/button_card_gray.svg" width="140" alt="В корзине" /></div></a></noindex>			</div>
+			</div>
+	</section>
+
+
+
+	
+<section class="book-inlist">
+	<div class="book-inlist-img">
+				<a onclick="ga('ec:addProduct', {       
+'id': '4068012', 
+'name': 'Коробка для хранения медикаментов',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'position': '2',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Мелиссовое эфирное масло - . Подробнее о товаре" href="/catalog/ekskluziv/forhealth/product.html?id=51296">
+				
+		<img src="/images/db/goods/d/51296_89425_d.jpg" border="0" width="144" height="144" style="width:144px; height:144px" alt="Мелиссовое эфирное масло. Подробная информация, цены, характеристики, описание." />			<!-- блок вывода картинки суперразмер -->
+						<!-- окончание блока вывода картинки суперразмер -->		
+					
+		</a>
+		<script type="text/javascript">ga('ec:addImpression', {       
+'id': '4067625', 
+'name': 'Мелиссовое эфирное масло',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'list': 'Красота и здоровье',
+'position': '3',
+});</script>	
+	</div>
+	<div class="book-inlist-descr">
+				<div class="book-inlist-name">
+							<a onclick="ga('ec:addProduct', {       
+'id': '4067625', 
+'name': 'Мелиссовое эфирное масло',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'position': '3',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Мелиссовое эфирное масло" href="/catalog/ekskluziv/forhealth/product.html?id=51296">Мелиссовое эфирное масло			</a>
+					</div>	
+		<div class="prod-adult">
+					</div>
+					<div class="mainGoodContent">Положительный эффект ароматерапии настолько велик, что его часто называют аромамагией! Натуральные эфирные масла помогут улучшить состояние волос и кожи, похудеть и даже избавиться от стресса							&nbsp;<span title="Подробнее..."> <a href="/catalog/ekskluziv/forhealth/product.html?id=51296">Читать&nbsp;далее&nbsp;»</a></span></div>
+						</div>
+	<div class="book-inlist-prbut">
+				
+			<!-- block free delivery -->
+			<div class="book-inlist-deliv">
+							</div>
+			<!-- End block free delivery -->
+			<div class="book-inlist-price">
+				<tr><td class="priceAct">59.00</td><td class="pricevalute">&nbsp;грн</td></tr>			</div>
+			<div class="book-inlist-button">
+			<noindex><a rel="nofollow" href="/cart/"><div class="cartimg--text"><img class="cartimg" style="margin-top:5px;" src="/img/icons/svg/buttons/button_card_gray.svg" width="140" alt="В корзине" /></div></a></noindex>			</div>
+			</div>
+	</section>
+
+
+
+	
+<section class="book-inlist">
+	<div class="book-inlist-img">
+				<a onclick="ga('ec:addProduct', {       
+'id': '4067625', 
+'name': 'Мелиссовое эфирное масло',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'position': '3',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Пояс согревающий из мериносовой шерсти - . Подробнее о товаре" href="/catalog/ekskluziv/forhealth/product.html?id=51531">
+				
+		<img src="/images/db/goods/d/51531_90473_d.jpg" border="0" width="144" height="144" style="width:144px; height:144px" alt="Пояс согревающий из мериносовой шерсти. Подробная информация, цены, характеристики, описание." />			<!-- блок вывода картинки суперразмер -->
+						<!-- окончание блока вывода картинки суперразмер -->		
+					
+		</a>
+		<script type="text/javascript">ga('ec:addImpression', {       
+'id': '4067455', 
+'name': 'Пояс согревающий из мериносовой шерсти',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'list': 'Красота и здоровье',
+'position': '4',
+});</script>	
+	</div>
+	<div class="book-inlist-descr">
+				<div class="book-inlist-name">
+							<a onclick="ga('ec:addProduct', {       
+'id': '4067455', 
+'name': 'Пояс согревающий из мериносовой шерсти',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'position': '4',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Пояс согревающий из мериносовой шерсти" href="/catalog/ekskluziv/forhealth/product.html?id=51531">Пояс согревающий из мериносовой шерсти			</a>
+					</div>	
+		<div class="prod-adult">
+					</div>
+					<div class="mainGoodContent">Согревающий пояс из шерсти мериноса — простое и эффективное средство. Натуральные волокна воздействуют на кожу мягко и благоприятно. Лечебный эффект при использовании корсета достигается за счет собственного тепла тела							&nbsp;<span title="Подробнее..."> <a href="/catalog/ekskluziv/forhealth/product.html?id=51531">Читать&nbsp;далее&nbsp;»</a></span></div>
+						</div>
+	<div class="book-inlist-prbut">
+				
+			<!-- block free delivery -->
+			<div class="book-inlist-deliv">
+							</div>
+			<!-- End block free delivery -->
+			<div class="book-inlist-price">
+				<tr><td class="priceAct">220.00</td><td class="pricevalute">&nbsp;грн</td></tr>			</div>
+			<div class="book-inlist-button">
+			<noindex><a onClick="ga('ec:addProduct', {       
+'id': '4067455', 
+'name': 'Пояс согревающий из мериносовой шерсти',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'price': '220.00',
+'quantity': '1',
+});ga('ec:setAction', 'add');ga('send', 'event', 'cartevent', 'addtocart', '/catalog/ekskluziv/forhealth/;51531;4067455;Пояс согревающий из мериносовой шерсти'); sessvars.addcart = $(document).scrollTop();sessvars.doubleclick_add_cart_productid=51531;sessvars.doubleclick_add_cart_price=220.00" style="color: #eb0000;" href="/catalog/ekskluziv/forhealth/?addtocartid=51531" rel="nofollow"><div class="cartimg--text"><img style="margin-top:5px;" class="cartimg cart--main" src="/img/icons/svg/buttons/button_card_red.svg" width="140" alt="Добавить в корзину" /></div></a></noindex>			</div>
+			</div>
+	</section>
+
+
+
+	
+<section class="book-inlist">
+	<div class="book-inlist-img">
+				<a onclick="ga('ec:addProduct', {       
+'id': '4067455', 
+'name': 'Пояс согревающий из мериносовой шерсти',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'position': '4',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Контейнер для съемных зубных протезов и щетка для чистки протезов - . Подробнее о товаре" href="/catalog/ekskluziv/forhealth/product.html?id=49818">
+				
+		<img src="/images/db/goods/d/49818_84654_d.jpg" border="0" width="144" height="144" style="width:144px; height:144px" alt="Контейнер для съемных зубных протезов и щетка для чистки протезов. Подробная информация, цены, характеристики, описание." />			<!-- блок вывода картинки суперразмер -->
+						<!-- окончание блока вывода картинки суперразмер -->		
+					
+		</a>
+		<script type="text/javascript">ga('ec:addImpression', {       
+'id': '4067295', 
+'name': 'Контейнер для съемных зубных протезов и щетка для чистки протезов',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'list': 'Красота и здоровье',
+'position': '5',
+});</script>	
+	</div>
+	<div class="book-inlist-descr">
+				<div class="book-inlist-name">
+							<a onclick="ga('ec:addProduct', {       
+'id': '4067295', 
+'name': 'Контейнер для съемных зубных протезов и щетка для чистки протезов',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'position': '5',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Контейнер для съемных зубных протезов и щетка для чистки протезов" href="/catalog/ekskluziv/forhealth/product.html?id=49818">Контейнер для съемных зубных протезов и щетка для чистки протезов			</a>
+					</div>	
+		<div class="prod-adult">
+					</div>
+					<div class="mainGoodContent">Забудьте про стаканчики с водой! Этот контейнер гораздо удобнее для временного хранения ваших зубных протезов. Им очень легко пользоваться!							&nbsp;<span title="Подробнее..."> <a href="/catalog/ekskluziv/forhealth/product.html?id=49818">Читать&nbsp;далее&nbsp;»</a></span></div>
+						</div>
+	<div class="book-inlist-prbut">
+				
+			<!-- block free delivery -->
+			<div class="book-inlist-deliv">
+							</div>
+			<!-- End block free delivery -->
+			<div class="book-inlist-price">
+				<tr><td class="price"><div style="position:relative"><span>273.80</span><img  class="discont_crossed_price" alt="line"
+									src="/img/lh_price.png"></div></td><td style="width: 5px;"></td><td class="priceAct">219.00</td><td class="pricevalute">&nbsp;грн</td></tr>			</div>
+			<div class="book-inlist-button">
+			<noindex><a onClick="ga('ec:addProduct', {       
+'id': '4067295', 
+'name': 'Контейнер для съемных зубных протезов и щетка для чистки протезов',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'price': '273.80',
+'quantity': '1',
+});ga('ec:setAction', 'add');ga('send', 'event', 'cartevent', 'addtocart', '/catalog/ekskluziv/forhealth/;49818;4067295;Контейнер для съемных зубных протезов и щетка для чистки протезов'); sessvars.addcart = $(document).scrollTop();sessvars.doubleclick_add_cart_productid=49818;sessvars.doubleclick_add_cart_price=273.80" style="color: #eb0000;" href="/catalog/ekskluziv/forhealth/?addtocartid=49818" rel="nofollow"><div class="cartimg--text"><img style="margin-top:5px;" class="cartimg cart--main" src="/img/icons/svg/buttons/button_card_red.svg" width="140" alt="Добавить в корзину" /></div></a></noindex>			</div>
+			</div>
+	</section>
+
+
+
+	
+<section class="book-inlist">
+	<div class="book-inlist-img">
+				<a onclick="ga('ec:addProduct', {       
+'id': '4067295', 
+'name': 'Контейнер для съемных зубных протезов и щетка для чистки протезов',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': '',
+'position': '5',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Магнитный корректор осанки - . Подробнее о товаре" href="/catalog/ekskluziv/forhealth/product.html?id=36602">
+				
+		<img src="/images/db/goods/d/36602_70380_d.jpg" border="0" width="144" height="144" style="width:144px; height:144px" alt="Магнитный корректор осанки. Подробная информация, цены, характеристики, описание." />			<!-- блок вывода картинки суперразмер -->
+						<!-- окончание блока вывода картинки суперразмер -->		
+					
+		</a>
+		<script type="text/javascript">ga('ec:addImpression', {       
+'id': '4068017', 
+'name': 'Магнитный корректор осанки',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'list': 'Красота и здоровье',
+'position': '6',
+});</script>	
+	</div>
+	<div class="book-inlist-descr">
+				<div class="book-inlist-name">
+							<a onclick="ga('ec:addProduct', {       
+'id': '4068017', 
+'name': 'Магнитный корректор осанки',
+'category': 'Товары/Товары от Клуба/Красота и здоровье',
+'brand': 'Товар',
+'variant': 'Распродажа',
+'position': '6',
+});ga('ec:setAction', 'click',{
+'list': 'Красота и здоровье',
+});ga('send', 'event', 'ClickToProduct', 'click', '');" title="Магнитный корректор осанки" href="/catalog/ekskluziv/forhealth/product.html?id=36602
