@@ -1,9 +1,7 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('page/home');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/book',function(){
     return view('page/book-page');
