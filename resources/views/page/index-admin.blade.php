@@ -48,7 +48,7 @@
                </div>
            </div>
            <div class="add-book hide tab" data-target="Add-Book">
-               <form action="/addBook" method="POST">
+               <form action="/addBook" method="POST"  enctype="multipart/form-data">
                 @csrf
                <div class="book-save">   
                     <div class="add-info-book">
@@ -79,7 +79,7 @@
                         
                     </div>
                     <div class="imgBlock">
-                        <input type="file" hidden id ="add-book-img" name="bookImg">
+                        <input type="file" hidden id ="add-book-img" name="image"  accept="image/x-png,image/gif,image/jpeg">
                         <img src="{{asset('img/emptyBook.png')}}" alt="" class="ce">
                         <label for="add-book-img">Додати картинку</label>
                     </div>
