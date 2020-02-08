@@ -1,6 +1,8 @@
 <?php
 
 
+Route::post('/addBook','AdminController@addBook');
+
 Route::get('/', 'HomeController@index');
 
 Route::get('/book',function(){
@@ -38,3 +40,4 @@ Route::get('/login',function(){
 Route::get('/user',function(){
     return view('page/user');
 });
+

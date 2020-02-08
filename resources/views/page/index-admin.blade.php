@@ -48,41 +48,44 @@
                </div>
            </div>
            <div class="add-book hide tab" data-target="Add-Book">
+               <form action="/addBook" method="POST">
+                @csrf
                <div class="book-save">   
                     <div class="add-info-book">
                         <div class="info-block">
                             <label for="new-name-book">Назва: </label>
-                            <input id = 'new-name-book' class="inpStan" type="text" placeholder="Назва книги"></input>
+                            <input id = 'new-name-book' name="nameBook" class="inpStan" type="text" placeholder="Назва книги"></input>
                         </div>
                         <div class="info-block">
                             <label for="new-author-book">Автор: </label>
-                            <input id = 'new-author-book' class="inpStan" type="text" placeholder="Ім'я автора"></input>
+                            <input id = 'new-author-book' name="authorName" class="inpStan" type="text" placeholder="Ім'я автора"></input>
                         </div>
                         <div class="info-block">
                             <label for="input-price">Ціна: </label>
-                            <input type="number" class = "inpStan" id="input-price" placeholder="Ціна">
+                            <input type="number" name = "price" class = "inpStan" id="input-price" placeholder="Ціна">
                         </div>
                         <div class="info-block">
                             <label for="create-select-ganre">Жанр: </label>
                                 <select name="create-select-ganre" id="create-select-ganre">
                                     <option value="default">Виберіть жанр</option>
-                                    <option value="">Фантастика</option>
-                                    <option value="">Психологія</option>
+                                    <option value="Фантастика">Фантастика</option>
+                                    <option value="Психологія">Психологія</option>
                                 </select>
                         </div>
                         <div class="info-block">
                             <label for="new-book">Опис: </label>
-                            <textarea id = 'new-name-book' type="text" rows="5"  placeholder="Опис до книги" class="new-description-book"></textarea>
+                            <textarea id = 'new-name-book' name="description" type="text" rows="5"  placeholder="Опис до книги" class="new-description-book"></textarea>
                         </div>
                         
                     </div>
                     <div class="imgBlock">
-                        <input type="file" hidden id="add-book-img">
+                        <input type="file" hidden id ="add-book-img" name="bookImg">
                         <img src="{{asset('img/emptyBook.png')}}" alt="" class="ce">
-                        <label for="add-book-img" >Додати картинку</label>
+                        <label for="add-book-img">Додати картинку</label>
                     </div>
                </div>
-               <button class ="btn-g ce btnAddBook">Зберегти книжку</button>
+               <button class ="btn-g ce btnAddBook" type="submit">Зберегти книжку</button>
+            </form>
            </div>
            <div class="admin-all-book hide tab" data-target="All-Book">
                <div class="book-info">

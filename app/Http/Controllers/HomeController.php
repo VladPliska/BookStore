@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\models\Product as Product;
+use App\models as Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,8 +15,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        $test = Product::create(['title'=>'test','description'=>'test','img'=>'test','price'=>100]);
-        dd($test);
         return view('page/home');
     }
 
