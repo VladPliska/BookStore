@@ -11,7 +11,11 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   $this->call(BookImg::class);
+    {   
+        
+        $this->call(Ganre::class);
+        $this->call(BookImg::class);
+        
         // $this->call(UsersTableSeeder::class);
     }
 }

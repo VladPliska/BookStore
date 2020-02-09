@@ -20,8 +20,10 @@ class CreateProductTable extends Migration
             $table->integer('price');
             $table->text('img');
             $table->integer('ganre')->unsigned();
+            $table->integer('wathed')->nullable();
+            $table->boolean('action')->default(false);
 
-            $table->foreign('ganre')->references('id')->on('ganre');
+            $table->foreign('ganre')->references('id')->on('ganres');
             $table->timestamps();
         });
     }

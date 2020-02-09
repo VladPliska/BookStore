@@ -13,10 +13,18 @@ class BookImg extends Seeder
      */
     public function run()
     {  
-        //  dump(scandir('../BookStore/testImg'));
         $allImg = scandir('../BookStore/storage/bookImg');
         foreach($allImg as  $k => $v){
-            Product::create(['title' =>"Title Book ".$k,'price' => rand(70,1000),'description' => "description ".$k,'img'=>"../storage/bookImg/".$v]);
+        if(strlen($v) < 5 ){
+            continue;
+        }
+            Product::create([
+                                'title' =>"Title Book ".$k,
+                                'price' => rand(70,1000),
+                                'description' => "description ".$k,
+                                'img'=>$v,
+                                'ganre' =>rand(1,12)
+                            ]);
         }
 
     }
