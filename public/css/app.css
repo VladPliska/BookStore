@@ -1158,6 +1158,20 @@ header .btnLogin .avatar-header {
           align-items: center;
 }
 
+.msg {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.msg-err {
+  color: #ff3b1b;
+}
+
+.msg-suc {
+  color: #7ef234;
+}
+
 .content-reg-block {
   min-height: 90vh;
   width: 100%;
@@ -1219,6 +1233,26 @@ header .btnLogin .avatar-header {
   line-height: normal;
   text-align: center;
   height: auto;
+}
+
+.popup-confirm-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+  background: #3071a9;
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.popup-confirm-code form {
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 .user-page {
