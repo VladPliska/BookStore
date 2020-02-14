@@ -4,36 +4,29 @@ namespace App\Http\Controllers;
 
 use App\models\Product as Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+
 
 
 class HomeController extends Controller
 {
-    
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
 
     public function index()
     {
-
-        $popularBook = Product::all()->random(10);
-        
-        foreach($popularBook as $v){
-            $arr = $v->getOriginal();
-            $img = ['image' => "path"];
-            array_merge($img,$arr);
-            dump($v->getOriginal());
-        }
-
-      
-        // $test = Storage::disk("img")->get('14245_74857_d.jpg');
-
-        // dd($test);
-
-        return view('page/home');
+        $popularBook = Product::where('watched', '>',10)->get()->take(10);
+        $actionBook = Product::all()->random(10);
+        return view('page/home',compact('popularBook','actionBook'));
     }
 
+    public function getBook(Request $request,$id){
+
+        $infoBook = Product::where('id',$id)->first();
+        $author = $infoBook->author->getOriginal();
+        $genre = $infoBook->genre->getOriginal();
+        $popularBook = Product::where('watched', '>',10)->get()->take(10);
+//        dd($ganre,$author);
+        return view('page/book-page',compact('author','infoBook','genre','popularBook'));
+//        dd($infoBook->getOriginal());
+
+    }
 
 }

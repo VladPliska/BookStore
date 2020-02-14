@@ -18,10 +18,6 @@ class AdminController extends Controller
 
         $img = $request->file('image');
 
-        // dd(file_get_contents($));
-
-        // dd($img,$img->hashName());
-
         
         if(empty($name)){
             return back()->withErrors(['Name book not found']);

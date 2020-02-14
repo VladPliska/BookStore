@@ -1,10 +1,14 @@
 <?php
 
+Route::get('/', 'HomeController@index');
 
 Route::post('/addBook','AdminController@addBook');
 
-Route::get('/', 'HomeController@index');
+Route::get('/book/{id}','HomeController@getBook');
 
+Route::post('/signin','AuthController@signin');
+
+//////////////////Route for test
 Route::get('/book',function(){
     return view('page/book-page');
 });
@@ -26,11 +30,6 @@ Route::get('/admin',function(){
 Route::get('/order',function(){
     return view('page/order');
 });
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/signup',function(){
     return view('page/register');
 });
