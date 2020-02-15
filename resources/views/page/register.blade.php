@@ -2,17 +2,19 @@
 {{-- <div class="container"> --}}
 @include('.layout/header')
     <div class="content-reg-block">
-        <div class="popup">
+        <div class="popup {{empty($reg) ? "hide" : ""}}">
             <div class="popup-confirm-code">
-                <form action="#" method="post" class="verification-form">
-                    @csrf
-                    <label for="code" class = "ce">Enter verification code</label><br>
-                    <input id="code" type="text" placeholder="Code" required name="ver-code"><br>
-                    <button type="submit">Submit</button>
-                </form>
+                <div class="popup-body">
+                    <form action="#" method="post" class="verification-form">
+                        @csrf
+                        <label for="code" class = "ce">Enter verification code</label>
+                        <input id="code" type="text" placeholder="Code" required name="ver-code"><br>
+                        <button type="submit" class="btn-g">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
-          <div class="reg-block">
+          <div class="reg-block {{!empty($reg) ? 'hide' : "" }}">
               <form action="/signin" method="POST">
                   @csrf
                   <p class="title-reg">Реєстрація</p>
