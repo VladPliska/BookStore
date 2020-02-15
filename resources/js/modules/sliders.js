@@ -1,5 +1,11 @@
 import { tns } from "tiny-slider/src/tiny-slider";
 
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 let popularSlider = document.getElementsByClassName("slider-Popular");
 let actionSlider = document.getElementsByClassName("slider-Action");
 let rangeMin = document.getElementsByClassName("range-min");

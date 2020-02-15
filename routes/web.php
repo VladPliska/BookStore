@@ -17,6 +17,8 @@ Route::group(['middleware' => ['user']], function () {
     Route::get('/book/{id}','HomeController@getBook');
 
     Route::get('/catalog','HomeController@catalog');
+
+    Route::post('/searchCatalog','HomeController@searchCatalog');
 });
 
 

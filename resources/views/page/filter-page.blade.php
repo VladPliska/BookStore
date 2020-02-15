@@ -5,8 +5,8 @@
     <div class="header-filter">
         <div class="filter-main-search">
             <label for="filter-search">Що ви шукаєте:</label>
-            <input type="text" id = "filter-search">
-            <span>Search</span>
+            <input type="text" id = "filter-search" >
+            <button class="btn-g searchCatalog">Search</button>
         </div>
         <div id="showAllFilter"class="show-main-filter">Фільтри</div>
     </div>

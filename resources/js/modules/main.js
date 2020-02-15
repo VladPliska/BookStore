@@ -6,10 +6,9 @@ if(showAllFilter != null){
       window.setTimeout(function() {
        mainFilter.classList.toggle("active")
               }, 0)
-      
+
   });
 }
-
 
 
 let adminNav = document.getElementsByClassName('showWork');
@@ -19,7 +18,7 @@ for(let i=0;adminNav.length>i;i++){
 }
 
 function showAdminWorkSpace(e){
-let showArea = e.target.getAttribute('data-open'); 
+let showArea = e.target.getAttribute('data-open');
 // e.target.classList.add('active')
 for(let i = 0;adminNav.length > i;i++){
  adminNav[i].classList.remove('active');
@@ -36,6 +35,27 @@ for(let a = 0; adminWorkSpace.length > a ; a++ ){
     adminWorkSpace[a].classList.remove('hide');
   }
 }
-
 }
 
+$('.searchCatalog').on('click',function(){
+   let searchQuery = $('#filter-search').val();
+   let mainFilter = $('#main-filters');
+   let filterOn = false;
+
+    if(mainFilter.hasClass('active')){
+        filterOn = true;
+    }
+
+    $.ajax({
+        method:"POST",
+        url:"searchCatalog",
+        data: {
+            'query': searchQuery,
+            'filter': filterOn
+        },
+        success:function(res){
+            console.log(res);
+        }
+    })
+
+});

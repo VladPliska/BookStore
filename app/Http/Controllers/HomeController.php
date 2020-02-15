@@ -33,4 +33,24 @@ class HomeController extends Controller
         return view('page/filter-page',['data'=>$books]);
     }
 
+    public function searchCatalog(Request $request){
+        $result = null;
+        $data = [
+         'filter' => $request->get('filter'),
+         'query' => $request->get('query')
+        ];
+//        dd($data);
+        if($data['filter'] == "true") {
+            dd($data['filter']);
+        }else{
+            $result = Product::where('title','like','%%'.$data['query'].'%%')->get();
+        }
+
+
+        $view = view('layout/book-card',['search' =>true,'result'=>$result])->render();
+        return response()->json([
+            'view' =>$view
+        ]);
+    }
+
 }

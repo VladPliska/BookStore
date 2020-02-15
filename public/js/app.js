@@ -23076,6 +23076,12 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./modules/sliders */ "./resources/js/modules/sliders.js");
@@ -23164,6 +23170,28 @@ function showAdminWorkSpace(e) {
   }
 }
 
+$('.searchCatalog').on('click', function () {
+  var searchQuery = $('#filter-search').val();
+  var mainFilter = $('#main-filters');
+  var filterOn = false;
+
+  if (mainFilter.hasClass('active')) {
+    filterOn = true;
+  }
+
+  $.ajax({
+    method: "POST",
+    url: "searchCatalog",
+    data: {
+      'query': searchQuery,
+      'filter': filterOn
+    },
+    success: function success(res) {
+      console.log(res);
+    }
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/modules/sliders.js":
@@ -23177,6 +23205,11 @@ function showAdminWorkSpace(e) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
 
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
 var popularSlider = document.getElementsByClassName("slider-Popular");
 var actionSlider = document.getElementsByClassName("slider-Action");
 var rangeMin = document.getElementsByClassName("range-min");

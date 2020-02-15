@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/VladPliska/BookStore#readme",
   "dependencies": {
+    "jquery": "^3.4.1",
     "tiny-slider": "^2.9.2"
   }
 }
