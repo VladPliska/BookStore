@@ -55,6 +55,7 @@ $('.searchCatalog').on('click',function(){
         },
         success:function(res){
             console.log(res);
+            $('.result-search').html(res.view);
         }
     })
 

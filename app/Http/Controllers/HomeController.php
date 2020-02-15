@@ -43,7 +43,7 @@ class HomeController extends Controller
         if($data['filter'] == "true") {
             dd($data['filter']);
         }else{
-            $result = Product::where('title','like','%%'.$data['query'].'%%')->get();
+            $result = Product::where('title','like','%%'.$data['query'].'%%')->take(20)->get();
         }
 
 

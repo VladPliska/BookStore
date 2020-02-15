@@ -23188,6 +23188,7 @@ $('.searchCatalog').on('click', function () {
     },
     success: function success(res) {
       console.log(res);
+      $('.result-search').html(res.view);
     }
   });
 });

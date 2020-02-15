@@ -7,7 +7,10 @@
     <div class="book-card-add-bascket">В корзину</div>
 </a>
 @else
-    @dd($result)
+{{--    @dd($result)--}}
+    @if(count($result) == 0 )
+        <p>Nothing search</p>
+    @endif
     @foreach($result as $v)
     <a class="book-card" href="/book/{{$v->getOriginal('id')}}" style="z-index:100">
         <img src="/storage/bookImg/{{$v->getOriginal('img')}}" alt="bookImg" class ="book-card-img">
