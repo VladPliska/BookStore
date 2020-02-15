@@ -19,14 +19,18 @@ class HomeController extends Controller
     }
 
     public function getBook(Request $request,$id){
-
         $infoBook = Product::where('id',$id)->first();
         $author = $infoBook->author->getOriginal();
         $genre = $infoBook->genre->getOriginal();
         $popularBook = Product::where('watched', '>',10)->get()->take(10);
 
         return view('page/book-page',compact('author','infoBook','genre','popularBook'));
+    }
 
+    public function catalog(Request $request){
+        $books = Product::all()->take(30);
+
+        return view('page/filter-page',['data'=>$books]);
     }
 
 }

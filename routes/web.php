@@ -5,13 +5,21 @@
 Route::post('/signin','AuthController@signin');
 Route::get('/confirmation/{token}','AuthController@confirm');
 Route::post('/login','AuthController@login');
-
 ///////////////
+///
+///
 
-Route::get('/', 'HomeController@index');
-Route::post('/addBook','AdminController@addBook');
+Route::group(['middleware' => ['user']], function () {
+    Route::get('/', 'HomeController@index');
 
-Route::get('/book/{id}','HomeController@getBook');
+    Route::post('/addBook','AdminController@addBook');
+
+    Route::get('/book/{id}','HomeController@getBook');
+
+    Route::get('/catalog','HomeController@catalog');
+});
+
+
 
 
 //////////////////Route for test
@@ -23,9 +31,7 @@ Route::get('/buy',function(){
     return view('page/basket');
 });
 
-Route::get('/catalog',function(){
-    return view('page/filter-page');
-});
+
 Route::get('/profile',function(){
     return view('page/profile-page');
 });

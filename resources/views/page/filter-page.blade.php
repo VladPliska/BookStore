@@ -19,13 +19,13 @@
                     <option value="Fan">Психологія</option>
                     <option value="Fan">Фантастика</option>
                 </select>
-            </div> 
+            </div>
             <div class="filter-author">
                 <div>Автор</div>
                 <input type="text" name="filter-author">
                 <div class="res-search"></div>
             </div>
-        </div>    
+        </div>
         <div class="filter-price">
             <p>Мінімальна ціна</p>
             <input class = "range-min" value="0" type="range" step="50" max="1000" min="0">
@@ -38,7 +38,7 @@
         <span>Сортувати за:</span>
         <div class="sort-by">
             <label for="sort-up">
-                Зростанням 
+                Зростанням
                 <input id="sort-up" type="checkbox">
             </label>
             <label for="sort-down">
@@ -55,12 +55,10 @@
     </div>
     </div>
     <div class="result-search">
-        @include('.layout/book-card')
-        @include('.layout/book-card')
-        @include('.layout/book-card')
-        @include('.layout/book-card')
-        @include('.layout/book-card')
+        @foreach($data as $v)
+                @include('.layout/book-card',['info'=>$v])
+        @endforeach
     </div>
 
 </div>
-@include('.includes/footer') 
+@include('.includes/footer')
