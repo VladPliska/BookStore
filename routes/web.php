@@ -1,12 +1,18 @@
 <?php
 
-Route::get('/', 'HomeController@index');
 
+////Auth /////
+Route::post('/signin','AuthController@signin');
+Route::get('/confirmation/{token}','AuthController@confirm');
+Route::post('/login','AuthController@login');
+
+///////////////
+
+Route::get('/', 'HomeController@index');
 Route::post('/addBook','AdminController@addBook');
 
 Route::get('/book/{id}','HomeController@getBook');
 
-Route::post('/signin','AuthController@signin');
 
 //////////////////Route for test
 Route::get('/book',function(){
