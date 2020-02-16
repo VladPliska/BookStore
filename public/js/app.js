@@ -23172,11 +23172,21 @@ function showAdminWorkSpace(e) {
 
 $('.searchCatalog').on('click', function () {
   var searchQuery = $('#filter-search').val();
-  var mainFilter = $('#main-filters');
+  var mainFilter = $('#mainFilter');
   var filterOn = false;
+  var filterInfo = null;
+  var sortBy;
 
   if (mainFilter.hasClass('active')) {
     filterOn = true;
+    if ($('#sort-up')[0].checked) sortBy = 'up';else if ($('#sort-down')[0].checked) sortBy = 'down';else sortBy = null;
+    filterInfo = {
+      'genre': $('.ganre-select').val(),
+      'author': $('.author-name').val(),
+      'min-price': $('.minPrice').innerHTML,
+      'max-price': $('.maxPrice').innerHTML,
+      'sort': sortBy
+    };
   }
 
   $.ajax({
@@ -23184,10 +23194,10 @@ $('.searchCatalog').on('click', function () {
     url: "searchCatalog",
     data: {
       'query': searchQuery,
-      'filter': filterOn
+      'filter': filterOn,
+      'filterInfo': filterInfo
     },
     success: function success(res) {
-      console.log(res);
       $('.result-search').html(res.view);
     }
   });

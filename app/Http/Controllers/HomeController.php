@@ -39,9 +39,9 @@ class HomeController extends Controller
          'filter' => $request->get('filter'),
          'query' => $request->get('query')
         ];
-//        dd($data);
         if($data['filter'] == "true") {
-            dd($data['filter']);
+            $filter = $request->get('filterInfo');
+            dd($filter);
         }else{
             $result = Product::where('title','like','%%'.$data['query'].'%%')->take(20)->get();
         }

@@ -22,16 +22,16 @@
             </div>
             <div class="filter-author">
                 <div>Автор</div>
-                <input type="text" name="filter-author">
+                <input type="text" name="filter-author" class="author-name">
                 <div class="res-search"></div>
             </div>
         </div>
         <div class="filter-price">
             <p>Мінімальна ціна</p>
-            <input class = "range-min" value="0" type="range" step="50" max="1000" min="0">
+            <input class = "range-min" name="minn-price" value="0" type="range" step="50" max="1000" min="0">
             <div class = "minPrice">0</div>
             <p>Максимальна ціна</p>
-            <input class = "range-max" type="range" value='500' step="50" max="1000" min="0">
+            <input class = "range-max" name ="max-price" type="range" value='500' step="50" max="1000" min="0">
             <div class = "maxPrice">500</div>
         </div>
     <div class="sort">
@@ -39,18 +39,18 @@
         <div class="sort-by">
             <label for="sort-up">
                 Зростанням
-                <input id="sort-up" type="checkbox">
+                <input id="sort-up" name="sort-by" type="radio" value="up">
             </label>
             <label for="sort-down">
                 Спаданням
-                <input id="sort-down" type="checkbox">
+                <input id="sort-down" name="sort-by" type="radio" value="down">
             </label>
         </div>
         <div class="button-block">
-            <div class="sort-btn-all">Новинки</div>
-            <div class="sort-btn-all">Акції</div>
-            <div class="sort-btn-all">Популярні</div>
-            <div class="sort-btn-search">Пошук</div>
+            <div class="sort-btn-all btnNewBook">Новинки</div>
+            <div class="sort-btn-all btnAction">Акції</div>
+            <div class="sort-btn-all btnPopular">Популярні</div>
+            <div class="sort-btn-search btnSearch">Пошук</div>
         </div>
     </div>
     </div>

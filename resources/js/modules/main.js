@@ -39,11 +39,30 @@ for(let a = 0; adminWorkSpace.length > a ; a++ ){
 
 $('.searchCatalog').on('click',function(){
    let searchQuery = $('#filter-search').val();
-   let mainFilter = $('#main-filters');
+   let mainFilter = $('#mainFilter');
    let filterOn = false;
+   let filterInfo = null;
+   let sortBy;
+
 
     if(mainFilter.hasClass('active')){
         filterOn = true;
+        if($('#sort-up')[0].checked)
+            sortBy = 'up';
+        else if($('#sort-down')[0].checked)
+            sortBy = 'down';
+        else
+            sortBy = null;
+
+
+        filterInfo = {
+            'genre':$('.ganre-select').val(),
+            'author':$('.author-name').val(),
+            'min-price':$('.minPrice').innerHTML,
+            'max-price':$('.maxPrice').innerHTML,
+            'sort':sortBy
+
+        }
     }
 
     $.ajax({
@@ -51,10 +70,10 @@ $('.searchCatalog').on('click',function(){
         url:"searchCatalog",
         data: {
             'query': searchQuery,
-            'filter': filterOn
+            'filter': filterOn,
+            'filterInfo':filterInfo
         },
         success:function(res){
-            console.log(res);
             $('.result-search').html(res.view);
         }
     })
