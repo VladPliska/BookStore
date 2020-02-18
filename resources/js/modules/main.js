@@ -48,18 +48,18 @@ $('.searchCatalog').on('click',function(){
     if(mainFilter.hasClass('active')){
         filterOn = true;
         if($('#sort-up')[0].checked)
-            sortBy = 'up';
+            sortBy = 'asc';
         else if($('#sort-down')[0].checked)
-            sortBy = 'down';
+            sortBy = 'desc';
         else
             sortBy = null;
 
 
         filterInfo = {
-            'genre':$('.ganre-select').val(),
+            'genre':$('#ganre-select').val(),
             'author':$('.author-name').val(),
-            'min-price':$('.minPrice').innerHTML,
-            'max-price':$('.maxPrice').innerHTML,
+            'min-price':$('.minPrice').text(),
+            'max-price':$('.maxPrice').text(),
             'sort':sortBy
 
         }

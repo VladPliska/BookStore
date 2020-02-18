@@ -41,9 +41,22 @@ class HomeController extends Controller
         ];
         if($data['filter'] == "true") {
             $filter = $request->get('filterInfo');
-            dd($filter);
+            $minPrice = intval($filter['min-price']) ?? 0;
+            $maxPrice = intval($filter['max-price']) ?? 1000;
+            $genre = $filter['genre'] ?? 'is not null';
+            $author = $filter['author'] ?? 'is not null';
+            $sort = $filter['sort'] ?? 'desc';
+//            dd($sort,$author,$maxPrice,$minPrice,$genre);
+//            $result = DB::select('select * from "product"
+//                where (price >= ? and price <= ?) and (author_id)',
+//                array($minPrice,$maxPrice,$author)
+//                );
+            $author = '*';
+            $result = DB::select('select * from "product" where
+            (price >= ? and price <= ?) and author_id = ?',array($minPrice,$maxPrice,$author));
+            dd($result);
         }else{
-            $result = Product::where('title','like','%%'.$data['query'].'%%')->take(20)->get();
+            $result = Product::where('title','ilike','%'.$data['query'].'%')->take(20)->get();
         }
 
 

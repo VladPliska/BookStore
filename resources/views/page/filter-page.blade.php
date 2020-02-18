@@ -39,18 +39,18 @@
         <div class="sort-by">
             <label for="sort-up">
                 Зростанням
-                <input id="sort-up" name="sort-by" type="radio" value="up">
+                <input id="sort-up" name="sort-by" type="radio" value="asc" checked>
             </label>
             <label for="sort-down">
                 Спаданням
-                <input id="sort-down" name="sort-by" type="radio" value="down">
+                <input id="sort-down" name="sort-by" type="radio" value="desc">
             </label>
         </div>
         <div class="button-block">
             <div class="sort-btn-all btnNewBook">Новинки</div>
             <div class="sort-btn-all btnAction">Акції</div>
             <div class="sort-btn-all btnPopular">Популярні</div>
-            <div class="sort-btn-search btnSearch">Пошук</div>
+            <div class="sort-btn-all btnRecomended">Рекомендовані</div>
         </div>
     </div>
     </div>
