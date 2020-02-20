@@ -8,7 +8,7 @@ html {
     // color:#A2EFE9;
 }
 *{
-    outline: none;
+    outline: none!important ;
 }
 
 a {
@@ -27,7 +27,7 @@ select {
     border-radius:5px;
     outline:none;
     font-size: 1.2em;
-    width: 70%;  
+    width: 70%;
 }
 .container {
     border-radius: 13px;
@@ -446,7 +446,7 @@ footer {
             font-size: 1.5em;
             margin-bottom: 5%;
         }
-       
+
     }
     .filter-price {
         width: 200px;
@@ -500,7 +500,7 @@ input[type="range"]::-webkit-slider-thumb {
     text-align: center;
     div{
         font-size: 1.5em;
-        margin-bottom: 5%;    
+        margin-bottom: 5%;
     }
     input{
         width:70%;
@@ -559,7 +559,7 @@ input[type="range"]::-webkit-slider-thumb {
         &:hover{
             cursor:pointer;
             background-color: rgb(224, 125, 39);
-            
+
         }
     }
 
@@ -576,8 +576,8 @@ input[type="range"]::-webkit-slider-thumb {
         display: grid;
         grid-template-columns: 1fr 1fr;
         label{
-            display: table-cell; 
-            vertical-align: middle; 
+            display: table-cell;
+            vertical-align: middle;
         }
         input{
             height: 20px;
@@ -635,8 +635,8 @@ input[type="range"]::-webkit-slider-thumb {
             display: block;
             margin: 0 auto;
         }
-    }    
-    
+    }
+
     input{
         width: 270px;
         border-radius: 9px;
@@ -689,9 +689,9 @@ header{
         font-family: Comic Sans;
 
     }
-    nav{  
+    nav{
     display: grid;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
     }
     .btnLogin{
         // border:1px solid;
@@ -702,7 +702,7 @@ header{
             border-radius: 30%;
         }
     }
-    
+
 }
 ////end////
 
@@ -747,7 +747,7 @@ header{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         padding-bottom:20px;
-        
+
         .info{
             &-1,&-2,&-3{
                 // border:1px solid black;
@@ -765,7 +765,7 @@ header{
                     margin:10px auto;
                 }
             }
-           
+
         }
         .info-center{
 
@@ -788,9 +788,9 @@ header{
             }
             label{
                 display:inline-block;
-                font-size: 1.2em;  
+                font-size: 1.2em;
                 vertical-align: top;
-                min-width: 60px;  
+                min-width: 60px;
             }
             input{
                 width:80%;
@@ -832,12 +832,12 @@ header{
                font-size: 1.5em;
                font-weight: 400;
            }
-       } 
+       }
     }
     .user-list,.user-list-title,.all-coments-title,.all-comments{
         padding:10px;
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         div{
             display: flex;
             align-items: center;
@@ -856,13 +856,13 @@ header{
         div{
             border-left: 1px solid;
             border-right: 1px solid;
-        } 
+        }
         .first{
             border-left: none!important;
-        } 
+        }
         .last{
             border-right: none!important;
-        }  
+        }
     }
     .admin-user-block{
         color:red;
@@ -873,23 +873,23 @@ header{
     }
     .forCommentsAdmin{
         height: 30px;
-        border-radius: 50%; 
-        margin-right: 2%;    
-    }   
+        border-radius: 50%;
+        margin-right: 2%;
+    }
     .comment-response-btn{
-        color:rgb(28, 207, 28);    
+        color:rgb(28, 207, 28);
         font-weight: 500;
         &:hover{
-            color:rgb(11, 163, 11);    
+            color:rgb(11, 163, 11);
             font-weight: 600;
             cursor: pointer;
         }
     }
     .comment-remove-btn{
-        color:rgb(250, 53, 18);    
+        color:rgb(250, 53, 18);
         font-weight: 500;
         &:hover{
-            color:rgb(175, 0, 23);    
+            color:rgb(175, 0, 23);
             font-weight: 600;
             cursor: pointer;
         }
@@ -902,7 +902,7 @@ header{
     height: auto;
     width: 100%;
     display:grid;
-    grid-template-rows: 1fr 4fr 1fr; 
+    grid-template-rows: 1fr 4fr 1fr;
     background-color:#f7f7f7;
     border-radius:10px;
     .title-block{
@@ -965,7 +965,7 @@ header{
     border-radius:10px;
 }
 .title-order{
-    margin: 15px 0;    
+    margin: 15px 0;
 }
 
 .order-item,.title-for-orders{
@@ -975,7 +975,7 @@ header{
     font-size: 1.2em;
     padding: 10px;
     margin: 10px 5px;
-    text-align: center; 
+    text-align: center;
     border-radius:8px;
     vertical-align: middle;
 }
@@ -984,8 +984,8 @@ header{
     cursor: pointer;
     &:hover{
         background-color: #eed7d7;
-    } 
-    
+    }
+
 }
 
 .my-coments-title{
@@ -1006,9 +1006,9 @@ header{
         font-weight: bolder;
     }
     .news-text{
-    font-size: 1.2em;    
+    font-size: 1.2em;
     }
-}   
+}
 
 .addNews{
     margin-top: 30px!important;

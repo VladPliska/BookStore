@@ -43,17 +43,27 @@ class HomeController extends Controller
             $filter = $request->get('filterInfo');
             $minPrice = intval($filter['min-price']) ?? 0;
             $maxPrice = intval($filter['max-price']) ?? 1000;
-            $genre = $filter['genre'] ?? 'is not null';
-            $author = $filter['author'] ?? 'is not null';
-            $sort = $filter['sort'] ?? 'desc';
+            $genre = $filter['genre'];
+            $author = $filter['author'];
+            $sort = $filter['sort'];
 //            dd($sort,$author,$maxPrice,$minPrice,$genre);
 //            $result = DB::select('select * from "product"
 //                where (price >= ? and price <= ?) and (author_id)',
 //                array($minPrice,$maxPrice,$author)
 //                );
-            $author = '*';
-            $result = DB::select('select * from "product" where
-            (price >= ? and price <= ?) and author_id = ?',array($minPrice,$maxPrice,$author));
+//            $result = DB::select('select * from "product" where
+//            (price >= ? and price <= ?)',array($minPrice,$maxPrice));
+//            $result = $result->where('author_id',20);
+            $result=Product::where('price','>=',$minPrice)->where('price','<=',$maxPrice)
+                ->orderBy('price',$sort)->get();
+            if($genre){
+              $result=Product::where('price','>=',$minPrice)->where('price','<=',$maxPrice)->
+                  where('ganre_id',$genre)->orderBy('price',$sort)->get();
+            }
+            if($author){
+                $result=Product::where('price','>=',$minPrice)->where('price','<=',$maxPrice)->
+                where('ganre_id',$genre)->orderBy('price',$sort)->get();
+            }
             dd($result);
         }else{
             $result = Product::where('title','ilike','%'.$data['query'].'%')->take(20)->get();
@@ -64,6 +74,13 @@ class HomeController extends Controller
         return response()->json([
             'view' =>$view
         ]);
+    }
+
+    public function actionPage(){
+        $data = Product::where('action',true)->get();
+
+        return view('page/action',compact('data'));
+
     }
 
 }

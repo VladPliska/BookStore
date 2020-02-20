@@ -19,6 +19,8 @@ Route::group(['middleware' => ['user']], function () {
     Route::get('/catalog','HomeController@catalog');
 
     Route::post('/searchCatalog','HomeController@searchCatalog');
+
+    Route::get('/action','HomeController@actionPage');
 });
 
 
