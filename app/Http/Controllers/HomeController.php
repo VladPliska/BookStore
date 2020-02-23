@@ -83,4 +83,14 @@ class HomeController extends Controller
 
     }
 
+    public function getAllBook(Request $request){
+        $limit = 20;
+        $skip = 0;
+        $product = Product::all()->skip($skip)->take($limit)->get();
+        dd($product);
+
+//        return
+
+    }
+
 }

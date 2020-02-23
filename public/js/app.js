@@ -23088,6 +23088,8 @@ __webpack_require__(/*! ./modules/sliders */ "./resources/js/modules/sliders.js"
 
 __webpack_require__(/*! ./modules/main */ "./resources/js/modules/main.js");
 
+__webpack_require__(/*! ./modules/admin */ "./resources/js/modules/admin.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -23119,6 +23121,23 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/modules/admin.js":
+/*!***************************************!*\
+  !*** ./resources/js/modules/admin.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).on('click', '.admin-allBook', function () {
+  $.ajax({
+    method: 'post',
+    url: "admin-all-book",
+    success: function success(res) {}
+  });
+});
 
 /***/ }),
 
@@ -23201,6 +23220,10 @@ $('.searchCatalog').on('click', function () {
       $('.result-search').html(res.view);
     }
   });
+});
+$(document).on('click', '.open-user-setting', function (e) {
+  e.preventDefault();
+  $('.admin-panel-open').toggleClass('active');
 });
 
 /***/ }),

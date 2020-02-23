@@ -79,3 +79,10 @@ $('.searchCatalog').on('click',function(){
     })
 
 });
+
+
+$(document).on('click','.open-user-setting',function(e){
+    e.preventDefault();
+    $('.admin-panel-open').toggleClass('active');
+
+});

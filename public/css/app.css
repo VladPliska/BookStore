@@ -747,6 +747,7 @@ header .btnLogin .avatar-header {
   padding: 5px 38.5px;
   border-bottom-left-radius: unset !important;
   border-bottom-right-radius: unset !important;
+  white-space: nowrap;
 }
 
 .admin-nav .btn-nav.active {
@@ -860,7 +861,7 @@ header .btnLogin .avatar-header {
 .admin-workspace .admin-all-book .book-info {
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .admin-workspace .admin-all-book .book-info div {
@@ -1104,6 +1105,7 @@ header .btnLogin .avatar-header {
 }
 
 .btn-g {
+  color: black;
   min-width: 150px;
   height: 45px;
   border-radius: 9px;
@@ -1291,6 +1293,33 @@ header .btnLogin .avatar-header {
   text-align: center;
   font-size: 1.4em;
   font-weight: 550;
+}
+
+.admin-panel-open {
+  overflow: hidden;
+  z-index: 10000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: absolute;
+  background: #b7dd8a;
+  border-radius: 10px;
+  right: 16px;
+  margin-top: 10px;
+  height: 0;
+}
+
+.admin-panel-open ul {
+  padding: 5px;
+  text-align: center;
+}
+
+.admin-panel-open li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.admin-panel-open.active {
+  height: 130px;
 }
 
 .buy-page {
