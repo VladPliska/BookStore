@@ -1,0 +1,7 @@
+1. install postgres
+2. create super user
+3.create database BookStore
+4.install postgres driver (https://stackoverflow.com/questions/25329302/laravel-error-pdoexception-could-not-find-driver-in-postgresql)
+4.start migration
+5.start seeds
+
