@@ -1,3 +1,11 @@
+for project
+1.git clone url
+2.install laravel if not exists
+3.install composer (composer install)
+4.npm install
+5.php artisan serve
+
+for db
 1. install postgres
 2. create super user
 3.create database BookStore
