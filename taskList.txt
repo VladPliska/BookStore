@@ -1,0 +1,30 @@
+Home page
+	1.get all news
+	2.brances
+	3.main search
+Catalog
+	1.create pagintaion(20 book on 1 page)
+	2.fix filter 
+News
+	1.add function for show all news
+	2.create branches for news
+Action 
+	1.add pagination
+	2.add footer
+	
+Admin
+	1.get statistic(main,users,coments,books)
+	2.fix bug add book
+	3.add function for create news
+Payment
+	1.config
+
+Buscket 
+	1.add buscket icon in header
+	2.config buscket
+All
+	1.Header - create function for search
+	2.click for user icon (go to profile user or admin)
+	3.check registration(send mail,login,verification mail)
+
+

@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('phone')->nullable();
             $table->string('token',100)->nullable();
+            $table->boolean('club')->default('false');
 
             $table->rememberToken();
             $table->timestamps();

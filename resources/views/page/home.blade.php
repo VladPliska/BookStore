@@ -2,9 +2,15 @@
 <div class="container">
 @include('./layout/header')
 <div class="content-container">
-    @include('.layout/content',['type'=>"Popular",'data' => $popularBook])
-    @include('.layout/content',['type'=>"Action",'data' => $actionBook])
-    @include('.layout/news')
+    @if(!empty($popular))
+        @include('.layout/content',['type'=>"Popular",'data' => $popularBook])
+    @endif
+    @if(!empty($actionBook))
+        @include('.layout/content',['type'=>"Action",'data' => $actionBook])
+    @endif
+    @if(!empty($news))
+        @include('.layout/news',['news' => $news])
+    @endif
 </div>
 
 @include('.includes/footer')

@@ -1,10 +1,11 @@
 <?php
 
-namespace App;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    //
+    protected $table    = "genres";
+    protected $fillable = ["text"];
 }
