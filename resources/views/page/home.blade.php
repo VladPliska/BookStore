@@ -2,7 +2,7 @@
 <div class="container">
 @include('./layout/header')
 <div class="content-container">
-    @if(!empty($popular))
+    @if(!empty($popularBook))
         @include('.layout/content',['type'=>"Popular",'data' => $popularBook])
     @endif
     @if(!empty($actionBook))

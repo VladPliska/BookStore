@@ -6,51 +6,51 @@
        <div class="admin-nav">
         <a href="javascript:;" class="admin-stats btn-nav showWork active " data-open="Statistic">Статистика</a>
         <a href="javascript:;" class="admin-addBook btn-nav showWork" data-open="Add-Book">Додати книжку</a>
-        <a href="javascript:;" class="admin-allBook btn-nav showWork" data-open="All-Book">Книжки</a>
-        <a href="javascript:;" class="admin-users btn-nav showWork" data-open="All-User">Користувачі</a>
-        <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment">Коментарі</a>
+        <a href="javascript:;" class="admin-allBook btn-nav showWork" data-open="All-Book" data-type="books">Книжки</a>
+        <a href="javascript:;" class="admin-users btn-nav showWork" data-open="All-User" data-type="users">Користувачі</a>
+        <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment" data-type="comments">Коментарі</a>
        </div>
        <div class="admin-workspace">
            <div class="tab-stats tab" data-target="Statistic">
                <div class="info-1">
                     <div class="info-block">
                         <p>Всіх користувачів</p>
-                        <h4>1000</h4>
+                        <h4>{{$users}}</h4>
                     </div>
                     <div class="info-block">
                         <p>Всіх книг</p>
-                        <h4>1000</h4>
+                        <h4>{{$books}}</h4>
                     </div>
                     <div class="info-block">
                         <p>В клубі</p>
-                        <h4>1000</h4>
+                        <h4>{{$club}}</h4>
                     </div>
                </div>
                <div class="info-2">
                    <div class="info-center info-block">
                     <p>Прибуток</p>
-                    <h4>$10000</h4>
+                    <h4>{{$profit}} грн.</h4>
                    </div>
                </div>
                <div class="info-3">
                 <div class="info-block">
                     <p>Всього покупок</p>
-                    <h4>1000</h4>
+                    <h4>{{$orders}}</h4>
                 </div>
                 <div class="info-block">
                     <p>Прибуток за місяць</p>
-                    <h4>1000</h4>
+                    <h4>{{$monthProfit}} грн.</h4>
                 </div>
                 <div class="info-block">
                     <p>Всіх коментарів</p>
-                    <h4>1000</h4>
+                    <h4>{{$comments}}</h4>
                 </div>
                </div>
            </div>
            <div class="add-book hide tab" data-target="Add-Book">
                <form action="/addBook" method="POST"  enctype="multipart/form-data">
                 @csrf
-               <div class="book-save">   
+               <div class="book-save">
                     <div class="add-info-book">
                         <div class="info-block">
                             <label for="new-name-book">Назва: </label>
@@ -76,7 +76,7 @@
                             <label for="new-book">Опис: </label>
                             <textarea id = 'new-name-book' name="description" type="text" rows="5"  placeholder="Опис до книги" class="new-description-book"></textarea>
                         </div>
-                        
+
                     </div>
                     <div class="imgBlock">
                         <input type="file" hidden id ="add-book-img" name="image"  accept="image/x-png,image/gif,image/jpeg">
@@ -88,26 +88,6 @@
             </form>
            </div>
            <div class="admin-all-book hide tab" data-target="All-Book">
-               <div class="book-info">
-                   <div class="admin-book-img">
-                        <img src="{{asset('img/img.jpeg')}}" class ="small-book-img"alt="">
-                   </div>
-                   <div class="book-name">Назва</div>
-                   <div class="book-author">Автор</div>
-                   <div class="book-price">$1000</div>
-                    <div class="book-btn-edit">Змінити</div>
-                    <div class="book-btn-remove">Видалити</div>
-               </div>
-               <div class="book-info">
-                    <div class="admin-book-img">
-                        <img src="{{asset('img/img.jpeg')}}" class ="small-book-img"alt="">
-                    </div>
-                    <div class="book-name">Назва</div>
-                    <div class="book-author">Автор</div>
-                    <div class="book-price">$1000</div>
-                    <div class="book-btn-edit">Змінити</div>
-                    <div class="book-btn-remove">Видалити</div>
-                </div>
                 <div class="book-info">
                     <div class="admin-book-img">
                         <img src="{{asset('img/img.jpeg')}}" class ="small-book-img"alt="">
@@ -125,17 +105,9 @@
                     <div class="admin-user-name">Ім'я</div>
                     <div class="admin user-email">Email</div>
                     <div class="admin-user-inclub">В клубі</div>
-                    <div class="admin-user-block-title last">Блокування</div>        
+                    <div class="admin-user-block-title last">Блокування</div>
                 </div>
-               <div class="user-list">
-                   <div class="admin-user-avatar">
-                        <img src="{{asset('img/avatar.png')}}" class="small-avatar-img" alt="">
-                   </div>
-                   <div class="admin-user-name">Ім'я</div>
-                   <div class="admin user-email">Email</div>
-                   <div class="admin-user-inclub">Так</div>
-                   <div class="admin-user-block">Заблокувати</div>
-               </div>
+
            </div>
            <div class="admin-all-coments hide tab" data-target ="All-Comment">
                <div class="all-coments-title">
@@ -163,4 +135,4 @@
 
 </div>
 
-@include('.includes/footer') 
+@include('.includes/footer')

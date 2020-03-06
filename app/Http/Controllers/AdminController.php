@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Coments as Comments;
 use App\models\User;
-use App\Order;
+use App\models\Order;
 use Illuminate\Http\Request;
 use App\models\Product as Product;
 
@@ -56,12 +57,44 @@ class AdminController extends Controller
         return view('page/home');
     }
 
-    public function index(){
-     $users =  User::count();
-     $books = Product::count();
-     $club= User::where('club',false)->count();
+     function index(){
+//     $users =  User::count();
+//     $books = Product::count();
+//     $club= User::where('club',true)->count();
+      $club = 100;
      $profit = 1000;
-//     $orders = Order::where
+//     $orders = Order::count();
+     $monthProfit = 10000000;
+//     $comments = Comments::count();
+    $users = 100;
+    $books = 100;
+    $orders = 100;
+    $comments = 200;
+     return view('page.index-admin',compact('users','books','club','profit',
+                                            'orders','monthProfit','comments'));
+
     }
 
+    function getInfo(Request $req){
+        $type = $req->get('type');
+        switch($type){
+            case 'books':
+                $data = Product::take(20)->get();
+                $view = view('page.admin.book-list',['books'=>$data])->render();
+                return response()->json([
+                    'setData'=>'admin-all-book',
+                    'view' => $view
+                ]);
+                break;
+            case 'users':
+                $data = Users::take(20)->get();
+                $view = view('page.admin.users-list',compact('data'))->render();
+                return response()->json([
+                    'setData' => 'admin-all-users',
+                    'view' => $view
+                ]);
+                break;
+        }
+
+    }
 }

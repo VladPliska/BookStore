@@ -135,6 +135,7 @@ footer * {
 
 .book-img {
   position: relative;
+  max-width: 140px;
   height: 70%;
 }
 
@@ -233,6 +234,7 @@ footer * {
 
 .main-info .img-book img {
   height: 90%;
+  max-width: 200px;
 }
 
 .main-info .first-book-info {

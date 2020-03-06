@@ -121,6 +121,7 @@ footer {
 }
 .book-img {
     position: relative;
+    max-width: 140px;
     height: 70%;
 }
 
@@ -221,6 +222,7 @@ footer {
         margin: 0 auto;
         img {
             height: 90%;
+            max-width: 200px;
         }
     }
 

@@ -19,12 +19,22 @@ for(let i=0;adminNav.length>i;i++){
 
 function showAdminWorkSpace(e){
 let showArea = e.target.getAttribute('data-open');
+let type = e.target.getAttribute('data-type');
 // e.target.classList.add('active')
 for(let i = 0;adminNav.length > i;i++){
  adminNav[i].classList.remove('active');
  if(adminNav[i].getAttribute('data-open') == showArea){
    adminNav[i].classList.add('active');
  }
+
+ $.ajax({
+     type:"post",
+     method:"getAdminInfo",
+     data:type,
+     success:function(res){
+
+     }
+ });
 
 }
 

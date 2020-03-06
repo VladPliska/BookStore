@@ -15,6 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         $popularBook = Product::where('watched', '>',10)->get()->take(10);
+
         $actionBook = Product::all()->random(10);
         $news = News::take(20)->get();
         return view('page/home',compact('popularBook','actionBook','news'));

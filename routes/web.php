@@ -21,6 +21,10 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/searchCatalog','HomeController@searchCatalog');
 
     Route::get('/action','HomeController@actionPage');
+
+    Route::get('/admin','AdminController@index');
+
+    Route::post('/getAdminInfo','AdminController@getInfo');
 });
 
 
@@ -39,9 +43,9 @@ Route::get('/buy',function(){
 Route::get('/profile',function(){
     return view('page/profile-page');
 });
-Route::get('/admin',function(){
-    return view('page/index-admin');
-});
+//Route::get('/admin',function(){
+//    return view('page/index-admin');
+//});
 
 Route::get('/order',function(){
     return view('page/order');
