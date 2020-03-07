@@ -23140,43 +23140,59 @@ if (showAllFilter != null) {
       mainFilter.classList.toggle("active");
     }, 0);
   });
-}
+} // let adminNav = document.getElementsByClassName('showWork');
+//
+// for (let i = 0; adminNav.length > i; i++) {
+//     adminNav[i].addEventListener('click', showAdminWorkSpace);
+//     console.log(adminNav[i]);
+// }
 
-var adminNav = document.getElementsByClassName('showWork');
 
-for (var i = 0; adminNav.length > i; i++) {
-  adminNav[i].addEventListener('click', showAdminWorkSpace);
-}
+$(document).on('click', '.showWork', function (e) {
+  console.log($(this));
+  var showArea = $(this).attr('data-open');
+  var type = $(this).attr('data-type');
+  $('.showWork').removeClass('active');
+  $(this).addClass('active');
+  $('.tab').addClass('hide');
+  $('[data-target=' + showArea + ']').removeClass('hide');
+  $.ajax({
+    type: "post",
+    url: "/getAdminInfo",
+    data: type,
+    success: function success(res) {
+      console.log(res);
 
-function showAdminWorkSpace(e) {
-  var showArea = e.target.getAttribute('data-open');
-  var type = e.target.getAttribute('data-type'); // e.target.classList.add('active')
-
-  for (var _i = 0; adminNav.length > _i; _i++) {
-    adminNav[_i].classList.remove('active');
-
-    if (adminNav[_i].getAttribute('data-open') == showArea) {
-      adminNav[_i].classList.add('active');
+      if (res.setData != 'none') {
+        console.log($('.' + res.setData));
+        $('.' + res.setData).append(res.view);
+      }
+    },
+    error: function error(err) {
+      console.log(err);
     }
-
-    $.ajax({
-      type: "post",
-      method: "getAdminInfo",
-      data: type,
-      success: function success(res) {}
-    });
-  }
-
-  var adminWorkSpace = document.querySelectorAll('.admin-workspace .tab');
-
-  for (var a = 0; adminWorkSpace.length > a; a++) {
-    adminWorkSpace[a].classList.add('hide');
-
-    if (adminWorkSpace[a].getAttribute('data-target') == showArea) {
-      adminWorkSpace[a].classList.remove('hide');
-    }
-  }
-}
+  });
+}); // function showAdminWorkSpace(e) {
+//     let showArea = e.target.getAttribute('data-open');
+//     let type = e.target.getAttribute('data-type');
+// // e.target.classList.add('active')
+//     for (let i = 0; adminNav.length > i; i++) {
+//         adminNav[i].classList.remove('active');
+//         if (adminNav[i].getAttribute('data-open') == showArea) {
+//             adminNav[i].classList.add('active');
+//         }
+//         console.log(type);
+//
+//     }
+//
+//     let adminWorkSpace = document.querySelectorAll('.admin-workspace .tab');
+//     for (let a = 0; adminWorkSpace.length > a; a++) {
+//         adminWorkSpace[a].classList.add('hide');
+//         if (adminWorkSpace[a].getAttribute('data-target') == showArea) {
+//             adminWorkSpace[a].classList.remove('hide');
+//         }
+//     }
+// }
 
 $('.searchCatalog').on('click', function () {
   var searchQuery = $('#filter-search').val();

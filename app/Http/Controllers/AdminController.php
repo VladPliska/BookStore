@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Coments;
 use App\models\Coments as Comments;
 use App\models\User;
 use App\models\Order;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use App\models\Product as Product;
 
@@ -75,8 +77,14 @@ class AdminController extends Controller
 
     }
 
-    function getInfo(Request $req){
+     public function getInfo(Request $req){
         $type = $req->get('type');
+        if(empty($type)){
+            return response()->json([
+                'setData' => 'none',
+            ]);
+        }
+        dd($type);
         switch($type){
             case 'books':
                 $data = Product::take(20)->get();
@@ -91,6 +99,14 @@ class AdminController extends Controller
                 $view = view('page.admin.users-list',compact('data'))->render();
                 return response()->json([
                     'setData' => 'admin-all-users',
+                    'view' => $view
+                ]);
+                break;
+            case 'comments':
+                $data = Coments::take(20)->get();
+                $view = view('page.admin.comments-list',compact('data'))->render();
+                return response()->json([
+                    'setData' =>'all-comments',
                     'view' => $view
                 ]);
                 break;
