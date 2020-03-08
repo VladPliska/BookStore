@@ -17,7 +17,7 @@ if (showAllFilter != null) {
 //     adminNav[i].addEventListener('click', showAdminWorkSpace);
 //     console.log(adminNav[i]);
 // }
-$(document).on('click','.showWork',function(e){
+$(document).on('click', '.showWork', function (e) {
     console.log($(this));
     let showArea = $(this).attr('data-open');
     let type = $(this).attr('data-type');
@@ -26,20 +26,19 @@ $(document).on('click','.showWork',function(e){
     $(this).addClass('active');
 
     $('.tab').addClass('hide');
-    $('[data-target='+showArea+']').removeClass('hide');
-
+    $('[data-target=' + showArea + ']').removeClass('hide');
     $.ajax({
         type: "post",
         url: "/getAdminInfo",
-        data: type,
+        data: {type},
         success: function (res) {
             console.log(res);
             if (res.setData != 'none') {
                 console.log($('.' + res.setData));
-                $('.' + res.setData).append(res.view);
+                $('.' + res.setData).html(res.view);
             }
         },
-        error:function(err){
+        error: function (err) {
             console.log(err);
         }
     });
@@ -111,3 +110,32 @@ $('.searchCatalog').on('click', function () {
     })
 
 });
+
+///add comment
+$(document).on('click', '.add-comment', function (e) {
+    let text = $("#bookComment").val();
+    let id = $(this).attr('data-id');
+    let userId = 1;
+
+    $.ajax({
+        type: "post",
+        url: '/addComment',
+        data: {
+            'text': text,
+            'book': id,
+            'user': userId,
+            'live':true,
+        },
+        success: function (res) {
+            if (res.commented) {
+                $('.all-comment-block').find('.emptyComment').remove();
+                $('.all-comment-block').append(res.body);
+            } else {
+                alert('err');
+
+            }
+        }
+    });
+
+});
+

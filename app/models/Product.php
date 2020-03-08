@@ -20,6 +20,12 @@ class Product extends Model
         return $this->belongsTo('App\models\Ganre');
     }
 
+    public function  getComment(){
+        return $this->hasOne('App\models\Coments');
+    }
+
+
+
 
 
 

@@ -25,6 +25,8 @@ Route::group(['middleware' => ['user']], function () {
     Route::get('/admin','AdminController@index');
 
     Route::post('/getAdminInfo','AdminController@getInfo');
+
+    Route::post('/addComment','HomeController@addComment');
 });
 
 

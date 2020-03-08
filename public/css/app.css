@@ -235,6 +235,7 @@ footer * {
 .main-info .img-book img {
   height: 90%;
   max-width: 200px;
+  max-height: 250px;
 }
 
 .main-info .first-book-info {
@@ -966,18 +967,32 @@ header .btnLogin .avatar-header {
   cursor: pointer;
 }
 
+.comment-text-admin {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .coment-block {
   margin-top: 20px;
   padding: 5px;
   height: auto;
   width: 100%;
-  display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
   background-color: #f7f7f7;
   border-radius: 10px;
 }
 
+.coment-block .all-comment-block {
+  max-height: 550px;
+  overflow-y: scroll;
+}
+
 .coment-block .title-block {
+  max-height: 70px;
   font-size: 1.8em;
   text-align: left;
   padding-bottom: 15px;
@@ -1012,7 +1027,6 @@ header .btnLogin .avatar-header {
 .user-comment-block {
   display: grid;
   grid-template-columns: 0.1fr 1fr;
-  padding: 15px;
 }
 
 .user-comment-block .icon-avatar {
@@ -1172,6 +1186,12 @@ header .btnLogin .avatar-header {
 
 .msg-suc {
   color: #5bcc06;
+}
+
+.msg-empty {
+  padding: 20px;
+  display: block;
+  text-align: center;
 }
 
 .content-reg-block {

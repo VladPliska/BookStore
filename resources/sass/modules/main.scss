@@ -223,6 +223,7 @@ footer {
         img {
             height: 90%;
             max-width: 200px;
+            max-height: 250px;
         }
     }
 
@@ -840,6 +841,7 @@ header{
         padding:10px;
         display:grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
         div{
             display: flex;
             align-items: center;
@@ -897,17 +899,28 @@ header{
         }
     }
 }
-
+.comment-text-admin{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    max-width: 150px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
 .coment-block{
     margin-top: 20px;
     padding: 5px;
     height: auto;
     width: 100%;
-    display:grid;
-    grid-template-rows: 1fr 4fr 1fr;
     background-color:#f7f7f7;
     border-radius:10px;
+    .all-comment-block{
+        max-height: 550px;
+        overflow-y: scroll;
+    }
     .title-block{
+        max-height: 70px;
         font-size: 1.8em;
         text-align: left;
         padding-bottom: 15px;
@@ -940,7 +953,6 @@ header{
 .user-comment-block{
     display:grid;
     grid-template-columns: 0.1fr 1fr;
-    padding:15px;
     .icon-avatar{
         padding: 20px;
     }

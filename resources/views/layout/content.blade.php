@@ -11,7 +11,6 @@
                                 <span class="book-title">{{$v->getOriginal('title')}}</span>
                                 <span class="book-price">{{$v->getOriginal('price')}} грн.</span>
                                 <span class="book-price">{{$v->author->name}}</span>
-
                             </a>
                         @endforeach
                 @endif

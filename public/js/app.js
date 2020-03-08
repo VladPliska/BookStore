@@ -23159,13 +23159,15 @@ $(document).on('click', '.showWork', function (e) {
   $.ajax({
     type: "post",
     url: "/getAdminInfo",
-    data: type,
+    data: {
+      type: type
+    },
     success: function success(res) {
       console.log(res);
 
       if (res.setData != 'none') {
         console.log($('.' + res.setData));
-        $('.' + res.setData).append(res.view);
+        $('.' + res.setData).html(res.view);
       }
     },
     error: function error(err) {
@@ -23223,6 +23225,30 @@ $('.searchCatalog').on('click', function () {
     },
     success: function success(res) {
       $('.result-search').html(res.view);
+    }
+  });
+}); ///add comment
+
+$(document).on('click', '.add-comment', function (e) {
+  var text = $("#bookComment").val();
+  var id = $(this).attr('data-id');
+  var userId = 1;
+  $.ajax({
+    type: "post",
+    url: '/addComment',
+    data: {
+      'text': text,
+      'book': id,
+      'user': userId,
+      'live': true
+    },
+    success: function success(res) {
+      if (res.commented) {
+        $('.all-comment-block').find('.emptyComment').remove();
+        $('.all-comment-block').append(res.body);
+      } else {
+        alert('err');
+      }
     }
   });
 });

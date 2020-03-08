@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Coments as Comments;
 use App\models\Product as Product;
 use App\models\User;
 use App\models\News as News;
@@ -26,8 +27,8 @@ class HomeController extends Controller
         $author = $infoBook->author->getOriginal();
         $genre = $infoBook->genre->getOriginal();
         $popularBook = Product::where('watched', '>',10)->get()->take(10);
-
-        return view('page/book-page',compact('author','infoBook','genre','popularBook'));
+        $comments = Comments::where('book_id',$id)->take(10)->get();
+        return view('page/book-page',compact('author','infoBook','genre','popularBook','comments'));
     }
 
     public function catalog(Request $request){
@@ -103,6 +104,31 @@ class HomeController extends Controller
     public  function getNews(){
         $news = News::take(20)->get();
         return view('page.news',compact('news'));
+    }
+
+    public function addComment(Request $req){
+        $idBook = $req->get('book');
+        $idUser = $req->get('user');
+        $comment = $req->get('text');
+        $live = $req->get('live');
+        try {
+            Comments::insert([
+                'user_id' => $idUser,
+                'book_id' => $idBook,
+                'coment' => $comment
+            ]);
+            $userInfo = User::where('id',$idUser)->first();
+            $commentBody = view('layout/user-comment',['text'=>$comment,'user'=>$userInfo,'live'=>$live])->render();
+
+            return response()->json([
+                'commented'=>true,
+                'body'=>$commentBody
+            ]);
+        }catch (\Exception $e){
+            return response()->json([
+                'commented'=>false
+            ]);
+        }
     }
 
 }

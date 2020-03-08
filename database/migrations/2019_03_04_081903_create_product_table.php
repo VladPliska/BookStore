@@ -38,6 +38,6 @@ class CreateProductTable extends Migration
      */
     public function down()
     {
-        Schema::drop('prodcut');
+        Schema::drop('product');
     }
 }

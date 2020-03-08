@@ -1,14 +1,15 @@
-@if(empty($data))
-    <h2>Empty comments</h2>
+@if(!count($data))
+    <h3 class="msg-empty">Коментарів не знайдено</h3>
 @else
     @foreach($data as $k => $v)
-        <div class="comment-name-book">Топ 1</div>
-        <div class="comment-info-user">
-            <img src="{{asset('img/avatar.png')}}" alt="" class="forCommentsAdmin">
-            <span>Вася</span>
-        </div>
-        <div class="comment-text-admin">Супер книга!</div>
-        <div class="comment-response-btn">Відповісти</div>
-        <div class="comment-remove-btn">Видалити</div>
+            <div class="comment-name-book">{{$v->books->title}}</div>
+            <div class="comment-info-user">
+                <img src="{{asset('img/avatar.png')}}" alt="" class="forCommentsAdmin">
+                <span>{{$v->user->username}}</span>
+            </div>
+            <span class="comment-text-admin" title="{{$v->coment}}">{{$v->coment}}</span>
+            <div class="comment-response-btn">Відповісти</div>
+            <div class="comment-remove-btn">Видалити</div>
+
     @endforeach
 @endif

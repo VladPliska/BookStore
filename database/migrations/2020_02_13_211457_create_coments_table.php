@@ -16,11 +16,11 @@ class CreateComentsTable extends Migration
         Schema::create('coments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->integer('bookComented')->unsigned();
+            $table->integer('book_id')->unsigned();
             $table->text('coment');
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('bookComented')->references('id')->on('product');
+            $table->foreign('book_id')->references('id')->on('product');
 
 
             $table->timestamps();

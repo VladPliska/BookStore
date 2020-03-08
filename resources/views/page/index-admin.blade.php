@@ -88,16 +88,7 @@
             </form>
            </div>
            <div class="admin-all-book hide tab" data-target="All-Book">
-                <div class="book-info">
-                    <div class="admin-book-img">
-                        <img src="{{asset('img/img.jpeg')}}" class ="small-book-img"alt="">
-                    </div>
-                    <div class="book-name">Назва</div>
-                    <div class="book-author">Автор</div>
-                    <div class="book-price">$1000</div>
-                    <div class="book-btn-edit">Змінити</div>
-                    <div class="book-btn-remove">Видалити</div>
-                </div>
+
            </div>
            <div class="admin-all-users hide tab" data-target="All-User">
                <div class="user-list-title">
@@ -107,6 +98,9 @@
                     <div class="admin-user-inclub">В клубі</div>
                     <div class="admin-user-block-title last">Блокування</div>
                 </div>
+               <div class="user-append">
+
+               </div>
 
            </div>
            <div class="admin-all-coments hide tab" data-target ="All-Comment">
@@ -118,14 +112,7 @@
                    <div class="comment-remove-btn-title last">Видалити</div>
                </div>
                <div class="all-comments">
-                    <div class="comment-name-book">Топ 1</div>
-                    <div class="comment-info-user">
-                        <img src="{{asset('img/avatar.png')}}" alt="" class ="forCommentsAdmin">
-                        <span>Вася</span>
-                    </div>
-                    <div class="comment-text-admin">Супер книга!</div>
-                    <div class="comment-response-btn">Відповісти</div>
-                    <div class="comment-remove-btn">Видалити</div>
+
                </div>
            </div>
 
