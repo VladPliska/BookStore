@@ -1,4 +1,6 @@
-@import "./modules/main"; 
+@import "~sweetalert2/dist/sweetalert2.min.css";
+
+@import "./modules/main";
 @import "./modules/for-360px";
 @import "./modules/fast-class";
 @import "./modules/auth.scss";

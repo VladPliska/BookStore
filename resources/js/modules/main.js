@@ -1,3 +1,4 @@
+
 let showAllFilter = document.getElementById('showAllFilter');
 let mainFilter = document.getElementById('mainFilter');
 if (showAllFilter != null) {
@@ -9,6 +10,7 @@ if (showAllFilter != null) {
 
     });
 }
+
 
 
 // let adminNav = document.getElementsByClassName('showWork');
@@ -46,27 +48,6 @@ $(document).on('click', '.showWork', function (e) {
 
 });
 
-// function showAdminWorkSpace(e) {
-//     let showArea = e.target.getAttribute('data-open');
-//     let type = e.target.getAttribute('data-type');
-// // e.target.classList.add('active')
-//     for (let i = 0; adminNav.length > i; i++) {
-//         adminNav[i].classList.remove('active');
-//         if (adminNav[i].getAttribute('data-open') == showArea) {
-//             adminNav[i].classList.add('active');
-//         }
-//         console.log(type);
-//
-//     }
-//
-//     let adminWorkSpace = document.querySelectorAll('.admin-workspace .tab');
-//     for (let a = 0; adminWorkSpace.length > a; a++) {
-//         adminWorkSpace[a].classList.add('hide');
-//         if (adminWorkSpace[a].getAttribute('data-target') == showArea) {
-//             adminWorkSpace[a].classList.remove('hide');
-//         }
-//     }
-// }
 
 $('.searchCatalog').on('click', function () {
     let searchQuery = $('#filter-search').val();
@@ -113,29 +94,63 @@ $('.searchCatalog').on('click', function () {
 
 ///add comment
 $(document).on('click', '.add-comment', function (e) {
+
     let text = $("#bookComment").val();
     let id = $(this).attr('data-id');
     let userId = 1;
 
-    $.ajax({
-        type: "post",
-        url: '/addComment',
-        data: {
-            'text': text,
-            'book': id,
-            'user': userId,
-            'live':true,
-        },
-        success: function (res) {
-            if (res.commented) {
-                $('.all-comment-block').find('.emptyComment').remove();
-                $('.all-comment-block').append(res.body);
-            } else {
-                alert('err');
+    if(text != '') {
+        $.ajax({
+            type: "post",
+            url: '/addComment',
+            data: {
+                'text': text,
+                'book': id,
+                'user': userId,
+                'live': true,
+            },
+            success: function (res) {
+                if (res.commented) {
+                    $('.all-comment-block').find('.emptyComment').remove();
+                    $('.all-comment-block').append(res.body);
+                } else {
+                    popup.fire('Виникла помилка,спробуйте пізніше')
+                }
+            }
+        });
+    }else{
+        popup.fire('Коментар не може бути порожнім!!')
+    }
+});
 
+///add new news
+$(document).on('click','.addNews',function(){
+    popup.fire({
+        title: "Введіть текст новини:",
+        html: "<textarea class='news-textarea' id='news'></textarea>",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        showLoaderOnConfirm: true,
+        animation: "slide-from-top",
+        inputPlaceholder: "Write something"
+    }).then((res)=>{
+        if(res.value) {
+            let text = $('#news').val();
+            if(text != ""){
+                $.ajax({
+                    type:'post',
+                    url:'/addNews',
+                    data:{
+                        text:"text"
+                    },
+                    success:function(result){
+                        if(result.add){
+                            popup.fire('success','Новину успішно додано')
+                        }
+                    }
+                })
             }
         }
-    });
-
+    })
 });
 
