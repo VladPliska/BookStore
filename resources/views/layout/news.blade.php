@@ -3,7 +3,7 @@
     @foreach($news as $val)
         <div class="news-item">
             <div class="news-time">31.01.2020</div>
-            <div class="news-text">{{$val->getOriginal('text')}}</div>
+            <div class="news-text">{{$val->text}}</div>
         </div>
     @endforeach
 </div>

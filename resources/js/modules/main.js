@@ -138,14 +138,18 @@ $(document).on('click','.addNews',function(){
             let text = $('#news').val();
             if(text != ""){
                 $.ajax({
-                    type:'post',
+                    type:'put',
                     url:'/addNews',
                     data:{
-                        text:"text"
+                        text:text
                     },
                     success:function(result){
-                        if(result.add){
-                            popup.fire('success','Новину успішно додано')
+                        console.log(result);
+                        if(result.news){
+                            popup.fire('Успіх','Новину успішно додано','success')
+                        }else{
+                            popup.fire('Помилка','Помилка під час додавання новини,спробуйте пізніше','error')
+
                         }
                     }
                 })

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\models\Coments as Comments;
+use App\models\News;
 use App\models\User;
 use App\models\Order;
 use Illuminate\Http\Request;
@@ -110,5 +111,21 @@ class AdminController extends Controller
                 break;
         }
 
+    }
+
+    public function addNews(Request $req){
+        $text = $req->get('text');
+         try{
+             News::create([
+                 'text'=>$text
+             ]);
+             return response()->json([
+                 'news'=>true
+             ]);
+         }catch (\Exception $e){
+             return response()->json([
+                 'news'=>false
+             ]);
+         }
     }
 }
