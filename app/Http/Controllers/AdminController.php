@@ -11,9 +11,16 @@ use App\models\Product as Product;
 
 class AdminController extends Controller
 {
+    public function signup(Request $request){
+        $email = $request->get('email');
+        $username = $request->get('username');
+        $password = $request->get('password');
+
+        dd($request->input);
+
+    }
+
     function addBook(Request $request){
-
-
         $name = $request->get('nameBook');
         $price = $request->get('price');
         $ganre = $request->get('create-select-ganre');
@@ -128,4 +135,6 @@ class AdminController extends Controller
              ]);
          }
     }
+
+
 }

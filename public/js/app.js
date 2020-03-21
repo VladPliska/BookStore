@@ -23189,35 +23189,43 @@ $(document).on('click', '.showWork', function (e) {
 });
 $('.searchCatalog').on('click', function () {
   var searchQuery = $('#filter-search').val();
-  var mainFilter = $('#mainFilter');
-  var filterOn = false;
-  var filterInfo = null;
-  var sortBy;
 
-  if (mainFilter.hasClass('active')) {
-    filterOn = true;
-    if ($('#sort-up')[0].checked) sortBy = 'asc';else if ($('#sort-down')[0].checked) sortBy = 'desc';else sortBy = null;
-    filterInfo = {
-      'genre': $('#ganre-select').val(),
-      'author': $('.author-name').val(),
-      'min-price': $('.minPrice').text(),
-      'max-price': $('.maxPrice').text(),
-      'sort': sortBy
-    };
-  }
+  if (searchQuery == '') {
+    popup.fire({
+      title: 'Введіть назву книги для пошуку'
+    });
+  } else {
+    var _mainFilter = $('#mainFilter');
 
-  $.ajax({
-    method: "POST",
-    url: "searchCatalog",
-    data: {
-      'query': searchQuery,
-      'filter': filterOn,
-      'filterInfo': filterInfo
-    },
-    success: function success(res) {
-      $('.result-search').html(res.view);
+    var filterOn = false;
+    var filterInfo = null;
+    var sortBy;
+
+    if (_mainFilter.hasClass('active')) {
+      filterOn = true;
+      if ($('#sort-up')[0].checked) sortBy = 'asc';else if ($('#sort-down')[0].checked) sortBy = 'desc';else sortBy = null;
+      filterInfo = {
+        'genre': $('#ganre-select').val(),
+        'author': $('.author-name').val(),
+        'min-price': $('.minPrice').text(),
+        'max-price': $('.maxPrice').text(),
+        'sort': sortBy
+      };
     }
-  });
+
+    $.ajax({
+      method: "POST",
+      url: "searchCatalog",
+      data: {
+        'query': searchQuery,
+        'filter': filterOn,
+        'filterInfo': filterInfo
+      },
+      success: function success(res) {
+        $('.result-search').html(res.view);
+      }
+    });
+  }
 }); ///add comment
 
 $(document).on('click', '.add-comment', function (e) {
@@ -23270,8 +23278,6 @@ $(document).on('click', '.addNews', function () {
             text: text
           },
           success: function success(result) {
-            console.log(result);
-
             if (result.news) {
               popup.fire('Успіх', 'Новину успішно додано', 'success');
             } else {
@@ -23282,6 +23288,9 @@ $(document).on('click', '.addNews', function () {
       }
     }
   });
+});
+$(document).on('click', '.avatar-header', function () {
+  $('.login-area').toggleClass('active');
 });
 
 /***/ }),

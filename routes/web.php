@@ -1,13 +1,10 @@
 <?php
 
-
 ////Auth /////
-Route::post('/signin','AuthController@signin');
+Route::post('/signin','AuthController@signup');
 Route::get('/confirmation/{token}','AuthController@confirm');
 Route::post('/login','AuthController@login');
 ///////////////
-///
-///
 
 Route::group(['middleware' => ['user']], function () {
     Route::get('/', 'HomeController@index');
@@ -47,9 +44,6 @@ Route::get('/buy',function(){
 Route::get('/profile',function(){
     return view('page/profile-page');
 });
-//Route::get('/admin',function(){
-//    return view('page/index-admin');
-//});
 
 Route::get('/order',function(){
     return view('page/order');

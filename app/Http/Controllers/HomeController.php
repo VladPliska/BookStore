@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-
     public function index()
     {
         $popularBook = Product::where('watched', '>',10)->get()->take(10);
@@ -50,39 +49,27 @@ class HomeController extends Controller
             $genre = $filter['genre'];
             $author = $filter['author'];
             $sort = $filter['sort'];
-//            dd($sort,$author,$maxPrice,$minPrice,$genre);
-//            $result = DB::select('select * from "product"
-//                where (price >= ? and price <= ?) and (author_id)',
-//                array($minPrice,$maxPrice,$author)
-//                );
-             $query = 'select * from "product"';
-            if(!empty($genre) || !empty($author)){
+
+
+
+            $query = 'select * from "product" where price >'.$minPrice.' and price <'.$maxPrice;
+
+            if(!empty($genre) || !empty($author)) {
                 $queryArray = [];
-                $query.=' where ';
-                if(!empty($genre)) {
-                    array_push($queryArray,'"genre_id"='.$genre);
+                $query .= ' and ';
+                if (!empty($genre)) {
+                    array_push($queryArray, '"genre_id"=' . $genre);
                 }
-                if(!empty($author)) {
-                    array_push($queryArray,'"author_id"='.$author);
+                if (!empty($author)) {
+                    array_push($queryArray, '"author_id"=' . $author);
                 }
                 $query .= join(' and ', $queryArray);
             }
-            dd($query);
+
+            $query .= 'order by price '.$sort;
+
             $result = DB::select($query);
-            dd($result);
-//            (price >= ? and price <= ?)',array($minPrice,$maxPrice));
-//            $result = $result->where('author_id',20);
-            $result=Product::where('price','>=',$minPrice)->where('price','<=',$maxPrice)
-                ->orderBy('price',$sort)->get();
-            if($genre){
-              $result=Product::where('price','>=',$minPrice)->where('price','<=',$maxPrice)->
-                  where('ganre_id',$genre)->orderBy('price',$sort)->get();
-            }
-            if($author){
-                $result=Product::where('price','>=',$minPrice)->where('price','<=',$maxPrice)->
-                where('ganre_id',$genre)->orderBy('price',$sort)->get();
-            }
-            dd($result);
+
         }else{
             $result = Product::where('title','ilike','%'.$data['query'].'%')->take(20)->get();
         }

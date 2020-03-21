@@ -732,8 +732,8 @@ header .btnLogin {
 }
 
 header .btnLogin .avatar-header {
-  width: 70px;
-  height: 60px;
+  width: 100px;
+  height: 80px;
   border-radius: 30%;
 }
 
@@ -1113,6 +1113,45 @@ header .btnLogin .avatar-header {
   font-size: 18px;
   width: 400px;
   height: 150px;
+}
+
+.title-page {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.login-area {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background-color: #FECCCC;
+  position: absolute;
+  z-index: 200;
+  right: 5px;
+  padding: 0 60px;
+  border-radius: 14px;
+}
+
+.login-area div {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.login-area div a {
+  color: #000;
+}
+
+.login-area div a:hover {
+  color: #FF8E38;
+}
+
+.login-area.active {
+  height: 110px;
+  padding: 10px 60px;
 }
 
 .ce {

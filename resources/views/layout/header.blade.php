@@ -14,7 +14,23 @@
     </div>
 </nav>
 <div class="btnLogin">
-    <img src="{{asset('img/avatar.png')}}" class="avatar-header ce">
+    <img src="{{asset('img/avatar.png')}}" class="avatar-header ">
+    <div class ='login-area'>
+        <div class="loginPage">
+            <a href="#">Login</a>
+        </div>
+        <div class="profileBtn">
+            <a href="#">Profile</a>
+        </div>
+
+        <div class="logoutBtn">
+            <a href="#">Logout</a>
+        </div>
+        <div class="adminPage">
+            <a href="#">Admin</a>
+        </div>
+        </div>
 </div>
+
 </header>
 
