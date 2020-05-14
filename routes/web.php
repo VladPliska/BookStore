@@ -1,12 +1,22 @@
 <?php
 
 ////Auth /////
-Route::post('/signin','AuthController@signup');
+Route::post('/signup','AuthController@signup')->name('register');
 Route::get('/confirmation/{token}','AuthController@confirm');
 Route::post('/login','AuthController@login');
+Route::get('/logout','AuthController@logout');
 ///////////////
 
 Route::group(['middleware' => ['user']], function () {
+
+    Route::get('/login',function(){
+        return view('page/login');
+    });
+
+    Route::get('/signup',function(){
+        return view('page/register');
+    });
+
     Route::get('/', 'HomeController@index');
 
     Route::post('/addBook','AdminController@addBook');
@@ -26,8 +36,17 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/addComment','HomeController@addComment');
 
     Route::put('/addNews','AdminController@addNews');
-});
 
+    Route::get('/profile','HomeController@profile');
+
+    Route::get('/news','HomeController@showNews');
+
+    Route::post('/changeDopInfo','HomeController@changeDopInfo');
+
+    Route::post('/changePass','HomeController@changePassword');
+
+    Route::post('/changeUserRealInfo','HomeController@changeUserRealInfo');
+});
 
 
 
@@ -41,19 +60,12 @@ Route::get('/buy',function(){
 });
 
 
-Route::get('/profile',function(){
-    return view('page/profile-page');
-});
 
 Route::get('/order',function(){
     return view('page/order');
 });
-Route::get('/signup',function(){
-    return view('page/register');
-});
-Route::get('/login',function(){
-    return view('page/login');
-});
+
+
 Route::get('/user',function(){
     return view('page/user');
 });

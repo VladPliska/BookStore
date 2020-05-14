@@ -57,13 +57,14 @@
 }
 
 .msg{
-    text-align: center;
     font-size: 1.4em;
     font-weight: 600;
     &-err{
+        text-align: center;
         color: #ff3b1b;
     }
     &-suc{
+        text-align: center;
         color: #5bcc06;
     }
     &-empty{

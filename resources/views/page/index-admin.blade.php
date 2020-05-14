@@ -68,8 +68,8 @@
                             <label for="create-select-ganre">Жанр: </label>
                                 <select name="create-select-ganre" id="create-select-ganre">
                                     <option value="default">Виберіть жанр</option>
-                                    <option value="Фантастика">Фантастика</option>
-                                    <option value="Психологія">Психологія</option>
+                                    <option value="1">Фантастика</option>
+                                    <option value="2">Психологія</option>
                                 </select>
                         </div>
                         <div class="info-block">

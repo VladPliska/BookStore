@@ -3,7 +3,7 @@
 @include('.layout/header')
     <div class="content-reg-block">
           <div class="reg-block">
-              <form action="/signin" method="POST">
+              <form action="/signup" method="POST">
                   @csrf
                   <p class="title-reg">Реєстрація</p>
                     <div class="get-reg-info">
@@ -24,8 +24,9 @@
                             <input type="password" placeholder="**********" name="repeatPass" id="repPass" required>
                         </div>
                     </div>
-                  @if(!empty($err))
-                      <p class ="msg msg-err">{{$err}}</p>
+
+              @if(!empty($errors->bug))
+                      <p class ="msg msg-err">{{$erros}}</p>
                   @endif
                     <button class ="btn-g ce" type = "submit">Зареєструватися</button><br>
               </form>

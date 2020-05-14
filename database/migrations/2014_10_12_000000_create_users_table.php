@@ -24,6 +24,9 @@ class CreateUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('token',100)->nullable();
             $table->boolean('club')->default('false');
+            $table->boolean('ban')->default('false');
+            $table->string('role')->default('user');
+            $table->string('img')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

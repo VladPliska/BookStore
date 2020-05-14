@@ -167,3 +167,12 @@ $(document).on('click','.addNews',function(){
 $(document).on('click','.avatar-header',function(){
 $('.login-area').toggleClass('active');
 });
+
+$(document).on('click','.btnFilter',function(){
+    let type = $(this).attr('data-type');
+});
+
+$(document).on('change','.addImg-profile',function (e) {
+    let a = document.getElementById('img-avatar').files[0];
+    $('.user-avatar').find('img').attr('src',URL.createObjectURL(a));
+})

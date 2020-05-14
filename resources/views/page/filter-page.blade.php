@@ -47,10 +47,10 @@
             </label>
         </div>
         <div class="button-block">
-            <div class="sort-btn-all btnNewBook">Новинки</div>
-            <div class="sort-btn-all btnAction">Акції</div>
-            <div class="sort-btn-all btnPopular">Популярні</div>
-            <div class="sort-btn-all btnRecomended">Рекомендовані</div>
+            <div class="sort-btn-all btnNewBook btnFilter" data-type="News">Новинки</div>
+            <div class="sort-btn-all btnAction btnFilter" data-type="Action">Акції</div>
+            <div class="sort-btn-all btnPopular btnFilter" data-type="Popular">Популярні</div>
+            <div class="sort-btn-all btnRecomended btnFilter" data-type="Recommended">Рекомендовані</div>
         </div>
     </div>
     </div>
