@@ -16,7 +16,8 @@ class Users extends Seeder
             "email" => 'admin@mail.com',
             "firstname" => 'admin',
             "lastname" => 'admin',
-            'password'=>'admin'
+            'role'=>'admin',
+            'password'=>crc32('admin')
         ]);
     }
 }

@@ -21,6 +21,8 @@ class checkAuth
         $cook = Cookie::get('auth');
         if($cook){
             $user = User::where('token',$cook)->first();
+
+//            dd($user);
             if($user != null){
                 View::share('user',$user);
                 $request->request->add(['user'=>$user]);

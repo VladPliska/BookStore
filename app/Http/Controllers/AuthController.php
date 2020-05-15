@@ -45,6 +45,7 @@ class AuthController extends Controller
 //        }
         $pass = crc32($password);
 
+//        dd($login,$pass);
         $user = User::where([
             'username'=>$login,
             'password'=>$pass,
@@ -53,8 +54,7 @@ class AuthController extends Controller
             'password'=>$pass,
         ])->first();
 
-
-        if($user != null){
+            if($user != null){
             $token = hash('md5',rand(2,200));
             $user->update(['token'=>$token]);
             Cookie::queue('auth',$token,60*30);

@@ -16,15 +16,7 @@
         <div class="btnLogin">
         <img src="{{$user->img ? 'storage/bookImg/'.$user->img:asset('img/avatar.png')}}"  class='avatar-header' alt="">
         <div class='login-area'>
-            @if($user != null)
-                <h2 class="header-title-area">Привіт,{{$user->username}}</h2>
-                <div class="profileBtn">
-                    <a href="/profile">Profile</a>
-                </div>
-                <div class="logoutBtn">
-                    <a href="/logout">Logout</a>
-                </div>
-            @elseif($user != null && $user->role == 'admin')
+            @if($user != null && $user->role == 'admin')
                 <h2 class="header-title-area">Привіт,{{$user->username}}</h2>
                 <div class="profileBtn">
                     <a href="/profile">Profile</a>
@@ -35,6 +27,15 @@
                 <div class="logoutBtn">
                     <a href="/logout">Logout</a>
                 </div>
+            @elseif($user != null)
+                <h2 class="header-title-area">Привіт,{{$user->username}}</h2>
+                <div class="profileBtn">
+                    <a href="/profile">Profile</a>
+                </div>
+                <div class="logoutBtn">
+                    <a href="/logout">Logout</a>
+                </div>
+
             @elseif($user == null)
                 <div class="loginPage">
                     <a href="/login">Login</a>
@@ -43,10 +44,10 @@
                     <a href="/signup">Sign Up</a>
                 </div>
             @endif
-
-
         </div>
     </div>
+    @else
+        <a href="/login">Авторизація</a>
     @endif
 </header>
 

@@ -46,6 +46,8 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/changePass','HomeController@changePassword');
 
     Route::post('/changeUserRealInfo','HomeController@changeUserRealInfo');
+
+    Route::post('/ban','AdminController@banUser');
 });
 
 

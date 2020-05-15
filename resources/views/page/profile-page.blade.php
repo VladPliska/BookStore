@@ -18,12 +18,12 @@
                    @csrf
                     <div class="user-avatar">
                         <label for="img-avatar">
-                            <img src="{{$user->img ? 'storage/bookImg/'.$user->img:asset('img/avatar.png')}}" alt="">
+                            <img src="{{$user ? 'storage/bookImg/'.$user->img:asset('img/avatar.png')}}" alt="">
                         </label>
                         <input type="file" id="img-avatar" hidden name="avatar" accept="image/*" class="hide addImg-profile">
                     </div>
                     <div class="user-name">
-                        <input type="text" class="userName" value="{{$user->lastname}}"  name="lastname"
+                        <input type="text" class="userName" value="{{$user->lastname ?? null}}"  name="lastname"
                                placeholder="Ім'я">
                     </div>
                     <div class="user-surname">

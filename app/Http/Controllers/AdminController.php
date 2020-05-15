@@ -129,5 +129,21 @@ class AdminController extends Controller
          }
     }
 
+    public function banUser(Request $req){
+        $user = $req->get('id');
+        $user = User::find($user)->first();
+            if($user->ban == false){
+                $user->update(['ban'=>true]);
+                return response()->json([
+                    'ban'=>true
+                ]);
+            }else{
+                $user->update(['ban'=>false]);
+                return response()->json([
+                    'ban'=>false
+                ]);
+            }
+    }
+
 
 }

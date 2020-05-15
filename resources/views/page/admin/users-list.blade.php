@@ -1,5 +1,5 @@
 @if(count($data))
-{{--    @dd(count($data))--}}
+    {{--    @dd(count($data))--}}
     @foreach($data as $val)
         <div class="user-list">
             <div class="admin-user-avatar">
@@ -8,7 +8,11 @@
             <div class="admin-user-name">{{$val->username}}</div>
             <div class="admin user-email">{{$val->email}}</div>
             <div class="admin-user-inclub">Так</div> {{--club--}}
-            <div class="admin-user-block" data-id="{{$val->id}}">Заблокувати</div>
+            @if($val->ban == false)
+                <div class="admin-user-block msg-err" data-id="{{$val->id}}">Заблокувати</div>
+            @else
+                <div class="admin-user-block msg-suc" data-id="{{$val->id}}">Розблокувати</div>
+            @endif
         </div>
     @endforeach
 @else

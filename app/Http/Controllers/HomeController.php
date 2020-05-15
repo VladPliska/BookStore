@@ -59,7 +59,7 @@ class HomeController extends Controller
             $sort = $filter['sort'];
 
 
-            $query = 'select * from "product" where price >' . $minPrice . ' and price <' . $maxPrice;
+            $query = 'select * from "product" where  price >' . $minPrice . ' and price <' . $maxPrice.'and title ilike %'.$data['query'].'%';
 
             if (!empty($genre) || !empty($author)) {
                 $queryArray = [];

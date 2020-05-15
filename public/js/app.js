@@ -23299,6 +23299,24 @@ $(document).on('change', '.addImg-profile', function (e) {
   var a = document.getElementById('img-avatar').files[0];
   $('.user-avatar').find('img').attr('src', URL.createObjectURL(a));
 });
+$(document).on('click', '.admin-user-block', function (e) {
+  var id = $(this).attr('data-id');
+  var curr = $(this);
+  $.ajax({
+    type: "post",
+    url: '/ban',
+    data: {
+      id: id
+    },
+    success: function success(res) {
+      if (res.ban) {
+        curr.text('Розблокувати').addClass('msg-err');
+      } else {
+        curr.text('Заблокувати').addClass('msg-suc');
+      }
+    }
+  });
+});
 
 /***/ }),
 
