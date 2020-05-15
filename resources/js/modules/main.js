@@ -1,4 +1,3 @@
-
 let showAllFilter = document.getElementById('showAllFilter');
 let mainFilter = document.getElementById('mainFilter');
 if (showAllFilter != null) {
@@ -10,7 +9,6 @@ if (showAllFilter != null) {
 
     });
 }
-
 
 
 // let adminNav = document.getElementsByClassName('showWork');
@@ -51,11 +49,11 @@ $(document).on('click', '.showWork', function (e) {
 
 $('.searchCatalog').on('click', function () {
     let searchQuery = $('#filter-search').val();
-    if(searchQuery == ''){
+    if (searchQuery == '') {
         popup.fire({
-            title:'Введіть назву книги для пошуку'
+            title: 'Введіть назву книги для пошуку'
         });
-    }else{
+    } else {
         let mainFilter = $('#mainFilter');
         let filterOn = false;
         let filterInfo = null;
@@ -106,7 +104,7 @@ $(document).on('click', '.add-comment', function (e) {
     let id = $(this).attr('data-id');
     let userId = 1;
 
-    if(text != '') {
+    if (text != '') {
         $.ajax({
             type: "post",
             url: '/addComment',
@@ -125,13 +123,13 @@ $(document).on('click', '.add-comment', function (e) {
                 }
             }
         });
-    }else{
+    } else {
         popup.fire('Коментар не може бути порожнім!!')
     }
 });
 
 ///add new news
-$(document).on('click','.addNews',function(){
+$(document).on('click', '.addNews', function () {
     popup.fire({
         title: "Введіть текст новини:",
         html: "<textarea class='news-textarea' id='news'></textarea>",
@@ -140,21 +138,22 @@ $(document).on('click','.addNews',function(){
         showLoaderOnConfirm: true,
         animation: "slide-from-top",
         inputPlaceholder: "Write something"
-    }).then((res)=>{
-        if(res.value) {
+    }).then((res) => {
+        if (res.value) {
             let text = $('#news').val();
-            if(text != ""){
+            if (text != "") {
                 $.ajax({
-                    type:'put',
-                    url:'/addNews',
-                    data:{
-                        text:text
+                    type: 'put',
+                    url: '/addNews',
+                    data: {
+                        text: text
                     },
-                    success:function(result){
-                        if(result.news){
-                            popup.fire('Успіх','Новину успішно додано','success')
-                        }else{
-                            popup.fire('Помилка','Помилка під час додавання новини,спробуйте пізніше','error')
+                    success: function (result) {
+                        if (result.news) {
+                            popup.fire('Успіх', 'Новину успішно додано', 'success')
+                            popup.fire('Успіх', 'Новину успішно додано', 'success')
+                        } else {
+                            popup.fire('Помилка', 'Помилка під час додавання новини,спробуйте пізніше', 'error')
 
                         }
                     }
@@ -164,34 +163,59 @@ $(document).on('click','.addNews',function(){
     })
 });
 
-$(document).on('click','.avatar-header',function(){
-$('.login-area').toggleClass('active');
+$(document).on('click', '.avatar-header', function () {
+    $('.login-area').toggleClass('active');
 });
 
-$(document).on('click','.btnFilter',function(){
+$(document).on('click', '.btnFilter', function () {
     let type = $(this).attr('data-type');
 });
 
-$(document).on('change','.addImg-profile',function (e) {
+$(document).on('change', '.addImg-profile', function (e) {
     let a = document.getElementById('img-avatar').files[0];
-    $('.user-avatar').find('img').attr('src',URL.createObjectURL(a));
+    $('.user-avatar').find('img').attr('src', URL.createObjectURL(a));
 })
 
 
-$(document).on('click','.admin-user-block',function (e) {
+$(document).on('click', '.admin-user-block', function (e) {
     let id = $(this).attr('data-id');
     let curr = $(this);
     $.ajax({
         type: "post",
         url: '/ban',
-        data:{id:id},
-        success:function (res) {
-            if(res.ban){
+        data: {id: id},
+        success: function (res) {
+            if (res.ban) {
                 curr.text('Розблокувати').addClass('msg-err');
 
-            }else{
+            } else {
                 curr.text('Заблокувати').addClass('msg-suc');
             }
         }
     });
+})
+
+
+$('.author-name').on('keyup', function (e) {
+    let curr = $(this);
+    let val = curr.val();
+
+    console.log(val)
+
+    if(val === ""){
+        curr.parent().find('.res-search-author').addClass('hide');
+    }else{
+        $.ajax({
+            type:'post',
+            url:'/searchAuthor',
+            data:{
+                name:val
+            },
+            success:function (res) {
+                curr.parent().find('.res-search-author').removeClass('hide').html(res.view);
+            }
+        })
+    }
+
+
 })

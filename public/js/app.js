@@ -23280,6 +23280,7 @@ $(document).on('click', '.addNews', function () {
           success: function success(result) {
             if (result.news) {
               popup.fire('Успіх', 'Новину успішно додано', 'success');
+              popup.fire('Успіх', 'Новину успішно додано', 'success');
             } else {
               popup.fire('Помилка', 'Помилка під час додавання новини,спробуйте пізніше', 'error');
             }
@@ -23316,6 +23317,26 @@ $(document).on('click', '.admin-user-block', function (e) {
       }
     }
   });
+});
+$('.author-name').on('keyup', function (e) {
+  var curr = $(this);
+  var val = curr.val();
+  console.log(val);
+
+  if (val === "") {
+    curr.parent().find('.res-search-author').addClass('hide');
+  } else {
+    $.ajax({
+      type: 'post',
+      url: '/searchAuthor',
+      data: {
+        name: val
+      },
+      success: function success(res) {
+        curr.parent().find('.res-search-author').removeClass('hide').html(res.view);
+      }
+    });
+  }
 });
 
 /***/ }),

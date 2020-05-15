@@ -48,8 +48,12 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/changeUserRealInfo','HomeController@changeUserRealInfo');
 
     Route::post('/ban','AdminController@banUser');
+
+    Route::get('/headerSearch','HomeController@serchHeader');
+
 });
 
+Route::post('/searchAuthor','HomeController@searchAuthor');
 
 
 //////////////////Route for test

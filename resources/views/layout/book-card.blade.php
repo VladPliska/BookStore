@@ -8,7 +8,7 @@
 </a>
 @else
     @if(count($result) == 0 )
-        <p>Nothing search</p>
+        <h2 class="empty-result">Нічого не знайденно!</h2>
     @endif
     @foreach($result as $v)
     <a class="book-card" href="/book/{{$v->id}}" style="z-index:100">

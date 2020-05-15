@@ -9,7 +9,10 @@
             <a href="#contact">Контакти</a>
         </div>
         <div class="searc-block">
-            <input type="text" class="search-query" placeholder="Пошук книг">
+            <form action="/headerSearch">
+                <input type="text"  class="search-query" id="headerSearch" name='title' placeholder="Пошук книг">
+            </form>
+
         </div>
     </nav>
     @if($user != null)
@@ -47,7 +50,7 @@
         </div>
     </div>
     @else
-        <a href="/login">Авторизація</a>
+        <a class='loginBtnHeader' href="/login">Авторизація</a>
     @endif
 </header>
 

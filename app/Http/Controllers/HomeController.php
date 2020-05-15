@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Author;
 use App\models\Coments as Comments;
+use App\models\Ganre;
 use App\models\Product as Product;
 use App\models\User;
 use App\models\News as News;
@@ -39,8 +41,9 @@ class HomeController extends Controller
     public function catalog(Request $request)
     {
         $books = Product::all()->take(30);
+        $genre = Ganre::all();
 
-        return view('page/filter-page', ['data' => $books]);
+        return view('page/filter-page', ['data' => $books,'genre'=>$genre]);
     }
 
     public function searchCatalog(Request $request)
@@ -187,6 +190,7 @@ class HomeController extends Controller
         return back(303)->with('succ','Зміни збережено');
 
     }
+
     public function changePassword(Request $req)
     {
         $user = $req->get('user');
@@ -233,6 +237,27 @@ class HomeController extends Controller
         $user->update(['phone' => $phone,'username'=>$username]);
 
         return back(303)->with('succ','Зміни збережено');
+
+    }
+
+    public function serchHeader(Request $req){
+        $query = $req->get('title');
+        $book = Product::where('title','like','%'.$query.'%')->take(20)->get();
+        $genre = Genre::all();
+        return view('page/filter-page',['data'=>$book,'genre'=>$genre,'query'=>$query]);
+    }
+
+    public function searchAuthor(Request $req){
+            $name = $req->get('name');
+
+            $authors = Author::where('name','like','%'.$name.'%')->take(10)->get();
+//            dd($authors);
+            $view  = view('layout.author-search',['data'=>$authors])->render();
+
+            return response()->json([
+                'view'=>$view
+            ]);
+
 
     }
 }
