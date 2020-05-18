@@ -14,7 +14,7 @@
             <div class="filter-ganre-author">
                 <div class="ganre-list">
                     <div>Виберіть жанр</div>
-                    <select name="ganre" id="ganre-select">
+                    <select name="ganre" id="ganre-select" required>
                         <option value="Fan" selected disabled>Виберіть жанр:</option>
                         @foreach($genre as $v)
                             <option value="{{$v->id}}">{{$v->name}}</option>

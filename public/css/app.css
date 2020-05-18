@@ -849,6 +849,15 @@ header .btnLogin .avatar-header {
   font-size: 1.3em;
 }
 
+.admin-workspace .book-save .imgBlock {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 .admin-workspace .book-save .imgBlock img {
   width: 300px;
   height: 250px;
@@ -884,6 +893,19 @@ header .btnLogin .avatar-header {
           justify-content: center;
   font-size: 1.5em;
   font-weight: 400;
+}
+
+.admin-workspace .admin-all-book .book-info .book-btn-edit:hover {
+  color: #26ba4b;
+}
+
+.admin-workspace .admin-all-book .book-info .book-btn-remove:hover {
+  color: #c72048;
+}
+
+.admin-workspace .admin-all-book .book-info:hover {
+  background: #9de0f6;
+  cursor: pointer;
 }
 
 .admin-workspace .user-list,
@@ -1186,10 +1208,9 @@ header .btnLogin .avatar-header {
 }
 
 .news-content .news-item {
-  width: 250px;
+  width: 270px;
   overflow: hidden;
   height: 100px;
-  border: 1px solid;
 }
 
 .loginBtnHeader {
@@ -1239,6 +1260,17 @@ header .btnLogin .avatar-header {
   border-radius: 10px;
 }
 
+.findAuthor {
+  position: relative;
+}
+
+.author-result-addBook {
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
 .ce {
   margin: 0 auto;
   display: block;
@@ -1268,7 +1300,7 @@ header .btnLogin .avatar-header {
 .btn-nav {
   border-radius: 9px;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 5px 15px;
   display: inline-block;
   background: #D98945;

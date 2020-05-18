@@ -18,7 +18,7 @@
                    @csrf
                     <div class="user-avatar">
                         <label for="img-avatar">
-                            <img src="{{$user ? 'storage/bookImg/'.$user->img:asset('img/avatar.png')}}" alt="">
+                            <img src="{{$user->img ? '/storage/bookImg/'.$user->img:asset('img/avatar.png')}}" alt="">
                         </label>
                         <input type="file" id="img-avatar" hidden name="avatar" accept="image/*" class="hide addImg-profile">
                     </div>

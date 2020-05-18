@@ -7,8 +7,8 @@
             <div class="book-name">{{$v->title}}</div>
             <div class="book-author">{{$v->author->name}}</div>
             <div class="book-price">{{$v->price}}</div>
-            <div class="book-btn-edit">Змінити</div>
-            <div class="book-btn-remove">Видалити</div>
+            <div class="book-btn-edit" data-id="{{$v->id}}">Змінити</div>
+            <div class="book-btn-remove" data-id="{{$v->id}}">Видалити</div>
         </div>
     @endforeach
 @else

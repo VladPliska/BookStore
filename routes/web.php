@@ -51,6 +51,8 @@ Route::group(['middleware' => ['user']], function () {
 
     Route::get('/headerSearch','HomeController@serchHeader');
 
+    Route::get('/bookInfo','AdminController@getBookInfo');
+
 });
 
 Route::post('/searchAuthor','HomeController@searchAuthor');

@@ -8,6 +8,7 @@ use App\models\Ganre;
 use App\models\Product as Product;
 use App\models\User;
 use App\models\News as News;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Date;
@@ -156,7 +157,8 @@ class HomeController extends Controller
 
     public function showNews()
     {
-        return view('page.news');
+        $news = News::take(20)->get();
+        return view('page.news',compact('news'));
     }
 
     public function profile(Request $req)
@@ -180,6 +182,7 @@ class HomeController extends Controller
             ]);
         }else{
             Storage::disk('public')->put('/bookImg',$img);
+            dd($img);
             $user->update([
                 'firstname' => $firstname,
                 'lastname' =>$lastname,

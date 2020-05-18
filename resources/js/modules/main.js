@@ -18,9 +18,17 @@ if (showAllFilter != null) {
 //     console.log(adminNav[i]);
 // }
 $(document).on('click', '.showWork', function (e) {
-    console.log($(this));
     let showArea = $(this).attr('data-open');
     let type = $(this).attr('data-type');
+
+    if(showArea != 'Add-Book'){
+        let form = $('.addBookForm');
+        form.find('input').val('');
+        form.find('textarea').val('');
+        form.find('select').val('default');
+        form.find('img').attr('src','/img/emptyBook.png');
+    }
+
 
     $('.showWork').removeClass('active');
     $(this).addClass('active');
@@ -32,9 +40,7 @@ $(document).on('click', '.showWork', function (e) {
         url: "/getAdminInfo",
         data: {type},
         success: function (res) {
-            console.log(res);
             if (res.setData != 'none') {
-                console.log($('.' + res.setData));
                 $('.' + res.setData).html(res.view);
             }
         },
@@ -47,8 +53,14 @@ $(document).on('click', '.showWork', function (e) {
 });
 
 
-$('.searchCatalog').on('click', function () {
+$(document).on('click','.searchCatalog', function () {
     let searchQuery = $('#filter-search').val();
+
+    if($('.res-search-author').is(':visible')){
+        $('.res-search-author').addClass('hide');
+        $('.author-name').val('');
+    }
+
     if (searchQuery == '') {
         popup.fire({
             title: 'Введіть назву книги для пошуку'
@@ -218,10 +230,52 @@ $('.author-name').on('keyup', function (e) {
 
 $(document).on('click','.author-search-item',function(e){
         let curr = $(this);
-        console.log(curr.text());
         curr.parent().parent().find('input').val(curr.text());
         curr.parent().parent().find('.author-id').val(curr.attr('data-id'));
         curr.parent().addClass('hide');
+})
 
+$(document).on('submit','.addBookForm',function(e){
+    if($('.res-search-author').is(':visible') ||  $('.author-name').val() === '' ){
+        $('.res-search-author').addClass('hide');
+        $('.author-name').val('');
+        popup.fire({
+            title:'Виберіть автора'
+        });
+        e.preventDefault();
+    }
+});
+
+
+$(document).on('change', '.bookImg-add', function (e) {
+    let a = $('#add-book-img')[0].files[0];
+    $(this).parent().find('img').attr('src', URL.createObjectURL(a));
+})
+
+$(document).on('click','.book-btn-edit',function (e) {
+        let el = $(e.currentTarget);
+        if(el.hasClass('book-btn-edit')){
+            let id = el.attr('data-id');
+            $.ajax({
+                type:'get',
+                url:'/bookInfo',
+                data:{id:id},
+                success:function(res){
+                    let form = $('.addBookForm');
+                    let book = res.info;
+                    form.find('#new-name-book').val(book.title);
+                    form.find('#new-author-book').val(book.authorname);
+                    form.find('.author-id').val(book.author_id);
+                    form.find('#create-select-ganre').val(book.genre_id)
+                    form.find('#new-description-book').val(book.description);
+                    form.find('#book-price').val(book.price);
+                    form.find('img').attr('src','/storage/bookImg/'+book.img);
+                    form.attr('action','/updateBook');
+                    $('.admin-addBook').trigger('click');
+                }
+            })
+        }
 
 })
+
+
