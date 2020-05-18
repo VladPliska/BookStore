@@ -72,7 +72,7 @@ $('.searchCatalog').on('click', function () {
 
             filterInfo = {
                 'genre': $('#ganre-select').val(),
-                'author': $('.author-name').val(),
+                'author': $('.author-id').val(),
                 'min-price': $('.minPrice').text(),
                 'max-price': $('.maxPrice').text(),
                 'sort': sortBy
@@ -200,8 +200,6 @@ $('.author-name').on('keyup', function (e) {
     let curr = $(this);
     let val = curr.val();
 
-    console.log(val)
-
     if(val === ""){
         curr.parent().find('.res-search-author').addClass('hide');
     }else{
@@ -216,6 +214,14 @@ $('.author-name').on('keyup', function (e) {
             }
         })
     }
+})
+
+$(document).on('click','.author-search-item',function(e){
+        let curr = $(this);
+        console.log(curr.text());
+        curr.parent().parent().find('input').val(curr.text());
+        curr.parent().parent().find('.author-id').val(curr.attr('data-id'));
+        curr.parent().addClass('hide');
 
 
 })

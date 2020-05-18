@@ -464,10 +464,6 @@ footer * {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.main-filters div {
-  margin: 0 auto;
-}
-
 .main-filters .ganre-list {
   width: 250px;
   text-align: center;
@@ -1218,7 +1214,7 @@ header .btnLogin .avatar-header {
 
 .res-search-author {
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
   position: absolute;
   z-index: 200;
   background: lightgray;
@@ -1235,6 +1231,12 @@ header .btnLogin .avatar-header {
 
 .res-search-author div {
   font-size: 20px;
+}
+
+.author-search-item:hover {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 10px;
 }
 
 .ce {

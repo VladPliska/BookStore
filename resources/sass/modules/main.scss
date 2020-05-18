@@ -444,7 +444,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     div {
         // border:1px solid;
-        margin: 0 auto;
+        //margin: 0 auto;
     }
     .ganre-list {
         width: 250px;
@@ -1131,7 +1131,7 @@ a{
 .res-search-author{
     //border: 1px solid;
     border-radius: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
     position: absolute;
     z-index: 200;
     background: lightgray;
@@ -1149,4 +1149,8 @@ a{
     }
 }
 
-
+.author-search-item:hover{
+        cursor:pointer;
+    background: #fff;
+    border-radius: 10px;
+}

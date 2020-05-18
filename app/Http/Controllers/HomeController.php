@@ -62,7 +62,7 @@ class HomeController extends Controller
             $sort = $filter['sort'];
 
 
-            $query = 'select * from "product" where  price >' . $minPrice . ' and price <' . $maxPrice.'and title ilike %'.$data['query'].'%';
+            $query = "select * from \"product\" where  price > " . $minPrice . " and price < " . $maxPrice." and title ilike '%".$data['query']."%'";
 
             if (!empty($genre) || !empty($author)) {
                 $queryArray = [];
@@ -75,11 +75,12 @@ class HomeController extends Controller
                 }
                 $query .= join(' and ', $queryArray);
             }
+//            dd($request->all());
 
-            $query .= 'order by price ' . $sort;
-
+            $query .= ' order by price ' . $sort;
+//                dd($query);
             $result = DB::select($query);
-
+//            dd($result);
         } else {
             $result = Product::where('title', 'ilike', '%' . $data['query'] . '%')->take(20)->get();
         }

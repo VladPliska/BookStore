@@ -23,7 +23,8 @@
                 </div>
                 <div class="filter-author">
                     <div>Автор</div>
-                    <input type="text" name="filter-author" class="author-name">
+                    <input type="text" name="" class="author-name">
+                    <input type='text' class="hide author-id" name="filter-author"/>
                     <div class="res-search-author hide"></div>
                 </div>
             </div>
