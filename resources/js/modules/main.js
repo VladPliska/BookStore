@@ -278,4 +278,38 @@ $(document).on('click','.book-btn-edit',function (e) {
 
 })
 
+$(document).on('click','.book-btn-remove',function (e) {
+    let curr = $(this);
+    let id = $(this).attr('data-id');
+
+        popup.fire({
+            title:'Видалити книжку?',
+            icon: "warning",
+            buttons: true,
+            showCancelButton: true,
+        }).then(function(data){
+                if(data.value){
+                    $.ajax({
+                        type:"delete",
+                        url:'/deleteBook',
+                        data:{id:id},
+                        success:function(res){
+                            if(res.delete){
+                                curr.parent().remove()
+                                popup.fire({
+                                    title:'Книжку видалено'
+                                })
+                            }else{
+                                popup.fire({
+                                    title:"Не вдалося видалити книгу"
+                                })
+                            }
+                        }
+                    })
+                }
+        })
+
+
+})
+
 

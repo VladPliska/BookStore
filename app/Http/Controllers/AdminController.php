@@ -168,4 +168,21 @@ class AdminController extends Controller
         ]);
     }
 
+    public function deleteBook(Request $req){
+            $id = $req->get('id');
+
+            $delete = Product::where('id',$id)->first();
+
+            if($delete){
+                $delete->delete();
+                return response()->json([
+                    'delete'=>true
+                ]);
+            }else{
+                return response()->json([
+                    'delete'=>false
+                ]);
+            }
+    }
+
 }

@@ -53,6 +53,8 @@ Route::group(['middleware' => ['user']], function () {
 
     Route::get('/bookInfo','AdminController@getBookInfo');
 
+    Route::delete('/deleteBook','AdminController@deleteBook');
+
 });
 
 Route::post('/searchAuthor','HomeController@searchAuthor');
