@@ -200,12 +200,11 @@ class AdminController extends Controller
             $type = $req->get('type');
 
             if($type == 'book'){
-                $model = Product;
+                $delete = Product::where('id',$id)->first();
             }else{
-                $model = Comments;
+                $delete = Comments::where('id',$id)->first();
             }
 
-            $delete = $model::where('id',$id)->first();
 
             if($delete){
                 $delete->delete();

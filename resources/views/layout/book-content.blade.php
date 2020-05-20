@@ -9,7 +9,7 @@
         <div class="page-rice">Ціна: {{$info->price}} грн</div>
     </div>
     <div class="button-buy">
-        <button class="buyBook">В кошик</button>
+        <button class="buyBook" data-id="{{$info->id}}">В кошик</button>
     </div>
 </div>
 <div class="description-info">

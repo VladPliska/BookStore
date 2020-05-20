@@ -263,6 +263,7 @@ footer {
             outline: none;
             color: #fff;
             &:hover {
+                cursor: pointer;
                 background-color: #f83b3b;
             }
         }
@@ -692,13 +693,19 @@ input[type="range"]::-webkit-slider-thumb {
 ///header new /////
 header{
     display: grid;
-    grid-template-columns: 0.7fr 3fr 0.7fr;
+    grid-template-columns: 0.9fr 3fr 0.7fr;
     height: 100px;
+    margin-bottom:10px ;
     .logo-header{
         font-weight: 500;
         font-size: 2em;
-        padding: 15px;
-
+        margin: unset;
+        margin-top: 10px;
+    }
+    .busket-btn{
+        font-size: 1em;
+        text-align: center;
+        margin: unset;
     }
     nav{
     display: grid;
@@ -859,7 +866,7 @@ header{
        }
        }
     }
-    .user-list,.user-list-title,.all-coments-title,.all-comments{
+    .user-list,.user-list-title,.all-coments-title,.coments-body-parent{
         padding:10px;
         display:grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -925,7 +932,7 @@ header{
     text-align: center;
     font-size: 18px;
     font-weight: 600;
-    max-width: 150px;
+    //max-width: 150px;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space: nowrap;

@@ -10,6 +10,11 @@ if (showAllFilter != null) {
     });
 }
 
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
 
 // let adminNav = document.getElementsByClassName('showWork');
 //
@@ -333,4 +338,14 @@ $(document).on('click','.btn-remove-content',function (e) {
 
 })
 
+$(document).on('click','.buyBook',function (e) {
+    let id = $(this).attr('data-id');
 
+    let other = getCookie('basket');
+    other +=','+id;
+    document.cookie = 'basket='+other+';path=/';
+
+    let count = parseInt($('.countBasket').text());
+    $('.countBasket').text(count+1);
+
+})

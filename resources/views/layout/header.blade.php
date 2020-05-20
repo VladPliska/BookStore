@@ -1,5 +1,8 @@
 <header>
-    <h2 class='logo-header'>BookStore</h2>
+    <div>
+        <h2 class='logo-header'>BookStore</h2>
+        <a href="/order"><h2 class="busket-btn">Товарів в корзині: <span class="countBasket">{{$countBook ?? 0}}</span></h2></a>
+    </div>
     <nav>
         <div class="nav-link">
             <a href="/">Головна</a>

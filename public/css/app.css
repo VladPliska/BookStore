@@ -280,6 +280,7 @@ footer * {
 }
 
 .main-info .button-buy .buyBook:hover {
+  cursor: pointer;
   background-color: #f83b3b;
 }
 
@@ -717,14 +718,22 @@ input[type=range]::-webkit-slider-thumb {
 
 header {
   display: grid;
-  grid-template-columns: 0.7fr 3fr 0.7fr;
+  grid-template-columns: 0.9fr 3fr 0.7fr;
   height: 100px;
+  margin-bottom: 10px;
 }
 
 header .logo-header {
   font-weight: 500;
   font-size: 2em;
-  padding: 15px;
+  margin: unset;
+  margin-top: 10px;
+}
+
+header .busket-btn {
+  font-size: 1em;
+  text-align: center;
+  margin: unset;
 }
 
 header nav {
@@ -911,7 +920,7 @@ header .btnLogin .avatar-header {
 .admin-workspace .user-list,
 .admin-workspace .user-list-title,
 .admin-workspace .all-coments-title,
-.admin-workspace .all-comments {
+.admin-workspace .coments-body-parent {
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -920,7 +929,7 @@ header .btnLogin .avatar-header {
 .admin-workspace .user-list div,
 .admin-workspace .user-list-title div,
 .admin-workspace .all-coments-title div,
-.admin-workspace .all-comments div {
+.admin-workspace .coments-body-parent div {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -934,7 +943,7 @@ header .btnLogin .avatar-header {
 .admin-workspace .user-list .admin-user-name,
 .admin-workspace .user-list-title .admin-user-name,
 .admin-workspace .all-coments-title .admin-user-name,
-.admin-workspace .all-comments .admin-user-name {
+.admin-workspace .coments-body-parent .admin-user-name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1002,7 +1011,6 @@ header .btnLogin .avatar-header {
   text-align: center;
   font-size: 18px;
   font-weight: 600;
-  max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

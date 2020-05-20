@@ -54,6 +54,17 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/bookInfo','AdminController@getBookInfo');
 
     Route::delete('/deleteBook','AdminController@deleteBook');
+    Route::get('/order',function(){
+        return view('page/order');
+    });
+    Route::get('/buy',function(){
+        return view('page/basket');
+    });
+    Route::get('/book',function(){
+        return view('page/book-page');
+    });
+
+
 
 });
 
@@ -61,19 +72,11 @@ Route::post('/searchAuthor','HomeController@searchAuthor');
 
 
 //////////////////Route for test
-Route::get('/book',function(){
-    return view('page/book-page');
-});
-
-Route::get('/buy',function(){
-    return view('page/basket');
-});
 
 
 
-Route::get('/order',function(){
-    return view('page/order');
-});
+
+
 
 
 Route::get('/user',function(){

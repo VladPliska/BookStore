@@ -23152,6 +23152,12 @@ if (showAllFilter != null) {
       mainFilter.classList.toggle("active");
     }, 0);
   });
+}
+
+function getCookie(name) {
+  var value = "; ".concat(document.cookie);
+  var parts = value.split("; ".concat(name, "="));
+  if (parts.length === 2) return parts.pop().split(';').shift();
 } // let adminNav = document.getElementsByClassName('showWork');
 //
 // for (let i = 0; adminNav.length > i; i++) {
@@ -23447,6 +23453,14 @@ $(document).on('click', '.btn-remove-content', function (e) {
       });
     }
   });
+});
+$(document).on('click', '.buyBook', function (e) {
+  var id = $(this).attr('data-id');
+  var other = getCookie('basket');
+  other += ',' + id;
+  document.cookie = 'basket=' + other + ';path=/';
+  var count = parseInt($('.countBasket').text());
+  $('.countBasket').text(count + 1);
 });
 
 /***/ }),
