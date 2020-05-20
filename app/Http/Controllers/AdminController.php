@@ -17,15 +17,14 @@ class AdminController extends Controller
 
     function addBook(Request $request)
     {
+
         $name = $request->get('nameBook');
         $price = $request->get('price');
         $ganre = $request->get('create-select-ganre');
         $author = $request->get('authorName');
         $desription = $request->get('description');
-
+        $id = $request->get('type');
         $img = $request->file('image');
-
-//        dd($img);
 
 
         if (empty($name)) {
@@ -47,23 +46,50 @@ class AdminController extends Controller
             return back()->withErrors(['Description book not found']);
         }
 
-//        if (empty($img->hashName())) {
-//            return back()->withErrors(['Image book not found']);
-//        }
+            if($id == null){
 
-        Storage::disk('public')->put('/bookImg',$img);
+                Storage::disk('public')->put('/bookImg',$img);
 
 
-        Product::create([
-            'title' => $name,
-            'description' => $desription,
-            'price' => $price,
-            'img' => $img->hashName(),
-            'genre_id'=>$ganre,
-            'author_id'=>$author,
-        ]);
+                Product::create([
+                    'title' => $name,
+                    'description' => $desription,
+                    'price' => $price,
+                    'img' => $img->hashName(),
+                    'genre_id'=>$ganre,
+                    'author_id'=>$author,
+                ]);
 
-        return back();
+                return back();
+            }
+            else{
+                $product = Product::where('id',$id)->first();
+
+                if($img == null){
+                        $product->update([
+                            'title' => $name,
+                            'description' => $desription,
+                            'price' => $price,
+                            'genre_id'=>$ganre,
+                            'author_id'=>$author,
+                        ]);
+                }else{
+                    Storage::disk('public')->put('/bookImg',$img);
+
+                    $product->update([
+                        'title' => $name,
+                        'description' => $desription,
+                        'price' => $price,
+                        'img' => $img->hashName(),
+                        'genre_id'=>$ganre,
+                        'author_id'=>$author,
+                    ]);
+                }
+                return back();
+
+
+            }
+
     }
 
     function index()
@@ -97,7 +123,7 @@ class AdminController extends Controller
         }
         switch ($type) {
             case 'books':
-                $data = Product::take(20)->get();
+                $data = Product::take(20)->orderBy('id','desc')->get();
                 $view = view('page.admin.book-list', ['books' => $data])->render();
                 return response()->json([
                     'setData' => 'admin-all-book',
@@ -168,10 +194,18 @@ class AdminController extends Controller
         ]);
     }
 
+
     public function deleteBook(Request $req){
             $id = $req->get('id');
+            $type = $req->get('type');
 
-            $delete = Product::where('id',$id)->first();
+            if($type == 'book'){
+                $model = Product;
+            }else{
+                $model = Comments;
+            }
+
+            $delete = $model::where('id',$id)->first();
 
             if($delete){
                 $delete->delete();
@@ -184,5 +218,6 @@ class AdminController extends Controller
                 ]);
             }
     }
+
 
 }

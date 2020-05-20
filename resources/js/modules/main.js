@@ -20,13 +20,14 @@ if (showAllFilter != null) {
 $(document).on('click', '.showWork', function (e) {
     let showArea = $(this).attr('data-open');
     let type = $(this).attr('data-type');
-
+    let form = $('.addBookForm');
     if(showArea != 'Add-Book'){
-        let form = $('.addBookForm');
         form.find('input').val('');
         form.find('textarea').val('');
         form.find('select').val('default');
         form.find('img').attr('src','/img/emptyBook.png');
+    }else{
+        form.find('input[name=_token]').val($('meta[name="csrf-token"]').attr('content'));
     }
 
 
@@ -130,6 +131,7 @@ $(document).on('click', '.add-comment', function (e) {
                 if (res.commented) {
                     $('.all-comment-block').find('.emptyComment').remove();
                     $('.all-comment-block').append(res.body);
+                    $("#bookComment").val('')
                 } else {
                     popup.fire('Виникла помилка,спробуйте пізніше')
                 }
@@ -257,12 +259,18 @@ $(document).on('click','.book-btn-edit',function (e) {
         if(el.hasClass('book-btn-edit')){
             let id = el.attr('data-id');
             $.ajax({
-                type:'get',
+                type:'post',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 url:'/bookInfo',
                 data:{id:id},
+
                 success:function(res){
                     let form = $('.addBookForm');
                     let book = res.info;
+                    form.find('.addType').val(id);
+                    form.find('input[name=_token]').val($('meta[name="csrf-token"]').attr('content'));
                     form.find('#new-name-book').val(book.title);
                     form.find('#new-author-book').val(book.authorname);
                     form.find('.author-id').val(book.author_id);
@@ -270,7 +278,6 @@ $(document).on('click','.book-btn-edit',function (e) {
                     form.find('#new-description-book').val(book.description);
                     form.find('#book-price').val(book.price);
                     form.find('img').attr('src','/storage/bookImg/'+book.img);
-                    form.attr('action','/updateBook');
                     $('.admin-addBook').trigger('click');
                 }
             })
@@ -278,12 +285,23 @@ $(document).on('click','.book-btn-edit',function (e) {
 
 })
 
-$(document).on('click','.book-btn-remove',function (e) {
+$(document).on('click','.btn-remove-content',function (e) {
     let curr = $(this);
     let id = $(this).attr('data-id');
+    let type = $(this).attr('data-type');
+    let title,err,success;
 
+    if(type === 'book'){
+        title = "Видалити книжку?"
+        err = "Не вдалося видалити книжку"
+        success = 'Книжку видалено'
+    }else{
+        title = "Видалити коментар?"
+        err = "Не вдалося видалити коментар"
+        success = 'Коментар видалено'
+    }
         popup.fire({
-            title:'Видалити книжку?',
+            title:title,
             icon: "warning",
             buttons: true,
             showCancelButton: true,
@@ -292,17 +310,20 @@ $(document).on('click','.book-btn-remove',function (e) {
                     $.ajax({
                         type:"delete",
                         url:'/deleteBook',
-                        data:{id:id},
+                        data:{
+                            id:id,
+                            type:type
+                        },
                         success:function(res){
                             if(res.delete){
                                 curr.parent().remove()
-                                popup.fire({
-                                    title:'Книжку видалено'
-                                })
+                                    popup.fire({
+                                        title:success
+                                    })
                             }else{
-                                popup.fire({
-                                    title:"Не вдалося видалити книгу"
-                                })
+                                    popup.fire({
+                                        title:err
+                                    })
                             }
                         }
                     })

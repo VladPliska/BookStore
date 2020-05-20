@@ -91,10 +91,11 @@
                                     <img src="{{asset('img/emptyBook.png')}}" alt="" class="ce">
                                     Додати картинку
                                 </label>
-                                <input type="file" hidden id="add-book-img" required  name="image"
+                                <input type="file" hidden id="add-book-img"   name="image"
                                        accept="image/*" class="bookImg-add">
                             </div>
                         </div>
+                        <input type="text" hidden name="type" value="" class="addType">
                         <button class="btn-g ce btnAddBook" type="submit">Зберегти книжку</button>
                     </form>
                 </div>

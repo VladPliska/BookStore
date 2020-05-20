@@ -738,7 +738,6 @@ header{
             background:#ac692f;
     }
 }
-
 .admin-workspace{
     width: 99%;
     margin:0 auto;
@@ -1171,4 +1170,9 @@ a{
     text-align: center;
     left: 50%;
     transform: translate(-50%,0);
+}
+.admin-book-img{
+    img{
+        max-width: 180px;
+    }
 }

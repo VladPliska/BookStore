@@ -23163,13 +23163,15 @@ if (showAllFilter != null) {
 $(document).on('click', '.showWork', function (e) {
   var showArea = $(this).attr('data-open');
   var type = $(this).attr('data-type');
+  var form = $('.addBookForm');
 
   if (showArea != 'Add-Book') {
-    var form = $('.addBookForm');
     form.find('input').val('');
     form.find('textarea').val('');
     form.find('select').val('default');
     form.find('img').attr('src', '/img/emptyBook.png');
+  } else {
+    form.find('input[name=_token]').val($('meta[name="csrf-token"]').attr('content'));
   }
 
   $('.showWork').removeClass('active');
@@ -23257,6 +23259,7 @@ $(document).on('click', '.add-comment', function (e) {
         if (res.commented) {
           $('.all-comment-block').find('.emptyComment').remove();
           $('.all-comment-block').append(res.body);
+          $("#bookComment").val('');
         } else {
           popup.fire('Виникла помилка,спробуйте пізніше');
         }
@@ -23373,7 +23376,10 @@ $(document).on('click', '.book-btn-edit', function (e) {
   if (el.hasClass('book-btn-edit')) {
     var id = el.attr('data-id');
     $.ajax({
-      type: 'get',
+      type: 'post',
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
       url: '/bookInfo',
       data: {
         id: id
@@ -23381,6 +23387,8 @@ $(document).on('click', '.book-btn-edit', function (e) {
       success: function success(res) {
         var form = $('.addBookForm');
         var book = res.info;
+        form.find('.addType').val(id);
+        form.find('input[name=_token]').val($('meta[name="csrf-token"]').attr('content'));
         form.find('#new-name-book').val(book.title);
         form.find('#new-author-book').val(book.authorname);
         form.find('.author-id').val(book.author_id);
@@ -23388,17 +23396,30 @@ $(document).on('click', '.book-btn-edit', function (e) {
         form.find('#new-description-book').val(book.description);
         form.find('#book-price').val(book.price);
         form.find('img').attr('src', '/storage/bookImg/' + book.img);
-        form.attr('action', '/updateBook');
         $('.admin-addBook').trigger('click');
       }
     });
   }
 });
-$(document).on('click', '.book-btn-remove', function (e) {
+$(document).on('click', '.btn-remove-content', function (e) {
   var curr = $(this);
   var id = $(this).attr('data-id');
+  var type = $(this).attr('data-type');
+
+  var title, err, _success;
+
+  if (type === 'book') {
+    title = "Видалити книжку?";
+    err = "Не вдалося видалити книжку";
+    _success = 'Книжку видалено';
+  } else {
+    title = "Видалити коментар?";
+    err = "Не вдалося видалити коментар";
+    _success = 'Коментар видалено';
+  }
+
   popup.fire({
-    title: 'Видалити книжку?',
+    title: title,
     icon: "warning",
     buttons: true,
     showCancelButton: true
@@ -23408,17 +23429,18 @@ $(document).on('click', '.book-btn-remove', function (e) {
         type: "delete",
         url: '/deleteBook',
         data: {
-          id: id
+          id: id,
+          type: type
         },
         success: function success(res) {
           if (res["delete"]) {
             curr.parent().remove();
             popup.fire({
-              title: 'Книжку видалено'
+              title: _success
             });
           } else {
             popup.fire({
-              title: "Не вдалося видалити книгу"
+              title: err
             });
           }
         }

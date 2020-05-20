@@ -1271,6 +1271,10 @@ header .btnLogin .avatar-header {
           transform: translate(-50%, 0);
 }
 
+.admin-book-img img {
+  max-width: 180px;
+}
+
 .ce {
   margin: 0 auto;
   display: block;

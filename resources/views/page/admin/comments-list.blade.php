@@ -8,8 +8,8 @@
                 <span>{{$v->user->username}}</span>
             </div>
             <span class="comment-text-admin" title="{{$v->coment}}">{{$v->coment}}</span>
-            <div class="comment-response-btn">Відповісти</div>
-            <div class="comment-remove-btn">Видалити</div>
+            <div class="comment-response-btn" data-id="{{$v->id}}">Відповісти</div>
+            <div class="comment-remove-btn btn-remove-content" data-type='comment' data-id="{{$v->id}}">Видалити</div>
 
     @endforeach
 @endif

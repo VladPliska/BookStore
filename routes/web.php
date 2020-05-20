@@ -51,7 +51,7 @@ Route::group(['middleware' => ['user']], function () {
 
     Route::get('/headerSearch','HomeController@serchHeader');
 
-    Route::get('/bookInfo','AdminController@getBookInfo');
+    Route::post('/bookInfo','AdminController@getBookInfo');
 
     Route::delete('/deleteBook','AdminController@deleteBook');
 

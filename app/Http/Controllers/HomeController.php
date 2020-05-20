@@ -114,14 +114,14 @@ class HomeController extends Controller
         $comment = $req->get('text');
         $live = $req->get('live');
         try {
-            Comments::insert([
-                'user_id' => $idUser,
-                'book_id' => $idBook,
+
+            Comments::create([
+                'user_id' => intval($idUser->id),
+                'book_id' => intval($idBook),
                 'coment' => $comment
             ]);
-            $userInfo = User::where('id', $idUser)->first();
+            $userInfo = User::where('id', $idUser->id)->first();
             $commentBody = view('layout/user-comment', ['text' => $comment, 'user' => $userInfo, 'live' => $live])->render();
-
             return response()->json([
                 'commented' => true,
                 'body' => $commentBody
