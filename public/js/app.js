@@ -23402,6 +23402,12 @@ $(document).on('click', '.book-btn-edit', function (e) {
         form.find('#new-description-book').val(book.description);
         form.find('#book-price').val(book.price);
         form.find('img').attr('src', '/storage/bookImg/' + book.img);
+
+        if (book.action > 0) {
+          form.find('#book-action')[0].checked = true;
+          form.find('.action-price').val(book.action).addClass('active');
+        }
+
         $('.admin-addBook').trigger('click');
       }
     });
@@ -23457,10 +23463,50 @@ $(document).on('click', '.btn-remove-content', function (e) {
 $(document).on('click', '.buyBook', function (e) {
   var id = $(this).attr('data-id');
   var other = getCookie('basket');
-  other += ',' + id;
+
+  if (other) {
+    var data = other.split(',');
+
+    if (data.indexOf(id) != -1) {
+      popup.fire({
+        title: "Книжка вже в кошику"
+      });
+      return;
+    }
+
+    other += ',' + id;
+  } else {
+    other = id;
+  }
+
   document.cookie = 'basket=' + other + ';path=/';
   var count = parseInt($('.countBasket').text());
   $('.countBasket').text(count + 1);
+});
+$(document).on('change', '#book-action', function () {
+  $('.action-price').toggleClass('active');
+
+  if ($('#book-action')[0].checked) {
+    $('.action-price').attr('required', '');
+  } else {
+    $('.action-price').removeAttr('required').val('');
+  }
+});
+$(document).on('click', '.removeInBasket', function (e) {
+  e.preventDefault();
+  $(this).closest('.book-section').remove();
+  var id = $(this).attr('data-id');
+  var basket = getCookie('basket');
+  basket = basket.split(',');
+  var newBasket = [];
+  basket.map(function (e) {
+    if (e != id) {
+      newBasket.push(e);
+    }
+  });
+  document.cookie = 'basket=' + newBasket.toString() + ';path=/';
+  var count = parseInt($('.countBasket').text());
+  $('.countBasket').text(count - 1);
 });
 
 /***/ }),

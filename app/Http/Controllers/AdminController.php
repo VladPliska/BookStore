@@ -25,7 +25,7 @@ class AdminController extends Controller
         $desription = $request->get('description');
         $id = $request->get('type');
         $img = $request->file('image');
-
+        $action = $request->get('action-price');
 
         if (empty($name)) {
             return back()->withErrors(['Name book not found']);
@@ -58,6 +58,7 @@ class AdminController extends Controller
                     'img' => $img->hashName(),
                     'genre_id'=>$ganre,
                     'author_id'=>$author,
+                    'action' => $action ?? 0
                 ]);
 
                 return back();
@@ -72,6 +73,7 @@ class AdminController extends Controller
                             'price' => $price,
                             'genre_id'=>$ganre,
                             'author_id'=>$author,
+                            'action'=>$action??0
                         ]);
                 }else{
                     Storage::disk('public')->put('/bookImg',$img);
@@ -83,6 +85,7 @@ class AdminController extends Controller
                         'img' => $img->hashName(),
                         'genre_id'=>$ganre,
                         'author_id'=>$author,
+                        'action'=>$action ?? 0
                     ]);
                 }
                 return back();

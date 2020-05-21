@@ -9,7 +9,12 @@
                         <a class="popular-item openBook" href="/book/{{$v->getOriginal('id')}}">
                                 <img class="book-img" src="/storage/bookImg/{{$v->getOriginal('img')}}" alt="test">
                                 <span class="book-title">{{$v->getOriginal('title')}}</span>
-                                <span class="book-price">{{$v->getOriginal('price')}} грн.</span>
+
+                            <span class="book-price-item {{$v->action > 0 ? 'actionTrue': ''}}">{{$v->getOriginal('price')}} грн.</span>
+                            @if($v->action >0)
+                                 <span class="action-price-item">{{$v->action}} грн.</span>
+                            @endif
+                            <br>
                                 <span class="book-price">{{$v->author->name}}</span>
                             </a>
                         @endforeach

@@ -70,6 +70,12 @@
                                     <input type="number" name="price" class="inpStan" id="book-price"
                                            placeholder="Ціна" required>
                                 </div>
+                                <div class="info-block actionBlock">
+                                    <label for="input-price">Акція: </label>
+                                    <input type="checkbox"  class="inpStanAction" id="book-action"
+                                           placeholder="" >
+                                        <input type="number" name="action-price" placeholder="Акційна ціна" class="inpStan action-price ">
+                                </div>
                                 <div class="info-block">
                                     <label for="create-select-ganre">Жанр: </label>
                                     <select name="create-select-ganre" id="create-select-ganre" required>

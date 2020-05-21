@@ -57,9 +57,7 @@ Route::group(['middleware' => ['user']], function () {
     Route::get('/order',function(){
         return view('page/order');
     });
-    Route::get('/buy',function(){
-        return view('page/basket');
-    });
+    Route::get('/buy','HomeController@getBuyContent');
     Route::get('/book',function(){
         return view('page/book-page');
     });

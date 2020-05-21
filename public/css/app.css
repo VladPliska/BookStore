@@ -151,7 +151,12 @@ footer * {
 
 .book-price {
   display: block;
-  font-size: 0.8em;
+  font-size: 1em;
+}
+
+.book-price-item {
+  font-size: 1em;
+  color: #0ba30b;
 }
 
 .tns-liveregion,
@@ -309,6 +314,7 @@ footer * {
   display: block;
   margin: 0 auto;
   max-height: 100px;
+  max-width: 150px;
 }
 
 .buy-title-book {
@@ -323,14 +329,18 @@ footer * {
 
 .parent-book-price {
   position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .parent-book-price .buy-book-price {
+  margin-right: 10px;
   font-weight: bold;
-  position: absolute;
-  right: 10%;
-  top: 35%;
-  color: #c50023;
+  color: #0ba30b;
 }
 
 .buy-total-book {
@@ -1281,6 +1291,43 @@ header .btnLogin .avatar-header {
 
 .admin-book-img img {
   max-width: 180px;
+}
+
+.inpStanAction {
+  width: 40px !important;
+  height: 30px;
+}
+
+.action-price {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  margin: unset;
+  padding: 10px;
+  width: 200px !important;
+  display: inline-block;
+}
+
+.action-price.active {
+  opacity: 1;
+}
+
+.actionBlock {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.actionTrue {
+  text-decoration: line-through;
+  font-size: 0.8em;
+}
+
+.action-price-item {
+  font-size: 1.1em;
+  color: #cece0c;
+  font-weight: 500;
 }
 
 .ce {

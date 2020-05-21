@@ -21,8 +21,8 @@ class CreateProductTable extends Migration
             $table->integer('price');
             $table->integer('genre_id');
             $table->integer('author_id');
-            $table->boolean('action')->default(false);
-            $table->integer('watched')->nullable();
+            $table->integer('action')->default(0);
+            $table->integer('watched')->default(0);
 
             $table->foreign('author_id')->references('id')->on('authors');
             $table->foreign('genre_id')->references('id')->on('genres');

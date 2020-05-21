@@ -22,9 +22,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $popularBook = Product::where('watched', '>', 10)->get()->take(10);
+        $popularBook = Product::where('watched', '>', 0)->get()->take(10);
 
-        $actionBook = Product::all()->random(10);
+        $actionBook = Product::where('action','>',0)->take(20)->get();
         $news = News::take(20)->get();
         return view('page/home', compact('popularBook', 'actionBook', 'news'));
     }
@@ -32,6 +32,7 @@ class HomeController extends Controller
     public function getBook(Request $request, $id)
     {
         $infoBook = Product::where('id', $id)->first();
+        $infoBook->update(['watched',$infoBook->watched++]);
         $author = $infoBook->author->getOriginal();
         $genre = $infoBook->genre->getOriginal();
         $popularBook = Product::where('watched', '>', 10)->get()->take(10);
@@ -262,6 +263,16 @@ class HomeController extends Controller
                 'view'=>$view
             ]);
 
+
+    }
+
+    public function getBuyContent(Request $req){
+        $id = $_COOKIE['basket'] ?? [];
+        $id = explode(',',$id);
+
+        $books = Product::whereIn('id',$id)->get();
+
+        return view('page.basket',compact('books'));
 
     }
 }
