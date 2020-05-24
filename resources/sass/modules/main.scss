@@ -374,6 +374,7 @@ footer {
     padding: 15px;
     border: 1px solid #28afb0;
     &:hover {
+        cursor:pointer;
         background-color: rgb(35, 199, 199);
     }
 }

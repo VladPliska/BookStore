@@ -8,14 +8,11 @@ use App\models\Ganre;
 use App\models\Product as Product;
 use App\models\User;
 use App\models\News as News;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
-use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 
 class HomeController extends Controller
@@ -96,7 +93,7 @@ class HomeController extends Controller
 
     public function actionPage()
     {
-        $data = Product::where('action', true)->get();
+        $data = Product::where('action', '>',1)->get();
 
         return view('page/action', compact('data'));
 
@@ -268,11 +265,25 @@ class HomeController extends Controller
 
     public function getBuyContent(Request $req){
         $id = $_COOKIE['basket'] ?? [];
-        $id = explode(',',$id);
+        if(!empty($id)){
+            $id = explode(',',$id);
+            $books = Product::whereIn('id',$id)->get();
+            return view('page.basket',compact('books'));
+        }
+        $books = [];
+        return view('page.basket',compact('books'));
+    }
 
+    public function orderPage(Request $req){
+        $id = $req->get('bookId');
+        $count = $req->get('count');
         $books = Product::whereIn('id',$id)->get();
 
-        return view('page.basket',compact('books'));
+
+
+        return view('page.order');
+
 
     }
+
 }

@@ -4,7 +4,7 @@
 Route::post('/signup','AuthController@signup')->name('register');
 Route::get('/confirmation/{token}','AuthController@confirm');
 Route::post('/login','AuthController@login');
-Route::get('/logout','AuthController@logout');
+Route::post('/logout','AuthController@logout');
 ///////////////
 
 Route::group(['middleware' => ['user']], function () {
@@ -16,6 +16,7 @@ Route::group(['middleware' => ['user']], function () {
     Route::get('/signup',function(){
         return view('page/register');
     });
+
 
     Route::get('/', 'HomeController@index');
 
@@ -54,20 +55,21 @@ Route::group(['middleware' => ['user']], function () {
     Route::post('/bookInfo','AdminController@getBookInfo');
 
     Route::delete('/deleteBook','AdminController@deleteBook');
-    Route::get('/order',function(){
-        return view('page/order');
-    });
+
     Route::get('/buy','HomeController@getBuyContent');
+
     Route::get('/book',function(){
         return view('page/book-page');
     });
-
-
+    Route::get('/order','HomeController@orderPage');
 
 });
 
+
+
 Route::post('/searchAuthor','HomeController@searchAuthor');
 
+Route::post('/createOrder','HomeController@createOrder');
 
 //////////////////Route for test
 

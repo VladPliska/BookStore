@@ -67,12 +67,21 @@ class AuthController extends Controller
 
     public function logout(Request $req){
             $cook = Cookie::get('auth');
+            try{
+                $user = User::where('token',$cook)->first();
+                $user->update(['token'=>null]);
+                Cookie::unqueue('auth');
+                return response()->json([
+                        'logout'=>true
+                ]);
+            }catch (\Exception $e){
+            return response()->json([
+                'logout'=>false
+            ]);
+        }
 
-            $user = User::where('token',$cook)->first();
-            $user->update(['token'=>null]);
-            Cookie::unqueue('auth');
 
-            return redirect('/login',302);
+
 
     }
 }

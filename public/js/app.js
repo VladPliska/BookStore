@@ -23463,6 +23463,7 @@ $(document).on('click', '.btn-remove-content', function (e) {
 $(document).on('click', '.buyBook', function (e) {
   var id = $(this).attr('data-id');
   var other = getCookie('basket');
+  var allProduct = localStorage.getItem('products');
 
   if (other) {
     var data = other.split(',');
@@ -23474,9 +23475,20 @@ $(document).on('click', '.buyBook', function (e) {
       return;
     }
 
+    var info = JSON.parse(allProduct);
+    info.push({
+      id: id,
+      count: 1
+    });
+    localStorage.setItem('products', JSON.stringify(info));
     other += ',' + id;
   } else {
     other = id;
+    var _data = [{
+      id: id,
+      count: 1
+    }];
+    localStorage.setItem('products', JSON.stringify(_data));
   }
 
   document.cookie = 'basket=' + other + ';path=/';
@@ -23505,8 +23517,71 @@ $(document).on('click', '.removeInBasket', function (e) {
     }
   });
   document.cookie = 'basket=' + newBasket.toString() + ';path=/';
+  var local = JSON.parse(localStorage.getItem('products'));
+  local.map(function (el, k) {
+    if (el.id == id) {
+      local.splice(k, 1);
+    }
+  });
+  localStorage.setItem('products', JSON.stringify(local));
+  $('.bookSelectId[value=' + id + ']').remove();
+  $('.productCount[data-id=' + id + ']').remove();
   var count = parseInt($('.countBasket').text());
   $('.countBasket').text(count - 1);
+}); // $(document).ready(function(e){
+//     // localStorage.setItem('data',);
+//     let data = localStorage.getItem('all')
+//     console.log(data['item'])
+//     // for(let key in data){
+//     //     console.log(key[]);
+//     // }
+// })
+
+$(document).on('click', '.buy-basket', function (e) {
+  e.preventDefault();
+  var curr = $(this);
+
+  if (curr.parent().find('input').length >= 1) {
+    var data = JSON.parse(localStorage.getItem('products'));
+    data.map(function (el) {
+      curr.parent().append('<input type="text" class="productCount" hidden data-id="' + el.id + '" name="count[]" value="' + el.count + '">');
+    });
+    curr.parent().submit();
+  } else {
+    popup.fire({
+      title: 'Спочатку виберіть твар щоб зробити замовлення'
+    });
+  }
+});
+$(document).on('input', '.total-buy', function (e) {
+  var id = $(this).attr('data-id');
+  var value = $(this).val() || 0;
+  var item = JSON.parse(localStorage.getItem('products'));
+  item.map(function (val) {
+    if (val.id == id) {
+      val.count = parseInt(value);
+    }
+  });
+  localStorage.setItem('products', JSON.stringify(item));
+  $('.productCount').remove();
+});
+$('.logoutUser').click(function (e) {
+  $.ajax({
+    type: 'POST',
+    url: '/logout',
+    success: function success(res) {
+      location.reload();
+    }
+  });
+});
+$(document).ready(function (e) {
+  if (location.pathname == '/buy') {
+    var data = JSON.parse(localStorage.getItem('products'));
+    data.map(function (v) {
+      v.count = 1;
+    });
+    localStorage.setItem('products', JSON.stringify(data));
+  }
 });
 
 /***/ }),

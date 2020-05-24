@@ -31,7 +31,7 @@
                     <a href="/admin">Admin</a>
                 </div>
                 <div class="logoutBtn">
-                    <a href="/logout">Logout</a>
+                    <a href="javascript:;" class="logoutUser">Logout</a>
                 </div>
             @elseif($user != null)
                 <h2 class="header-title-area">Привіт,{{$user->username}}</h2>
@@ -39,7 +39,7 @@
                     <a href="/profile">Profile</a>
                 </div>
                 <div class="logoutBtn">
-                    <a href="/logout">Logout</a>
+                    <a href="javascript:;" class="logoutUser">Logout</a>
                 </div>
 
             @elseif($user == null)

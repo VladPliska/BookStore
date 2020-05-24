@@ -4,6 +4,7 @@
 <div class="content-container">
 
 
+{{--    @dd($user)--}}
 <div class="buy-page">
     <div class="post-order-info">
         <div class="select-post">
@@ -16,7 +17,7 @@
                     <input type="radio" name="post" id="ukr-post" class="ukr-post post"><label for="ukr-post">Укрпошта (45грн)</label>
                 </div>
                 <div>
-                    <input type="radio" name="post" id="mist" class="mistExpress post"><label for="mist">Містекспресс (45грн)</label> 
+                    <input type="radio" name="post" id="mist" class="mistExpress post"><label for="mist">Містекспресс (45грн)</label>
                 </div>
                 <input type="submit" style="display:none">
             </form>
@@ -27,7 +28,7 @@
                 <input type="radio" name="type-pay" id="start-pay" class="post type-pay"><label for="start-pay">Предоплата</label>
             </div>
             <div>
-                <input type="radio" name="type-pay" id="after-order" class="post type-pay"><label for="after-order">Оплата при отримані</label> 
+                <input type="radio" name="type-pay" id="after-order" class="post type-pay"><label for="after-order">Оплата при отримані</label>
             </div>
         </div>
     </div>
@@ -40,10 +41,10 @@
         <input type="text" name="email" placeholder="Населений пункт"><br>
 
     </div>
-</div>  
+</div>
 <button class="btn-g ce btnCreateOrder">Замовити</button>
 
 
 
 </div>
-@include('.includes/footer') 
+@include('.includes/footer')

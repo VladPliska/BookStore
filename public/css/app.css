@@ -393,6 +393,7 @@ footer * {
 }
 
 .buy-basket:hover {
+  cursor: pointer;
   background-color: #23c7c7;
 }
 
