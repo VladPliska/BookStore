@@ -63,13 +63,14 @@ Route::group(['middleware' => ['user']], function () {
     });
     Route::get('/order','HomeController@orderPage');
 
+    Route::post('/createOrder','HomeController@createOrder');
+
 });
 
 
 
 Route::post('/searchAuthor','HomeController@searchAuthor');
 
-Route::post('/createOrder','HomeController@createOrder');
 
 //////////////////Route for test
 

@@ -567,6 +567,7 @@ input[type="range"]::-webkit-slider-thumb {
     }
     &-add-bascket{
         // border:1px solid;
+        z-index: 200;
         display:inline-block;
         font-size: 1.1em;
         padding:5px;
@@ -765,6 +766,10 @@ header{
    .tab{
        transition:all 1s;
    }
+
+    .admin-all-order{
+        min-height:300px;
+    }
 
     .tab-stats{
         height: 100%;

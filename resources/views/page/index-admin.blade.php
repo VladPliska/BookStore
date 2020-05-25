@@ -10,6 +10,8 @@
                 <a href="javascript:;" class="admin-users btn-nav showWork" data-open="All-User" data-type="users">Користувачі</a>
                 <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment"
                    data-type="comments">Коментарі</a>
+                <a href="javascript:;" class="admin-orders btn-nav showWork" data-open="All-Orders"
+                   data-type="orders">Замовлення</a>
             </div>
             <div class="admin-workspace">
                 <div class="tab-stats tab" data-target="Statistic">
@@ -131,6 +133,22 @@
                     </div>
                     <div class="all-comments">
 
+                    </div>
+                </div>
+                <div class="admin-all-order hide tab" data-target="All-Orders">
+                    <div class="header-list-order">
+                        <div>№</div>
+                        <div>ПІБ</div>
+                        <div>Номер телефону</div>
+                        <div>Місто</div>
+                        <div>Статус</div>
+                    </div>
+                    <div class="list-orders">
+
+                    </div>
+
+                    <div class="selectOrder hide">
+                    <h2>Редагування замовлення</h2>
                     </div>
                 </div>
 

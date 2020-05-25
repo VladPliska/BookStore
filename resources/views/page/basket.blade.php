@@ -32,9 +32,6 @@
 
                     </div>
                 @endforeach
-                @else
-                <h1 class="ce">Нічого не знайдено</h1>
-            @endif
         </div>
         <form action="/order" class="'createOrder" method="get">
             @csrf
@@ -44,5 +41,10 @@
 
             <buttton class="buy-basket" type="submit">Замовити</buttton>
         </form>
+        @else
+            <h1>Корзина пуста</h1>
+            @endif
+
+
     </div>
 @include('includes/footer')

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\models\Author;
 use App\models\Coments as Comments;
 use App\models\Ganre;
+use App\models\Order;
 use App\models\Product as Product;
 use App\models\User;
 use App\models\News as News;
@@ -21,7 +22,7 @@ class HomeController extends Controller
     {
         $popularBook = Product::where('watched', '>', 0)->get()->take(10);
 
-        $actionBook = Product::where('action','>',0)->take(20)->get();
+        $actionBook = Product::where('action', '>', 0)->take(20)->get();
         $news = News::take(20)->get();
         return view('page/home', compact('popularBook', 'actionBook', 'news'));
     }
@@ -29,7 +30,7 @@ class HomeController extends Controller
     public function getBook(Request $request, $id)
     {
         $infoBook = Product::where('id', $id)->first();
-        $infoBook->update(['watched',$infoBook->watched++]);
+        $infoBook->update(['watched', $infoBook->watched++]);
         $author = $infoBook->author->getOriginal();
         $genre = $infoBook->genre->getOriginal();
         $popularBook = Product::where('watched', '>', 10)->get()->take(10);
@@ -42,7 +43,7 @@ class HomeController extends Controller
         $books = Product::all()->take(30);
         $genre = Ganre::all();
 
-        return view('page/filter-page', ['data' => $books,'genre'=>$genre]);
+        return view('page/filter-page', ['data' => $books, 'genre' => $genre]);
     }
 
     public function searchCatalog(Request $request)
@@ -61,7 +62,7 @@ class HomeController extends Controller
             $sort = $filter['sort'];
 
 
-            $query = "select * from \"product\" where  price > " . $minPrice . " and price < " . $maxPrice." and title ilike '%".$data['query']."%'";
+            $query = "select * from \"product\" where  price > " . $minPrice . " and price < " . $maxPrice . " and title ilike '%" . $data['query'] . "%'";
 
             if (!empty($genre) || !empty($author)) {
                 $queryArray = [];
@@ -93,7 +94,7 @@ class HomeController extends Controller
 
     public function actionPage()
     {
-        $data = Product::where('action', '>',1)->get();
+        $data = Product::where('action', '>', 1)->get();
 
         return view('page/action', compact('data'));
 
@@ -156,40 +157,41 @@ class HomeController extends Controller
     public function showNews()
     {
         $news = News::take(20)->get();
-        return view('page.news',compact('news'));
+        return view('page.news', compact('news'));
     }
 
     public function profile(Request $req)
     {
         $cook = Cookie::get('auth');
-        $user = User::where('token',$cook)->first();
-        return view('page.profile-page',compact($user));
+        $user = User::where('token', $cook)->first();
+        return view('page.profile-page', compact($user));
     }
 
-    public function changeUserRealInfo(Request $req){
+    public function changeUserRealInfo(Request $req)
+    {
         $user = $req->get('user');
         $firstname = $req->get('firstname');
         $lastname = $req->get('lastname');
         $img = $req->file('avatar');
 
 
-        if($img == null){
+        if ($img == null) {
             $user->update([
                 'firstname' => $firstname,
-                'lastname' =>$lastname,
+                'lastname' => $lastname,
             ]);
-        }else{
-            Storage::disk('public')->put('/bookImg',$img);
+        } else {
+            Storage::disk('public')->put('/bookImg', $img);
             dd($img);
             $user->update([
                 'firstname' => $firstname,
-                'lastname' =>$lastname,
-                'img' =>$img->hashName()
+                'lastname' => $lastname,
+                'img' => $img->hashName()
             ]);
         }
 
 
-        return back(303)->with('succ','Зміни збережено');
+        return back(303)->with('succ', 'Зміни збережено');
 
     }
 
@@ -202,88 +204,132 @@ class HomeController extends Controller
 
         $old = crc32($old);
 
-        if($user->password != $old){
+        if ($user->password != $old) {
             return back()->withErrors(['Старий пароль вказано невірно']);
-        }else if($new != $repeat){
+        } else if ($new != $repeat) {
             return back()->withErrors(['Паролі не співпадають']);
-        }else{
+        } else {
             $new = crc32($new);
             $user->update([
-                'password'=>$new
+                'password' => $new
             ]);
-            return back(303)->with('succ','Пароль змінено');
+            return back(303)->with('succ', 'Пароль змінено');
         }
-
-
 
 
     }
 
-    public function changeDopInfo(Request $req){
+    public function changeDopInfo(Request $req)
+    {
         $user = $req->get('user');
         $phone = $req->get('phone');
         $username = $req->get('username');
-        if($username === $user->username){
-            if($phone != null){
+        if ($username === $user->username) {
+            if ($phone != null) {
                 $user->update(['phone' => $phone]);
-                return back(303)->with('succ','Зміни збережено');
+                return back(303)->with('succ', 'Зміни збережено');
             }
             return back()->withErrors(['Ви вже використовуте вказаний нік']);
         }
-        $checkUserName = User::where('username',$username)->first();
+        $checkUserName = User::where('username', $username)->first();
 
-        if($checkUserName != null){
+        if ($checkUserName != null) {
             return back()->withErrors(['Нік зайнятий,спробуйте інший']);
         }
 
-        $user->update(['phone' => $phone,'username'=>$username]);
+        $user->update(['phone' => $phone, 'username' => $username]);
 
-        return back(303)->with('succ','Зміни збережено');
+        return back(303)->with('succ', 'Зміни збережено');
 
     }
 
-    public function serchHeader(Request $req){
+    public function serchHeader(Request $req)
+    {
         $query = $req->get('title');
-        $book = Product::where('title','like','%'.$query.'%')->take(20)->get();
+        $book = Product::where('title', 'like', '%' . $query . '%')->take(20)->get();
         $genre = Genre::all();
-        return view('page/filter-page',['data'=>$book,'genre'=>$genre,'query'=>$query]);
+        return view('page/filter-page', ['data' => $book, 'genre' => $genre, 'query' => $query]);
     }
 
-    public function searchAuthor(Request $req){
-            $name = $req->get('name');
+    public function searchAuthor(Request $req)
+    {
+        $name = $req->get('name');
 
-            $authors = Author::where('name','like','%'.$name.'%')->take(10)->get();
+        $authors = Author::where('name', 'like', '%' . $name . '%')->take(10)->get();
 //            dd($authors);
-            $view  = view('layout.author-search',['data'=>$authors])->render();
+        $view = view('layout.author-search', ['data' => $authors])->render();
 
-            return response()->json([
-                'view'=>$view
-            ]);
+        return response()->json([
+            'view' => $view
+        ]);
 
 
     }
 
-    public function getBuyContent(Request $req){
+    public function getBuyContent(Request $req)
+    {
         $id = $_COOKIE['basket'] ?? [];
-        if(!empty($id)){
-            $id = explode(',',$id);
-            $books = Product::whereIn('id',$id)->get();
-            return view('page.basket',compact('books'));
+        if (!empty($id)) {
+            $id = explode(',', $id);
+            $books = Product::whereIn('id', $id)->get();
+            return view('page.basket', compact('books'));
         }
         $books = [];
-        return view('page.basket',compact('books'));
+        return view('page.basket', compact('books'));
     }
 
-    public function orderPage(Request $req){
+    public function orderPage(Request $req)
+    {
         $id = $req->get('bookId');
         $count = $req->get('count');
-        $books = Product::whereIn('id',$id)->get();
+        $books = Product::whereIn('id', $id)->get();
+        $countInfo = json_decode($_COOKIE['basketNew']);
+        $allPrice = 0;
+        foreach ($books as $v) {
+            foreach ($countInfo as $val) {
+                if ($v->id == $val->id) {
+                    $v->count = $val->count;
+                    $allPrice += $v->price * $v->count;
+                }
+            }
 
+        }
+        return view('page.order', compact('books', 'count', 'allPrice'));
+    }
 
+    public function createOrder(Request $req)
+    {
+        $firstname = $req->get('name');
+        $lastname = $req->get('surname');
+        $phone = $req->get('number');
+        $email = $req->get('email');
+        $city = $req->get('city');
+        $orderInfo = $_COOKIE['basketNew'];
+        $typePay = $req->get('type-pay');
+        $post = $req->get('post');
+        $user = $req->get('user');
+        $allPrice = $req->get('allPrice');
+//        dd($req->all(), $orderInfo);
 
-        return view('page.order');
+      $order = Order::create([
+            'user_id' => $user->id ?? 0,
+            'price' => $allPrice,
+            'orderInfo' => $orderInfo,
+            'phone' => $phone,
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'city' =>$city,
+            'email'=>$email,
+            'post'=>$post,
+            'pay-type'=>$typePay,
+            'status'=>'Обробка'
+        ]);
+//        $_COOKIE['basketNew'] = '';
+//        $_COOKIE['basket'] = '';
+        setcookie('basketNew', null, -1, '/');
+        setcookie('basket', null, -1, '/');
 
-
+        return redirect('/#createOrder');
     }
 
 }

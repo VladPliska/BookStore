@@ -13,5 +13,7 @@ for db
 4.start migration
 5.start seeds
 
+api key a6270edcc20a400b58901ce8a9a9cccb
+
 
 

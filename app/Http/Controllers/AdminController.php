@@ -221,5 +221,24 @@ class AdminController extends Controller
             }
     }
 
+    function getAllOrders(Request $req){
+        $orders = Order::all()->take(20)->get();
+
+        $view = view('.layout.order-item',compact('orders'))->render();
+
+        return response()->json([
+            'view'=>$view
+        ]);
+    }
+
+    function getOrder(Request $req){
+        $id = $req->get('id');
+
+        $order = Order::where('id',$id)->first();
+
+        return response()->json([
+           'order'=>$order
+        ]);
+    }
 
 }

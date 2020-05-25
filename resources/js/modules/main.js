@@ -379,7 +379,13 @@ $(document).on('click', '.buyBook', function (e) {
 
     let count = parseInt($('.countBasket').text());
     $('.countBasket').text(count + 1);
-
+    popup.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Товар додано в кошик',
+        showConfirmButton: false,
+        timer: 1000
+    })
 
 })
 
@@ -411,16 +417,16 @@ $(document).on('click', '.removeInBasket', function (e) {
 
     let local = JSON.parse(localStorage.getItem('products'));
 
-    local.map((el,k) => {
-        if(el.id == id){
-            local.splice(k,1);
+    local.map((el, k) => {
+        if (el.id == id) {
+            local.splice(k, 1);
         }
     })
 
-    localStorage.setItem('products',JSON.stringify(local));
+    localStorage.setItem('products', JSON.stringify(local));
 
-    $('.bookSelectId[value='+id+']').remove();
-    $('.productCount[data-id='+id+']').remove();
+    $('.bookSelectId[value=' + id + ']').remove();
+    $('.productCount[data-id=' + id + ']').remove();
 
 
     let count = parseInt($('.countBasket').text());
@@ -438,20 +444,22 @@ $(document).on('click', '.removeInBasket', function (e) {
 //     // }
 // })
 
-$(document).on('click','.buy-basket',function(e){
+$(document).on('click', '.buy-basket', function (e) {
     e.preventDefault();
     let curr = $(this)
 
-    if(curr.parent().find('input').length >= 1){
+    if (curr.parent().find('input').length >= 1) {
         let data = JSON.parse(localStorage.getItem('products'));
 
-        data.map(el=> {
-            curr.parent().append('<input type="text" class="productCount" hidden data-id="'+el.id+'" name="count[]" value="'+el.count+'">');
+        data.map(el => {
+            curr.parent().append('<input type="text" class="productCount" hidden data-id="' + el.id + '" name="count[]" value="' + el.count + '">');
         })
+        document.cookie = 'basketNew='+JSON.stringify(data);
+
         curr.parent().submit();
-    }else{
+    } else {
         popup.fire({
-            title:'Спочатку виберіть твар щоб зробити замовлення'
+            title: 'Спочатку виберіть твар щоб зробити замовлення'
         })
     }
 })
@@ -471,28 +479,59 @@ $(document).on('input', '.total-buy', function (e) {
         }
     )
 
-    localStorage.setItem('products',JSON.stringify(item))
+    localStorage.setItem('products', JSON.stringify(item))
     $('.productCount').remove();
 })
 
-$('.logoutUser').click(function(e){
+$('.logoutUser').click(function (e) {
     $.ajax({
-        type:'POST',
-        url:'/logout',
-        success:function (res) {
+        type: 'POST',
+        url: '/logout',
+        success: function (res) {
             location.reload()
         }
     })
 })
 
 $(document).ready(function (e) {
-    if(location.pathname == '/buy'){
+    if (location.pathname == '/buy') {
         let data = JSON.parse(localStorage.getItem('products'));
-
-        data.map(v =>{
+        data.map(v => {
             v.count = 1
         })
 
-        localStorage.setItem('products',JSON.stringify(data));
+        localStorage.setItem('products', JSON.stringify(data));
+    }
+    if(location.hash == '#createOrder'){
+        localStorage.clear();
+        popup.fire({
+            icon:'success',
+            title:'Замовлення успішно створенно,через деякий час з вами зявжеться наш оператор для уточнення деталей'
+        })
+        window.history.replaceState(null,null,'/')
     }
 })
+
+
+
+$(document).on('click','.book-card',function(e){
+    let target = $(e.target);
+    let curr = $(this);
+    if(target.hasClass('buyBook')){
+        e.preventDefault();
+    }
+})
+
+
+$('.admin-orders').click(function (e) {
+    $.ajax({
+        type:'POST',
+        url:'/getAllOrders',
+        success:(res)=>{
+            if($('.list-orders').find('div').length < 0){
+                $('.list-orders').html(res.view);
+            }
+        }
+    })
+})
+

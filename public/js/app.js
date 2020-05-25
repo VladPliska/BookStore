@@ -23494,6 +23494,13 @@ $(document).on('click', '.buyBook', function (e) {
   document.cookie = 'basket=' + other + ';path=/';
   var count = parseInt($('.countBasket').text());
   $('.countBasket').text(count + 1);
+  popup.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Товар додано в кошик',
+    showConfirmButton: false,
+    timer: 1000
+  });
 });
 $(document).on('change', '#book-action', function () {
   $('.action-price').toggleClass('active');
@@ -23546,6 +23553,7 @@ $(document).on('click', '.buy-basket', function (e) {
     data.map(function (el) {
       curr.parent().append('<input type="text" class="productCount" hidden data-id="' + el.id + '" name="count[]" value="' + el.count + '">');
     });
+    document.cookie = 'basketNew=' + JSON.stringify(data);
     curr.parent().submit();
   } else {
     popup.fire({
@@ -23582,6 +23590,34 @@ $(document).ready(function (e) {
     });
     localStorage.setItem('products', JSON.stringify(data));
   }
+
+  if (location.hash == '#createOrder') {
+    localStorage.clear();
+    popup.fire({
+      icon: 'success',
+      title: 'Замовлення успішно створенно,через деякий час з вами зявжеться наш оператор для уточнення деталей'
+    });
+    window.history.replaceState(null, null, '/');
+  }
+});
+$(document).on('click', '.book-card', function (e) {
+  var target = $(e.target);
+  var curr = $(this);
+
+  if (target.hasClass('buyBook')) {
+    e.preventDefault();
+  }
+});
+$('.admin-orders').click(function (e) {
+  $.ajax({
+    type: 'POST',
+    url: '/getAllOrders',
+    success: function success(res) {
+      if ($('.list-orders').find('div').length < 0) {
+        $('.list-orders').html(res.view);
+      }
+    }
+  });
 });
 
 /***/ }),
