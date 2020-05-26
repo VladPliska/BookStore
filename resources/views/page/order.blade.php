@@ -12,17 +12,17 @@
                     <div class="select-post">
                         <h2 class="title-select-post title">Виберіть спосіб доставки</h2>
                         <div>
-                            <input type="radio" name="post" id="new-post" class="new-post post" value="new-post"
+                            <input type="radio" name="post" id="new-post" class="new-post post" value="Нова пошта"
                                    required><label
                                 for="new-post">Нова пошта (50грн)</label>
                         </div>
                         <div>
-                            <input type="radio" name="post" id="ukr-post" class="ukr-post post" value="ukr-post"
+                            <input type="radio" name="post" id="ukr-post" class="ukr-post post" value="Укрпошта"
                                    required><label
                                 for="ukr-post">Укрпошта (45грн)</label>
                         </div>
                         <div>
-                            <input type="radio" name="post" id="mist" class="mistExpress post" value="mistexpress"
+                            <input type="radio" name="post" id="mist" class="mistExpress post" value="Містекспрес"
                                    required><label
                                 for="mist">Містекспресс (45грн)</label>
                         </div>
@@ -30,12 +30,12 @@
                     <div class="select-type-pay">
                         <h2>Виберіть спосіб оплати</h2>
                         <div>
-                            <input type="radio" name="type-pay" id="start-pay" class="post type-pay" value="paynow"
+                            <input type="radio" name="type-pay" id="start-pay" class="post type-pay" value="Предоплата"
                                    required><label
                                 for="start-pay">Предоплата</label>
                         </div>
                         <div>
-                            <input type="radio" name="type-pay" id="after-order" class="post type-pay" value="payafter"
+                            <input type="radio" name="type-pay" id="after-order" class="post type-pay" value="Оплата при отриманні"
                                    required><label
                                 for="after-order">Оплата при отримані</label>
                         </div>

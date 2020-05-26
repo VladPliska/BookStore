@@ -292,7 +292,6 @@ class HomeController extends Controller
                     $allPrice += $v->price * $v->count;
                 }
             }
-
         }
         return view('page.order', compact('books', 'count', 'allPrice'));
     }
@@ -321,7 +320,7 @@ class HomeController extends Controller
             'city' =>$city,
             'email'=>$email,
             'post'=>$post,
-            'pay-type'=>$typePay,
+            'payType'=>$typePay,
             'status'=>'Обробка'
         ]);
 //        $_COOKIE['basketNew'] = '';
@@ -331,5 +330,7 @@ class HomeController extends Controller
 
         return redirect('/#createOrder');
     }
+
+
 
 }

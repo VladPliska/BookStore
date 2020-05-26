@@ -46,52 +46,51 @@ class AdminController extends Controller
             return back()->withErrors(['Description book not found']);
         }
 
-            if($id == null){
+        if ($id == null) {
 
-                Storage::disk('public')->put('/bookImg',$img);
+            Storage::disk('public')->put('/bookImg', $img);
 
 
-                Product::create([
+            Product::create([
+                'title' => $name,
+                'description' => $desription,
+                'price' => $price,
+                'img' => $img->hashName(),
+                'genre_id' => $ganre,
+                'author_id' => $author,
+                'action' => $action ?? 0
+            ]);
+
+            return back();
+        } else {
+            $product = Product::where('id', $id)->first();
+
+            if ($img == null) {
+                $product->update([
+                    'title' => $name,
+                    'description' => $desription,
+                    'price' => $price,
+                    'genre_id' => $ganre,
+                    'author_id' => $author,
+                    'action' => $action ?? 0
+                ]);
+            } else {
+                Storage::disk('public')->put('/bookImg', $img);
+
+                $product->update([
                     'title' => $name,
                     'description' => $desription,
                     'price' => $price,
                     'img' => $img->hashName(),
-                    'genre_id'=>$ganre,
-                    'author_id'=>$author,
+                    'genre_id' => $ganre,
+                    'author_id' => $author,
                     'action' => $action ?? 0
                 ]);
-
-                return back();
             }
-            else{
-                $product = Product::where('id',$id)->first();
-
-                if($img == null){
-                        $product->update([
-                            'title' => $name,
-                            'description' => $desription,
-                            'price' => $price,
-                            'genre_id'=>$ganre,
-                            'author_id'=>$author,
-                            'action'=>$action??0
-                        ]);
-                }else{
-                    Storage::disk('public')->put('/bookImg',$img);
-
-                    $product->update([
-                        'title' => $name,
-                        'description' => $desription,
-                        'price' => $price,
-                        'img' => $img->hashName(),
-                        'genre_id'=>$ganre,
-                        'author_id'=>$author,
-                        'action'=>$action ?? 0
-                    ]);
-                }
-                return back();
+            return back();
 
 
-            }
+        }
 
     }
 
@@ -111,7 +110,7 @@ class AdminController extends Controller
         $comments = 200;
         $genre = Ganre::all();
         return view('page.index-admin', compact('users', 'books', 'club', 'profit',
-            'orders', 'monthProfit', 'comments','genre'));
+            'orders', 'monthProfit', 'comments', 'genre'));
 
     }
 
@@ -126,7 +125,7 @@ class AdminController extends Controller
         }
         switch ($type) {
             case 'books':
-                $data = Product::take(20)->orderBy('id','desc')->get();
+                $data = Product::take(20)->orderBy('id', 'desc')->get();
                 $view = view('page.admin.book-list', ['books' => $data])->render();
                 return response()->json([
                     'setData' => 'admin-all-book',
@@ -187,58 +186,99 @@ class AdminController extends Controller
         }
     }
 
-    public function getBookInfo (Request $req){
+    public function getBookInfo(Request $req)
+    {
         $id = $req->get('id');
 
-        $product = Product::where('id',$id)->first();
-        $product->authorname  = $product->author->name;
+        $product = Product::where('id', $id)->first();
+        $product->authorname = $product->author->name;
         return response()->json([
-            'info'=>$product
+            'info' => $product
         ]);
     }
 
 
-    public function deleteBook(Request $req){
-            $id = $req->get('id');
-            $type = $req->get('type');
+    public function deleteBook(Request $req)
+    {
+        $id = $req->get('id');
+        $type = $req->get('type');
 
-            if($type == 'book'){
-                $delete = Product::where('id',$id)->first();
-            }else{
-                $delete = Comments::where('id',$id)->first();
-            }
+        if ($type == 'book') {
+            $delete = Product::where('id', $id)->first();
+        } else {
+            $delete = Comments::where('id', $id)->first();
+        }
 
 
-            if($delete){
-                $delete->delete();
-                return response()->json([
-                    'delete'=>true
-                ]);
-            }else{
-                return response()->json([
-                    'delete'=>false
-                ]);
-            }
+        if ($delete) {
+            $delete->delete();
+            return response()->json([
+                'delete' => true
+            ]);
+        } else {
+            return response()->json([
+                'delete' => false
+            ]);
+        }
     }
 
-    function getAllOrders(Request $req){
-        $orders = Order::all()->take(20)->get();
+    public function getAllOrders(Request $req)
+    {
+        $orders = Order::all()->take(20);
 
-        $view = view('.layout.order-item',compact('orders'))->render();
+        $view = view('.layout.order-item', compact('orders'))->render();
 
         return response()->json([
-            'view'=>$view
+            'view' => $view
         ]);
     }
 
-    function getOrder(Request $req){
+    public function getOrder(Request $req)
+    {
         $id = $req->get('id');
 
-        $order = Order::where('id',$id)->first();
+        $order = Order::where('id', $id)->first();
+        $countInfo = json_decode($order->orderInfo);
+        $bookId = [];
+        foreach ($countInfo as $v) {
+            array_push($bookId, $v->id);
+        }
+        $books = Product::whereIn('id', $bookId)->get();
 
+        $info = $this->setCountOrder($books, $countInfo);
+        $view = view('.layout.order-select-item', ['data' => $info])->render();
         return response()->json([
-           'order'=>$order
+            'order' => $order,
+            'view' => $view
         ]);
     }
+
+    function setCountOrder($books, $countInfo)
+    {
+        foreach ($books as $v) {
+            foreach ($countInfo as $val) {
+                if ($v->id == $val->id) {
+                    $v->count = $val->count;
+
+                }
+            }
+        }
+        return $books;
+    }
+
+    public function changeSatus(Request $req)
+    {
+        $id = $req->get('id');
+        $status = $req->get('status');
+
+        $order = Order::where('id', $id)->first();
+        $order->update(['status' => $status]);
+
+        return response()->json([
+            'success' =>true
+        ]);
+
+    }
+
 
 }

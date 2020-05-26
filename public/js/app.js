@@ -23609,12 +23609,63 @@ $(document).on('click', '.book-card', function (e) {
   }
 });
 $('.admin-orders').click(function (e) {
+  if ($('.list-orders').find('div').length == 0) {
+    $.ajax({
+      type: 'POST',
+      url: '/getAllOrders',
+      success: function success(res) {
+        $('.list-orders').html(res.view);
+      }
+    });
+  }
+});
+$(document).on('click', '.item-order', function (e) {
+  var id = $(this).attr('data-id');
+  $.ajax({
+    type: "POST",
+    url: '/getOrder',
+    data: {
+      id: id
+    },
+    success: function success(res) {
+      $('.pib-order').text(res.order.firstname + " " + res.order.lastname);
+      $('.phone-order').text(res.order.phone);
+      $('.email-order').text(res.order.email);
+      $('.city-order').val(res.order.city);
+      $('.paymethod-order').text(res.order.payType);
+      $('.post-order').text(res.order.post);
+      $('.body-order-item').html(res.view);
+      $('.orderDetail-title').first().text('Замовлення №' + res.order.id);
+      $('.order-price').text('Ціна ' + res.order.price + "грн.");
+      $('#status').val(res.order.status);
+      $('.changeStatusBtn').attr('data-id', res.order.id);
+      $('.list-orders').addClass('hide');
+      $('.header-list-order').addClass('hide');
+      $('.selectOrder').toggleClass('hide');
+    }
+  });
+});
+$(document).on('click', '.all-orders-show', function (e) {
+  $('.list-orders').removeClass('hide');
+  $('.header-list-order').removeClass('hide');
+  $('.selectOrder').toggleClass('hide');
+});
+$(document).on('click', '.changeStatusBtn', function () {
+  var id = $(this).attr('data-id');
+  var status = $(this).parent().find('select').val();
   $.ajax({
     type: 'POST',
-    url: '/getAllOrders',
+    url: "/changeStatus",
+    data: {
+      id: id,
+      status: status
+    },
     success: function success(res) {
-      if ($('.list-orders').find('div').length < 0) {
-        $('.list-orders').html(res.view);
+      if (res.success) {
+        popup.fire({
+          title: 'Статус змінено',
+          icon: "success"
+        });
       }
     }
   });

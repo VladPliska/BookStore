@@ -1,105 +1,187 @@
 
-
-.buy-page{
+.buy-page {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     margin-top: 20px;
 }
 
-.select-post,.select-type-pay{
+.select-post, .select-type-pay {
     margin: 0 auuto;
-    text-align:center;
-    form{
+    text-align: center;
+
+    form {
         margin: 30px auto;
         width: auto;
     }
-    div{
-      text-align: left;
-      margin: 20px;
+
+    div {
+        text-align: left;
+        margin: 20px;
     }
-    input{
+
+    input {
         margin-right: 10px;
     }
-    label{
+
+    label {
         vertical-align: top;
         font-size: 1.4em;
     }
 }
 
-.title-select-post{
+.title-select-post {
     font-size: 1.5em;
 }
 
-.info-client{
+.info-client {
     display: block;
-    h2{
+
+    h2 {
         text-align: center;
         padding: 0;
         font-size: 1.5em;
         margin: 0;
         margin-bottom: 50px;
     }
-    input{
+
+    input {
         display: block;
         margin: 10px auto;
         padding: 10px;
         font-size: 1em;
-        border-radius:10px;
+        border-radius: 10px;
     }
 }
 
 
-.post-order-info{
+.post-order-info {
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
-.type-pay{
-    text-align: left!important;
+.type-pay {
+    text-align: left !important;
 }
-.btnCreateOrder{
+
+.btnCreateOrder {
     margin-top: 40px;
 }
-.titleOrder{
+
+.titleOrder {
     text-align: center;
 }
-.order-select-book{
+
+.order-select-book {
     display: grid;
     //border:1px solid;
     padding: 5px;
-    .item{
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+
+    .item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         text-align: center;
         margin-bottom: 10px;
-        *{
+
+        * {
             display: flex;
             justify-content: center;
             align-items: center;
         }
     }
 }
-.orderImg{
+
+.orderImg {
     max-width: 150px;
     max-height: 100px;
     margin: 0 auto;
 }
 
-.header-list-order{
-    border-bottom: 1px solid ;
-    div{
+.header-list-order {
+    border-bottom: 1px solid;
+
+    div {
         font-size: 18px;
     }
 }
 
-.item-order,.header-list-order{
+.item-order, .header-list-order {
     padding: 10px;
     display: grid;
     grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr;
-    *{
+
+    * {
         display: flex;
         justify-content: center;
         align-items: center;
 
     }
+}
+
+.item-order {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.selectOrder {
+    padding: 5px;
+    position: relative;
+
+    .change-status {
+        position: absolute;
+        right: 0;
+        top: 20px;
+
+        select {
+            font-size: unset !important;
+        }
+    }
+}
+
+.orderDetail-title {
+    text-align: center;
+}
+
+.selectOrderInfo {
+    width: 100%;
+    .productInfo{
+        .order-price{
+            text-align: right;
+            padding-right: 60px;
+            font-size: 30px;
+        }
+    }
+    .userInfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        div {
+            padding-left: 20px;
+        }
+    }
+
+
+
+    .item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
+        margin-bottom: 10px;
+
+        * {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.input-city-order{
+    font-size: 20px;
+    border:unset;
+}
+.all-orders-show{
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
 }

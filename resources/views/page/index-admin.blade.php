@@ -148,7 +148,55 @@
                     </div>
 
                     <div class="selectOrder hide">
-                    <h2>Редагування замовлення</h2>
+                        <button class="all-orders-show">
+                            Всі замовлення
+                        </button>
+                        <div class="change-status">
+                            <select name="status" id="status">
+                                <option value="Обробка" >Обробка</option>
+                                <option value="Підготовка">Підготовка до відправлення</option>
+                                <option value="Відправлено">Відправлено</option>
+                                <option value="Отримано">Отримано</option>
+                            </select>
+                            <button class="changeStatusBtn">Змінити</button>
+                        </div>
+                    <h2 class="orderDetail-title">Інформація про замовлення</h2>
+                        <div class ='selectOrderInfo'>
+                            <div class="userInfo">
+                                <div>
+                                    <div>
+                                        <span>ПІБ: </span><span class="pib-order"></span>
+                                    </div>
+                                    <div>
+                                        <span>Номер телефоу: </span><span class="phone-order"></span>
+                                    </div>
+                                    <div>
+                                        <span>Email: </span><span class="email-order"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <form action="/asdasd">
+                                        <div>
+                                            <span class="input-city-order">Місто: </span><input value=""  class='input-city-order city-order' placeholder="Місто"/>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <span>Метод оплати: </span><span class="paymethod-order"></span>
+                                    </div>
+                                    <div>
+                                        <span>Пошта: </span ><span class='post-order'></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                                <div class="productInfo">
+                                    <h3 class="orderDetail-title">Інформація придбаного товару</h3>
+                                    <div class="body-order-item">
+
+                                    </div>
+                                    <h3 class="order-price">Ціна:111</h3>
+                                </div>
+                        </div>
                     </div>
                 </div>
 

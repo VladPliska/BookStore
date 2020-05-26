@@ -454,7 +454,7 @@ $(document).on('click', '.buy-basket', function (e) {
         data.map(el => {
             curr.parent().append('<input type="text" class="productCount" hidden data-id="' + el.id + '" name="count[]" value="' + el.count + '">');
         })
-        document.cookie = 'basketNew='+JSON.stringify(data);
+        document.cookie = 'basketNew=' + JSON.stringify(data);
 
         curr.parent().submit();
     } else {
@@ -502,36 +502,88 @@ $(document).ready(function (e) {
 
         localStorage.setItem('products', JSON.stringify(data));
     }
-    if(location.hash == '#createOrder'){
+    if (location.hash == '#createOrder') {
         localStorage.clear();
         popup.fire({
-            icon:'success',
-            title:'Замовлення успішно створенно,через деякий час з вами зявжеться наш оператор для уточнення деталей'
+            icon: 'success',
+            title: 'Замовлення успішно створенно,через деякий час з вами зявжеться наш оператор для уточнення деталей'
         })
-        window.history.replaceState(null,null,'/')
+        window.history.replaceState(null, null, '/')
     }
 })
 
 
-
-$(document).on('click','.book-card',function(e){
+$(document).on('click', '.book-card', function (e) {
     let target = $(e.target);
     let curr = $(this);
-    if(target.hasClass('buyBook')){
+    if (target.hasClass('buyBook')) {
         e.preventDefault();
     }
 })
 
 
 $('.admin-orders').click(function (e) {
-    $.ajax({
-        type:'POST',
-        url:'/getAllOrders',
-        success:(res)=>{
-            if($('.list-orders').find('div').length < 0){
+    if ($('.list-orders').find('div').length == 0) {
+        $.ajax({
+            type: 'POST',
+            url: '/getAllOrders',
+            success: (res) => {
                 $('.list-orders').html(res.view);
             }
+        })
+    }
+})
+
+$(document).on('click', '.item-order', function (e) {
+    let id = $(this).attr('data-id');
+    $.ajax({
+        type: "POST",
+        url: '/getOrder',
+        data: {
+            id: id
+        },
+        success: (res) => {
+            $('.pib-order').text(res.order.firstname +" "+res.order.lastname);
+            $('.phone-order').text(res.order.phone);
+            $('.email-order').text(res.order.email);
+            $('.city-order').val(res.order.city);
+            $('.paymethod-order').text(res.order.payType);
+            $('.post-order').text(res.order.post);
+            $('.body-order-item').html(res.view);
+            $('.orderDetail-title').first().text('Замовлення №'+res.order.id)
+            $('.order-price').text('Ціна '+res.order.price +"грн.")
+            $('#status').val(res.order.status)
+            $('.changeStatusBtn').attr('data-id',res.order.id);
+
+            $('.list-orders').addClass('hide');
+            $('.header-list-order').addClass('hide');
+            $('.selectOrder').toggleClass('hide');
         }
     })
 })
+$(document).on('click','.all-orders-show',function(e){
+    $('.list-orders').removeClass('hide');
+    $('.header-list-order').removeClass('hide');
+    $('.selectOrder').toggleClass('hide');
+})
 
+$(document).on('click','.changeStatusBtn',function(){
+    let id = $(this).attr('data-id');
+    let status = $(this).parent().find('select').val();
+
+    $.ajax({
+        type:'POST',
+        url:"/changeStatus",
+        data:{
+            id:id,status
+        },
+        success:(res)=>{
+            if(res.success){
+                popup.fire({
+                    title:'Статус змінено',
+                    icon:"success"
+                })
+            }
+    }
+    })
+})

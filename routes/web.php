@@ -67,7 +67,11 @@ Route::group(['middleware' => ['user']], function () {
 
 });
 
+Route::post('/getAllOrders','AdminController@getAllOrders');
 
+Route::post('/getOrder','AdminController@getOrder');
+
+Route::post('/changeStatus','AdminController@changeSatus');
 
 Route::post('/searchAuthor','HomeController@searchAuthor');
 

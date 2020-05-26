@@ -1675,3 +1675,73 @@ header .btnLogin .avatar-header {
           align-items: center;
 }
 
+.item-order:hover {
+  cursor: pointer;
+}
+
+.selectOrder {
+  padding: 5px;
+  position: relative;
+}
+
+.selectOrder .change-status {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.selectOrder .change-status select {
+  font-size: unset !important;
+}
+
+.orderDetail-title {
+  text-align: center;
+}
+
+.selectOrderInfo {
+  width: 100%;
+}
+
+.selectOrderInfo .productInfo .order-price {
+  text-align: right;
+  padding-right: 60px;
+  font-size: 30px;
+}
+
+.selectOrderInfo .userInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.selectOrderInfo .userInfo div {
+  padding-left: 20px;
+}
+
+.selectOrderInfo .item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.selectOrderInfo .item * {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.input-city-order {
+  font-size: 20px;
+  border: unset;
+}
+
+.all-orders-show {
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+

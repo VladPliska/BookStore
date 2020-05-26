@@ -23,7 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string('lastname');
             $table->string('city');
             $table->string('email');
-            $table->string('pay-type');
+            $table->string('payType');
             $table->string('post');
             $table->string('status');
 
