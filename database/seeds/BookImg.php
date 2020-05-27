@@ -13,7 +13,7 @@ class BookImg extends Seeder
      */
     public function run()
     {
-        $allImg = scandir('../BookStore/public/storage/bookImg');
+        $allImg = scandir('/public/storage/bookImg');
         foreach($allImg as  $k => $v){
         if(strlen($v) < 5 ){
             continue;
