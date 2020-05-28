@@ -11,7 +11,7 @@
                             <p>{{$k+1}}</p>
                         </div>
                         <div class="buy-book-img">
-                            <img src="/storage/bookImg/{{$v->img}}" alt="book">
+                            <img src="{{$v->img}}" alt="book">
                         </div>
                         <div class="buy-title-book">
                             <div class="name-book">{{$v->title}}</div>

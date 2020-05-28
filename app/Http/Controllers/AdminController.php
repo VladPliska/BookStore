@@ -10,6 +10,7 @@ use App\models\Order;
 use Illuminate\Http\Request;
 use App\models\Product as Product;
 use Illuminate\Support\Facades\Storage;
+use App\Image;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,6 @@ class AdminController extends Controller
 
     function addBook(Request $request)
     {
-
         $name = $request->get('nameBook');
         $price = $request->get('price');
         $ganre = $request->get('create-select-ganre');
@@ -48,14 +48,16 @@ class AdminController extends Controller
 
         if ($id == null) {
 
-            Storage::disk('public')->put('/bookImg', $img);
+//            Storage::disk('public')->put('/bookImg', $img);
+            $path = $request->file('image')->store('images','s3');
 
+            Storage::disk('s3')->setVisibility($path,'public');
 
             Product::create([
                 'title' => $name,
                 'description' => $desription,
                 'price' => $price,
-                'img' => $img->hashName(),
+                'img' =>Storage::disk('s3')->url($path),
                 'genre_id' => $ganre,
                 'author_id' => $author,
                 'action' => $action ?? 0

@@ -7,7 +7,7 @@
                 @if(!empty($data))
                         @foreach($data as $v)
                         <a class="popular-item openBook" href="/book/{{$v->getOriginal('id')}}">
-                                <img class="book-img" src="/storage/bookImg/{{$v->getOriginal('img')}}" alt="test">
+                                <img class="book-img" src="{{$v->getOriginal('img')}}" alt="test">
                                 <span class="book-title">{{$v->getOriginal('title')}}</span>
 
                             <span class="book-price-item {{$v->action > 0 ? 'actionTrue': ''}}">{{$v->getOriginal('price')}} грн.</span>

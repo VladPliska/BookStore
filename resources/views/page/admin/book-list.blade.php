@@ -2,7 +2,7 @@
     @foreach($books as $v)
         <div class="book-info">
             <div class="admin-book-img">
-                <img src="/storage/bookImg/{{$v->img}}" class="small-book-img" alt={{$v->img}}>
+                <img src="{{$v->img}}" class="small-book-img" alt={{$v->img}}>
             </div>
             <div class="book-name">{{$v->title}}</div>
             <div class="book-author">{{$v->author->name}}</div>

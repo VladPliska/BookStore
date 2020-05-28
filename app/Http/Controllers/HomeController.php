@@ -40,7 +40,7 @@ class HomeController extends Controller
 
     public function catalog(Request $request)
     {
-        $books = Product::all()->take(30);
+        $books = Product::all();
         $genre = Ganre::all();
 
         return view('page/filter-page', ['data' => $books, 'genre' => $genre]);

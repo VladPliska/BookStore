@@ -7,7 +7,7 @@
 </div>
 @foreach($data as $v)
 <div class="item">
-    <img src="/storage/bookImg/{{$v->img ?? ''}}" class="orderImg" alt="">
+    <img src="{{$v->img ?? ''}}" class="orderImg" alt="">
     <div class="name">{{$v->title ?? 'test'}}</div>
     <div class="count">{{$v->count ?? '1'}}</div>
     <div class="price">{{$v->price ?? 200}} грн.</div>

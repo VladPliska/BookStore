@@ -74,7 +74,7 @@
                 </div>
                 @foreach($books as $k=>$v)
                     <div class="item">
-                        <img src="/storage/bookImg/{{$v->img}}" class="orderImg" alt="">
+                        <img src="{{$v->img}}" class="orderImg" alt="">
                         <div class="name">{{$v->title}}</div>
                         <div class="count">{{$v->count}}</div>
                         <div class="price">{{$v->price}}</div>

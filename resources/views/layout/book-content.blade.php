@@ -1,6 +1,6 @@
 <div class="main-info">
     <div class="img-book">
-        <img src="/storage/bookImg/{{$info->img}}" alt="BookImg" class="page-main-book-img">
+        <img src="{{$info->img}}" alt="BookImg" class="page-main-book-img">
     </div>
     <div class="first-book-info">
         <div class="page-title-book">Назва: {{$info->title}}</div>
