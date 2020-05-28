@@ -1,4 +1,4 @@
-@csrf
+
 @if(empty($search))
 <a class="book-card" href="/book/{{$v->getOriginal('id')}}" style="z-index:100">
     <img src="{{$v->getOriginal('img')}}" alt="bookImg" class ="book-card-img">
