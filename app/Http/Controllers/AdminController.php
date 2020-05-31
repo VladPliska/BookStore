@@ -165,6 +165,7 @@ class AdminController extends Controller
                 'news' => true
             ]);
         } catch (\Exception $e) {
+            dd($e);
             return response()->json([
                 'news' => false
             ]);
