@@ -14,6 +14,6 @@ class News extends Model
     public function getCreatedAtAttribute($timestamp) {
         return Carbon::parse($timestamp)->format('d.m.Y G:i');
     }
-    protected $dateFormat = 'd.m.Y G:i';
+//    protected $dateFormat = 'd.m.Y G:i';
 
 }
