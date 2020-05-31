@@ -75,6 +75,10 @@ Route::post('/changeStatus','AdminController@changeSatus');
 
 Route::post('/searchAuthor','HomeController@searchAuthor');
 
+Route::post('/getAuthors','AdminController@getAuthors');
+
+Route::post('/changeAuthor','AdminController@changeAuthor');
+
 
 //////////////////Route for test
 

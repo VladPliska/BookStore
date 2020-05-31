@@ -8,10 +8,9 @@
                 <a href="javascript:;" class="admin-addBook btn-nav showWork" data-open="Add-Book">Додати книжку</a>
                 <a href="javascript:;" class="admin-allBook btn-nav showWork" data-open="All-Book" data-type="books">Книжки</a>
                 <a href="javascript:;" class="admin-users btn-nav showWork" data-open="All-User" data-type="users">Користувачі</a>
-                <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment"
-                   data-type="comments">Коментарі</a>
-                <a href="javascript:;" class="admin-orders btn-nav showWork" data-open="All-Orders"
-                   data-type="orders">Замовлення</a>
+                <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment" data-type="comments">Коментарі</a>
+                <a href="javascript:;" class="admin-orders btn-nav showWork" data-open="All-Orders" data-type="orders">Замовлення</a>
+                <a href="javascript:;" class="admin-authors btn-nav showWork" data-open="All-Author" data-type="author">Автори</a>
             </div>
             <div class="admin-workspace">
                 <div class="tab-stats tab" data-target="Statistic">
@@ -74,9 +73,10 @@
                                 </div>
                                 <div class="info-block actionBlock">
                                     <label for="input-price">Акція: </label>
-                                    <input type="checkbox"  class="inpStanAction" id="book-action"
-                                           placeholder="" >
-                                        <input type="number" name="action-price" placeholder="Акційна ціна" class="inpStan action-price ">
+                                    <input type="checkbox" class="inpStanAction" id="book-action"
+                                           placeholder="">
+                                    <input type="number" name="action-price" placeholder="Акційна ціна"
+                                           class="inpStan action-price ">
                                 </div>
                                 <div class="info-block">
                                     <label for="create-select-ganre">Жанр: </label>
@@ -99,7 +99,7 @@
                                     <img src="{{asset('img/emptyBook.png')}}" alt="" class="ce">
                                     Додати картинку
                                 </label>
-                                <input type="file" hidden id="add-book-img"   name="image"
+                                <input type="file" hidden id="add-book-img" name="image"
                                        accept="image/*" class="bookImg-add">
                             </div>
                         </div>
@@ -153,15 +153,15 @@
                         </button>
                         <div class="change-status">
                             <select name="status" id="status">
-                                <option value="Обробка" >Обробка</option>
+                                <option value="Обробка">Обробка</option>
                                 <option value="Підготовка">Підготовка до відправлення</option>
                                 <option value="Відправлено">Відправлено</option>
                                 <option value="Отримано">Отримано</option>
                             </select>
                             <button class="changeStatusBtn">Змінити</button>
                         </div>
-                    <h2 class="orderDetail-title">Інформація про замовлення</h2>
-                        <div class ='selectOrderInfo'>
+                        <h2 class="orderDetail-title">Інформація про замовлення</h2>
+                        <div class='selectOrderInfo'>
                             <div class="userInfo">
                                 <div>
                                     <div>
@@ -177,28 +177,44 @@
                                 <div>
                                     <form action="/asdasd">
                                         <div>
-                                            <span class="input-city-order">Місто: </span><input value=""  class='input-city-order city-order' placeholder="Місто"/>
+                                            <span class="input-city-order">Місто: </span><input value=""
+                                                                                                class='input-city-order city-order'
+                                                                                                placeholder="Місто"/>
                                         </div>
                                     </form>
                                     <div>
                                         <span>Метод оплати: </span><span class="paymethod-order"></span>
                                     </div>
                                     <div>
-                                        <span>Пошта: </span ><span class='post-order'></span>
+                                        <span>Пошта: </span><span class='post-order'></span>
                                     </div>
 
                                 </div>
                             </div>
-                                <div class="productInfo">
-                                    <h3 class="orderDetail-title">Інформація придбаного товару</h3>
-                                    <div class="body-order-item">
+                            <div class="productInfo">
+                                <h3 class="orderDetail-title">Інформація придбаного товару</h3>
+                                <div class="body-order-item">
 
-                                    </div>
-                                    <h3 class="order-price">Ціна:111</h3>
                                 </div>
+                                <h3 class="order-price">Ціна:111</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="admin-all-author hide tab" data-target="All-Author">
+                    <div class="header-list-order">
+                        <div>№</div>
+                        <div>Імя</div>
+                        <div>Кількість книг</div>
+                        <div>Редагувати</div>
+                        <div>Видалити</div>
+                    </div>
+                    <div class="list-orders list-author">
+
+                    </div>
+{{--                    <div class="btnAddAuthor">Додати автора</div>--}}
+                </div>
+
 
             </div>
             <button class="btn-g ce addNews">Додати новину</button>

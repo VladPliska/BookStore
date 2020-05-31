@@ -1,3 +1,5 @@
+'use strict'
+
 let showAllFilter = document.getElementById('showAllFilter');
 let mainFilter = document.getElementById('mainFilter');
 if (showAllFilter != null) {
@@ -535,31 +537,34 @@ $('.admin-orders').click(function (e) {
 })
 
 $(document).on('click', '.item-order', function (e) {
-    let id = $(this).attr('data-id');
-    $.ajax({
-        type: "POST",
-        url: '/getOrder',
-        data: {
-            id: id
-        },
-        success: (res) => {
-            $('.pib-order').text(res.order.firstname +" "+res.order.lastname);
-            $('.phone-order').text(res.order.phone);
-            $('.email-order').text(res.order.email);
-            $('.city-order').val(res.order.city);
-            $('.paymethod-order').text(res.order.payType);
-            $('.post-order').text(res.order.post);
-            $('.body-order-item').html(res.view);
-            $('.orderDetail-title').first().text('Замовлення №'+res.order.id)
-            $('.order-price').text('Ціна '+res.order.price +"грн.")
-            $('#status').val(res.order.status)
-            $('.changeStatusBtn').attr('data-id',res.order.id);
+    if(!$(e.target).hasClass('updateAuthor') || !$(e.target).hasClass('removeAuthor')){
+        let id = $(this).attr('data-id');
+        $.ajax({
+            type: "POST",
+            url: '/getOrder',
+            data: {
+                id: id
+            },
+            success: (res) => {
+                $('.pib-order').text(res.order.firstname +" "+res.order.lastname);
+                $('.phone-order').text(res.order.phone);
+                $('.email-order').text(res.order.email);
+                $('.city-order').val(res.order.city);
+                $('.paymethod-order').text(res.order.payType);
+                $('.post-order').text(res.order.post);
+                $('.body-order-item').html(res.view);
+                $('.orderDetail-title').first().text('Замовлення №'+res.order.id)
+                $('.order-price').text('Ціна '+res.order.price +"грн.")
+                $('#status').val(res.order.status)
+                $('.changeStatusBtn').attr('data-id',res.order.id);
 
-            $('.list-orders').addClass('hide');
-            $('.header-list-order').addClass('hide');
-            $('.selectOrder').toggleClass('hide');
-        }
-    })
+                $('.list-orders').addClass('hide');
+                $('.header-list-order').addClass('hide');
+                $('.selectOrder').toggleClass('hide');
+            }
+        })
+    }
+
 })
 $(document).on('click','.all-orders-show',function(e){
     $('.list-orders').removeClass('hide');
@@ -586,4 +591,86 @@ $(document).on('click','.changeStatusBtn',function(){
             }
     }
     })
+})
+
+$(document).on('click','.admin-authors',function(e){
+
+        $.ajax({
+            type:'post',
+            url:'/getAuthors',
+            success:function(res){
+                $('.list-author').html(res.view)
+            }
+        })
+
+})
+
+$(document).on('click','.updateAuthor,.removeAuthor',function(e) {
+    let curr = $(this);
+    let name = $(this).parent().find('.nameAuthor').text();
+    let id = $(this).attr('data-id');
+    if($(this).hasClass('remove')){
+        let curr = $(this).parent();
+        $.ajax({
+            type:'post',
+            url:'/changeAuthor',
+            data:{
+                delete:true,
+                id:id
+            },
+            success:(res)=>{
+                if(res.change){
+                    curr.remove();
+                    popup.fire('Успіх', 'Автор видалений', 'success')
+                }else{
+                    if(res.message){
+                        popup.fire('Помилка', res.message, 'error')
+                    }else{
+                        popup.fire('Помилка', 'Невдалося оновити автора', 'error')
+                    }
+                }
+            }
+        })
+    }else{
+        let html = '<textarea class=\'news-textarea\' id=\'news\'>'+name+'</textarea>';
+        popup.fire({
+            title:"Зміна імені автора.",
+            showCancelButton:true,
+            html: html,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true,
+            animation: "slide-from-top",
+            inputPlaceholder: "Write something"
+        }).then((res)=>{
+            if(res.value){
+                let text = $('#news').val();
+                if (text != "") {
+                    $.ajax({
+                        type:'post',
+                        url:'/changeAuthor',
+                        data:{
+                            delete:false,
+                            name:text,
+                            id:id
+                        },
+                        success:(res)=>{
+                            if(res.change){
+                                curr.parent().find('.nameAuthor').text(text);
+                                popup.fire('Успіх', 'Дані оновленно', 'success')
+                            }else{
+                                if(res.message){
+                                    popup.fire('Помилка', res.message, 'error')
+                                }else{
+                                    popup.fire('Помилка', 'Невдалося оновити автора', 'error')
+                                }
+                            }
+                        }
+                    })
+                }
+            }
+        })
+
+    }
+
+
 })

@@ -9,8 +9,10 @@ use App\models\User;
 use App\models\Order;
 use Illuminate\Http\Request;
 use App\models\Product as Product;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Image;
+use App\models\Author;
 
 class AdminController extends Controller
 {
@@ -51,6 +53,9 @@ class AdminController extends Controller
             $path = $request->file('image')->store('images','s3');
 
             Storage::disk('s3')->setVisibility($path,'public');
+            $authorData = Author::where('id',$author)->first();
+
+            $authorData->update(['books'=> $authorData->books +1]);
 
             Product::create([
                 'title' => $name,
@@ -75,10 +80,21 @@ class AdminController extends Controller
                     'author_id' => $author,
                     'action' => $action ?? 0
                 ]);
+                if($product->author_id != $author){
+                    $authorData = Author::where('id',$author)->first();
+
+                    $authorData->update(['books'=> $authorData->books +1]);
+                }
             } else {
                 $path = $request->file('image')->store('images','s3');
 
                 Storage::disk('s3')->setVisibility($path,'public');
+
+                if($product->author_id != $author){
+                    $authorData = Author::where('id',$author)->first();
+
+                    $authorData->update(['books'=> $authorData->books +1]);
+                }
 
                 $product->update([
                     'title' => $name,
@@ -211,6 +227,10 @@ class AdminController extends Controller
 
         if ($type == 'book') {
             $delete = Product::where('id', $id)->first();
+            $author = Author::where('id',$delete->author_id)->first();
+            if($author->books > 0){
+                $author->update(['books'=>intval($author->books)-1]);
+            }
         } else {
             $delete = Comments::where('id', $id)->first();
         }
@@ -285,6 +305,44 @@ class AdminController extends Controller
         ]);
 
     }
+
+    public function getAuthors(Request $req){
+        $author = Author::where('id','>',0)->orderBy('id','asc')->take(10)->get();
+
+        $view = view('.layout.order-item',['data'=>$author,'author'=>true])->render();
+
+        return response()->json([
+            'view' => $view
+        ]);
+    }
+
+    public function changeAuthor(Request $req){
+
+            $author = Author::where('id',$req->get('id'))->first();
+            try{
+                if($req->get('delete') == 'true'){
+                    if($author->books > 0){
+                        return response()->json([
+                            'change' => false,
+                            'message'=>'Автор не можу бути видалений так як він має книги'
+                        ]);
+                    } else{
+                        $author->delete();
+
+                    }
+                }else if($req->get('delete') == 'false'){
+                    $author->update(['name'=>$req->get('name')]);
+                }
+                return response()->json([
+                    'change' => true
+                ]);
+            }catch(\Exception $e){
+                return response()->json([
+                    'change' => false
+                ]);
+            }
+    }
+
 
 
 }
