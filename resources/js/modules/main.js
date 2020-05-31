@@ -162,7 +162,7 @@ $(document).on('click', '.addNews', function () {
             let text = $('#news').val();
             if (text != "") {
                 $.ajax({
-                    type: 'put',
+                    type: 'post',
                     url: '/addNews',
                     data: {
                         text: text
