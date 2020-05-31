@@ -9,7 +9,7 @@ class News extends Model
 {
 
     protected $table    = "news";
-    protected $fillable = ["text",'created_at'];
+    protected $fillable = ["text",'created_at','updated_at'];
 
     public function getCreatedAtAttribute($timestamp) {
         return Carbon::parse($timestamp)->format('d.m.Y G:i');

@@ -157,15 +157,16 @@ class AdminController extends Controller
     public function addNews(Request $req)
     {
         $text = $req->get('text');
+        $created = date('Y/m/d h:i:s', time());
+        $updated = date('Y/m/d h:i:s', time());
         try {
             News::create([
-                'text' => $text
-            ]);
+                'text' => $text,
+                ]);
             return response()->json([
                 'news' => true
             ]);
         } catch (\Exception $e) {
-            dd($e);
             return response()->json([
                 'news' => false
             ]);

@@ -19316,18 +19316,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _getBody_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getBody.js */ "./node_modules/tiny-slider/src/helpers/getBody.js");
 /* harmony import */ var _setFakeBody_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./setFakeBody.js */ "./node_modules/tiny-slider/src/helpers/setFakeBody.js");
 /* harmony import */ var _resetFakeBody_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./resetFakeBody.js */ "./node_modules/tiny-slider/src/helpers/resetFakeBody.js");
-// get css-calc 
+// get css-calc
 // @return - false | calc | -webkit-calc | -moz-calc
-// @usage - var calc = getCalc(); 
+// @usage - var calc = getCalc();
 
 
 
 
 function calc() {
-  var doc = document, 
+  var doc = document,
       body = Object(_getBody_js__WEBPACK_IMPORTED_MODULE_0__["getBody"])(),
       docOverflow = Object(_setFakeBody_js__WEBPACK_IMPORTED_MODULE_1__["setFakeBody"])(body),
-      div = doc.createElement('div'), 
+      div = doc.createElement('div'),
       result = false;
 
   body.appendChild(div);
@@ -19338,13 +19338,13 @@ function calc() {
     for (var i = 0; i < 3; i++) {
       val = vals[i];
       div.style.width = val;
-      if (div.offsetWidth === 100) { 
-        result = val.replace(str, ''); 
+      if (div.offsetWidth === 100) {
+        result = val.replace(str, '');
         break;
       }
     }
   } catch (e) {}
-  
+
   body.fake ? Object(_resetFakeBody_js__WEBPACK_IMPORTED_MODULE_2__["resetFakeBody"])(body, docOverflow) : div.remove();
 
   return result;
@@ -19637,7 +19637,7 @@ __webpack_require__.r(__webpack_exports__);
 function getSlideId() {
   var id = window.tnsId;
   window.tnsId = !id ? 1 : id + 1;
-  
+
   return 'tns' + window.tnsId;
 }
 
@@ -19656,7 +19656,7 @@ __webpack_require__.r(__webpack_exports__);
 function getTouchDirection(angle, range) {
   var direction = false,
       gap = Math.abs(90 - Math.abs(angle));
-      
+
   if (gap >= 90 - range) {
     direction = 'horizontal';
   } else if (gap <= range) {
@@ -19688,7 +19688,7 @@ __webpack_require__.r(__webpack_exports__);
 function has3DTransforms(tf){
   if (!tf) { return false; }
   if (!window.getComputedStyle) { return false; }
-  
+
   var doc = document,
       body = Object(_getBody_js__WEBPACK_IMPORTED_MODULE_0__["getBody"])(),
       docOverflow = Object(_setFakeBody_js__WEBPACK_IMPORTED_MODULE_1__["setFakeBody"])(body),
@@ -19779,7 +19779,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNodeList", function() { return isNodeList; });
 function isNodeList(el) {
   // Only NodeList has the "item()" function
-  return typeof el.item !== "undefined"; 
+  return typeof el.item !== "undefined";
 }
 
 /***/ }),
@@ -19823,8 +19823,8 @@ function jsTransform(element, attr, prefix, postfix, to, duration, callback) {
     duration -= tick;
     from += positionTick;
     element.style[attr] = prefix + from + unit + postfix;
-    if (duration > 0) { 
-      setTimeout(moveElement, tick); 
+    if (duration > 0) {
+      setTimeout(moveElement, tick);
     } else {
       callback();
     }
@@ -20218,7 +20218,7 @@ function whichProperty(props){
     var arr = [props],
         Props = props.charAt(0).toUpperCase() + props.substr(1),
         prefixes = ['Webkit', 'Moz', 'ms', 'O'];
-        
+
     prefixes.forEach(function(prefix) {
       if (prefix !== 'ms' || props === 'transform') {
         arr.push(prefix + Props);
@@ -20380,7 +20380,7 @@ var tns = function(options) {
     onInit: false,
     useLocalStorage: true
   }, options || {});
-  
+
   var doc = document,
       win = window,
       KEYS = {
@@ -20435,9 +20435,9 @@ var tns = function(options) {
 
   // get element nodes from selectors
   var supportConsoleWarn = win.console && typeof win.console.warn === "function",
-      tnsList = ['container', 'controlsContainer', 'prevButton', 'nextButton', 'navContainer', 'autoplayButton'], 
+      tnsList = ['container', 'controlsContainer', 'prevButton', 'nextButton', 'navContainer', 'autoplayButton'],
       optionsElements = {};
-      
+
   tnsList.forEach(function(item) {
     if (typeof options[item] === 'string') {
       var str = options[item],
@@ -20476,10 +20476,10 @@ var tns = function(options) {
       var val = responsive[key];
       // update responsive
       // from: 300: 2
-      // to: 
-      //   300: { 
-      //     items: 2 
-      //   } 
+      // to:
+      //   300: {
+      //     items: 2
+      //   }
       val = typeof val === 'number' ? {items: val} : val;
       responsiveTem[key] = val;
     }
@@ -20699,11 +20699,11 @@ var tns = function(options) {
         disY,
         panStart = false,
         rafIndex,
-        getDist = horizontal ? 
+        getDist = horizontal ?
           function(a, b) { return a.x - b.x; } :
           function(a, b) { return a.y - b.y; };
   }
-  
+
   // disable slider when slidecount <= items
   if (!autoWidth) { resetVariblesWhenDisable(disable || freeze); }
 
@@ -20757,8 +20757,8 @@ var tns = function(options) {
     var absIndex = getAbsIndex(),
         result;
 
-    result = navAsThumbnails ? absIndex : 
-      fixedWidth || autoWidth ? Math.ceil((absIndex + 1) * pages / slideCount - 1) : 
+    result = navAsThumbnails ? absIndex :
+      fixedWidth || autoWidth ? Math.ceil((absIndex + 1) * pages / slideCount - 1) :
           Math.floor(absIndex / items);
 
     // set active nav to the last one when reaches the right edge
@@ -20864,8 +20864,8 @@ var tns = function(options) {
   }
 
   function getSlideMarginLeft (i) {
-    return CALC ? 
-      CALC + '(' + i * 100 + '% / ' + slideCountNew + ')' : 
+    return CALC ?
+      CALC + '(' + i * 100 + '% / ' + slideCountNew + ')' :
       i * 100 / slideCountNew + '%';
   }
 
@@ -20906,8 +20906,8 @@ var tns = function(options) {
     } else {
       if (!carousel) { itemsTem = Math.floor(itemsTem); }
       var dividend = carousel ? slideCountNew : itemsTem;
-      width = CALC ? 
-        CALC + '(100% / ' + dividend + ')' : 
+      width = CALC ?
+        CALC + '(100% / ' + dividend + ')' :
         100 / dividend + '%';
     }
 
@@ -20984,7 +20984,7 @@ var tns = function(options) {
     containerParent.insertBefore(outerWrapper, container);
     innerWrapper.appendChild(container);
 
-    // add id, class, aria attributes 
+    // add id, class, aria attributes
     // before clone slides
     Object(_helpers_forEach_js__WEBPACK_IMPORTED_MODULE_17__["forEach"])(slideItems, function(item, i) {
       Object(_helpers_addClass_js__WEBPACK_IMPORTED_MODULE_19__["addClass"])(item, 'tns-item');
@@ -21000,7 +21000,7 @@ var tns = function(options) {
     // carousel: n + slides + n
     // gallery:      slides + n
     if (cloneCount) {
-      var fragmentBefore = doc.createDocumentFragment(), 
+      var fragmentBefore = doc.createDocumentFragment(),
           fragmentAfter = doc.createDocumentFragment();
 
       for (var j = cloneCount; j--;) {
@@ -21031,7 +21031,7 @@ var tns = function(options) {
       // add complete class if all images are loaded/failed
       Object(_helpers_forEach_js__WEBPACK_IMPORTED_MODULE_17__["forEach"])(imgs, function(img) {
         var src = img.src;
-        
+
         if (src && src.indexOf('data:image') < 0) {
           Object(_helpers_addEvents_js__WEBPACK_IMPORTED_MODULE_32__["addEvents"])(img, imgEvents);
           img.src = '';
@@ -21101,7 +21101,7 @@ var tns = function(options) {
   function initSheet () {
     // gallery:
     // set animation classes and left value for gallery slider
-    if (!carousel) { 
+    if (!carousel) {
       for (var i = index, l = index + Math.min(slideCount, items); i < l; i++) {
         var item = slideItems[i];
         item.style.left = (i - index) * 100 / items + '%';
@@ -21282,7 +21282,7 @@ var tns = function(options) {
         if (autoplayResetOnVisibility) { Object(_helpers_addEvents_js__WEBPACK_IMPORTED_MODULE_32__["addEvents"])(container, visibilityEvent); }
       }
     }
- 
+
     // == navInit ==
     if (hasNav) {
       var initIndex = !carousel ? 0 : cloneCount;
@@ -21300,7 +21300,7 @@ var tns = function(options) {
           });
         });
 
-      // generated nav 
+      // generated nav
       } else {
         var navHtml = '',
             hiddenStr = navAsThumbnails ? '' : 'style="display:none"';
@@ -21365,7 +21365,7 @@ var tns = function(options) {
           'tabindex': '-1',
         });
       }
-      
+
       if (options.controlsContainer || (options.prevButton && options.nextButton)) {
         Object(_helpers_setAttrs_js__WEBPACK_IMPORTED_MODULE_23__["setAttrs"])(prevButton, {'data-controls' : 'prev'});
         Object(_helpers_setAttrs_js__WEBPACK_IMPORTED_MODULE_23__["setAttrs"])(nextButton, {'data-controls' : 'next'});
@@ -21586,7 +21586,7 @@ var tns = function(options) {
         updateIndex();
       }
     }
-    
+
     if (bpChanged) {
       if (disable !== disableTem) {
         if (disable) {
@@ -21703,13 +21703,13 @@ var tns = function(options) {
     }
 
     indChanged = index !== indexTem;
-    if (indChanged) { 
+    if (indChanged) {
       events.emit('indexChanged', info());
       needContainerTransform = true;
     } else if (itemsChanged) {
       if (!indChanged) { additionalUpdates(); }
     } else if (fixedWidth || autoWidth) {
-      doLazyLoad(); 
+      doLazyLoad();
       updateSlideStatus();
       updateLiveRegion();
     }
@@ -21736,7 +21736,7 @@ var tns = function(options) {
           }
 
           // slide styles
-          var str = getSlideWidthStyle(fixedWidth, gutter, items) + 
+          var str = getSlideWidthStyle(fixedWidth, gutter, items) +
                     getSlideGutterStyle(gutter);
 
           // remove the last line and
@@ -21789,7 +21789,7 @@ var tns = function(options) {
 
   // (slideBy, indexMin, indexMax) => index
   var updateIndex = (function () {
-    return loop ? 
+    return loop ?
       carousel ?
         // loop + carousel
         function () {
@@ -21916,7 +21916,7 @@ var tns = function(options) {
     if (!horizontal || !carousel) { Object(_helpers_removeAttrs_js__WEBPACK_IMPORTED_MODULE_24__["removeAttrs"])(innerWrapper, ['style']); }
 
     // gallery
-    if (!carousel) { 
+    if (!carousel) {
       for (var i = index, l = index + slideCount; i < l; i++) {
         var item = slideItems[i];
         Object(_helpers_removeAttrs_js__WEBPACK_IMPORTED_MODULE_24__["removeAttrs"])(item, ['style']);
@@ -21946,7 +21946,7 @@ var tns = function(options) {
     }
 
     // gallery
-    if (!carousel) { 
+    if (!carousel) {
       for (var i = index, l = index + slideCount; i < l; i++) {
         var item = slideItems[i],
             classN = i < index + items ? animateIn : animateNormal;
@@ -21970,7 +21970,7 @@ var tns = function(options) {
     var arr = getVisibleSlideRange(),
         start = arr[0] + 1,
         end = arr[1] + 1;
-    return start === end ? start + '' : start + ' to ' + end; 
+    return start === end ? start + '' : start + ' to ' + end;
   }
 
   function getVisibleSlideRange (val) {
@@ -22121,10 +22121,10 @@ var tns = function(options) {
 
     // otherwise execute this functiona again
     Object(_helpers_raf_js__WEBPACK_IMPORTED_MODULE_2__["raf"])(function(){ imgsLoadedCheck(imgs, cb); });
-  } 
+  }
 
   function additionalUpdates () {
-    doLazyLoad(); 
+    doLazyLoad();
     updateSlideStatus();
     updateLiveRegion();
     updateControlsStatus();
@@ -22248,7 +22248,7 @@ var tns = function(options) {
           'aria-label': navStr + (navCurrentIndexCached + 1)
         });
         Object(_helpers_removeClass_js__WEBPACK_IMPORTED_MODULE_20__["removeClass"])(navPrev, navActiveClass);
-        
+
         Object(_helpers_setAttrs_js__WEBPACK_IMPORTED_MODULE_23__["setAttrs"])(navCurrent, {'aria-label': navStr + (navCurrentIndex + 1) + navStrCurrent});
         Object(_helpers_removeAttrs_js__WEBPACK_IMPORTED_MODULE_24__["removeAttrs"])(navCurrent, 'tabindex');
         Object(_helpers_addClass_js__WEBPACK_IMPORTED_MODULE_19__["addClass"])(navCurrent, navActiveClass);
@@ -22384,7 +22384,7 @@ var tns = function(options) {
       }
       Object(_helpers_removeClass_js__WEBPACK_IMPORTED_MODULE_20__["removeClass"])(item, classOut);
       Object(_helpers_addClass_js__WEBPACK_IMPORTED_MODULE_19__["addClass"])(item, classIn);
-      
+
       if (isOut) { slideItemsOut.push(item); }
     }
   }
@@ -22397,10 +22397,10 @@ var tns = function(options) {
       function () {
         resetDuration(container, '');
         if (TRANSITIONDURATION || !speed) {
-          // for morden browsers with non-zero duration or 
+          // for morden browsers with non-zero duration or
           // zero duration for all browsers
           doContainerTransform();
-          // run fallback function manually 
+          // run fallback function manually
           // when duration is 0 / container is hidden
           if (!speed || !Object(_helpers_isVisible_js__WEBPACK_IMPORTED_MODULE_28__["isVisible"])(container)) { onTransitionEnd(); }
 
@@ -22422,7 +22422,7 @@ var tns = function(options) {
         animateSlide(indexCached, animateIn, animateOut, true);
         animateSlide(index, animateNormal, animateIn);
 
-        // run fallback function manually 
+        // run fallback function manually
         // when transition or animation not supported / duration is 0
         if (!TRANSITIONEND || !ANIMATIONEND || !speed || !Object(_helpers_isVisible_js__WEBPACK_IMPORTED_MODULE_28__["isVisible"])(container)) { onTransitionEnd(); }
       };
@@ -22477,7 +22477,7 @@ var tns = function(options) {
           // set item positions
           item.style.left = '';
 
-          if (ANIMATIONDELAY && TRANSITIONDELAY) { 
+          if (ANIMATIONDELAY && TRANSITIONDELAY) {
             item.style[ANIMATIONDELAY] = '';
             item.style[TRANSITIONDELAY] = '';
           }
@@ -22487,27 +22487,27 @@ var tns = function(options) {
       }
 
       /* update slides, nav, controls after checking ...
-       * => legacy browsers who don't support 'event' 
-       *    have to check event first, otherwise event.target will cause an error 
-       * => or 'gallery' mode: 
+       * => legacy browsers who don't support 'event'
+       *    have to check event first, otherwise event.target will cause an error
+       * => or 'gallery' mode:
        *   + event target is slide item
-       * => or 'carousel' mode: 
-       *   + event target is container, 
+       * => or 'carousel' mode:
+       *   + event target is container,
        *   + event.property is the same with transform attribute
        */
-      if (!event || 
-          !carousel && event.target.parentNode === container || 
+      if (!event ||
+          !carousel && event.target.parentNode === container ||
           event.target === container && strTrans(event.propertyName) === strTrans(transformAttr)) {
 
-        if (!updateIndexBeforeTransform) { 
+        if (!updateIndexBeforeTransform) {
           var indexTem = index;
           updateIndex();
-          if (index !== indexTem) { 
+          if (index !== indexTem) {
             events.emit('indexChanged', info());
 
             doContainerTransformSilent();
           }
-        } 
+        }
 
         if (nested === 'inner') { events.emit('innerLoaded', info()); }
         running = false;
@@ -22535,7 +22535,7 @@ var tns = function(options) {
         if (preventActionWhenRunning) { return; } else { onTransitionEnd(); }
       }
 
-      var absIndex = getAbsIndex(), 
+      var absIndex = getAbsIndex(),
           indexGap = 0;
 
       if (targetIndex === 'first') {
@@ -22618,7 +22618,7 @@ var tns = function(options) {
     if (running) {
       if (preventActionWhenRunning) { return; } else { onTransitionEnd(); }
     }
-    
+
     e = getEvent(e);
     var target = getTarget(e), navIndex;
 
@@ -22703,20 +22703,20 @@ var tns = function(options) {
   }
 
   function mouseoverPause () {
-    if (animating) { 
+    if (animating) {
       stopAutoplayTimer();
       autoplayHoverPaused = true;
     }
   }
 
   function mouseoutRestart () {
-    if (autoplayHoverPaused) { 
+    if (autoplayHoverPaused) {
       setAutoplayTimer();
       autoplayHoverPaused = false;
     }
   }
 
-  // keydown events on document 
+  // keydown events on document
   function onDocumentKeydown (e) {
     e = getEvent(e);
     var keyIndex = [KEYS.LEFT, KEYS.RIGHT].indexOf(e.keyCode);
@@ -22793,7 +22793,7 @@ var tns = function(options) {
     }
 
     if (autoplay && animating) { stopAutoplayTimer(); }
-    
+
     panStart = true;
     if (rafIndex) {
       Object(_helpers_caf_js__WEBPACK_IMPORTED_MODULE_3__["caf"])(rafIndex);
@@ -22885,7 +22885,7 @@ var tns = function(options) {
           Object(_helpers_addEvents_js__WEBPACK_IMPORTED_MODULE_32__["addEvents"])(target, {'click': function preventClick (e) {
             preventDefaultBehavior(e);
             Object(_helpers_removeEvents_js__WEBPACK_IMPORTED_MODULE_33__["removeEvents"])(target, {'click': preventClick});
-          }}); 
+          }});
         }
 
         if (carousel) {
@@ -22923,7 +22923,7 @@ var tns = function(options) {
 
     // reset
     if (options.preventScrollOnTouch === 'auto') { preventScroll = false; }
-    if (swipeAngle) { moveDirectionExpected = '?'; } 
+    if (swipeAngle) { moveDirectionExpected = '?'; }
     if (autoplay && !animating) { setAutoplayTimer(); }
   }
 
@@ -23291,7 +23291,7 @@ $(document).on('click', '.addNews', function () {
 
       if (text != "") {
         $.ajax({
-          type: 'put',
+          type: 'post',
           url: '/addNews',
           data: {
             text: text

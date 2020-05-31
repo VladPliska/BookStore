@@ -36,7 +36,7 @@ Route::group(['middleware' => ['user']], function () {
 
     Route::post('/addComment','HomeController@addComment');
 
-    Route::put('/addNews','AdminController@addNews');
+    Route::post('/addNews','AdminController@addNews');
 
     Route::get('/profile','HomeController@profile');
 
