@@ -247,7 +247,7 @@ class HomeController extends Controller
     {
         $query = $req->get('title');
         $book = Product::where('title', 'like', '%' . $query . '%')->take(20)->get();
-        $genre = Genre::all();
+        $genre = Ganre::all();
         return view('page/filter-page', ['data' => $book, 'genre' => $genre, 'query' => $query]);
     }
 
