@@ -48,7 +48,6 @@ class AdminController extends Controller
 
         if ($id == null) {
 
-//            Storage::disk('public')->put('/bookImg', $img);
             $path = $request->file('image')->store('images','s3');
 
             Storage::disk('s3')->setVisibility($path,'public');
@@ -77,13 +76,15 @@ class AdminController extends Controller
                     'action' => $action ?? 0
                 ]);
             } else {
-                Storage::disk('public')->put('/bookImg', $img);
+                $path = $request->file('image')->store('images','s3');
+
+                Storage::disk('s3')->setVisibility($path,'public');
 
                 $product->update([
                     'title' => $name,
                     'description' => $desription,
                     'price' => $price,
-                    'img' => $img->hashName(),
+                    'img' => Storage::disk('s3')->url($path),
                     'genre_id' => $ganre,
                     'author_id' => $author,
                     'action' => $action ?? 0

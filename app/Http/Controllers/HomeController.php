@@ -181,12 +181,14 @@ class HomeController extends Controller
                 'lastname' => $lastname,
             ]);
         } else {
-            Storage::disk('public')->put('/bookImg', $img);
-            dd($img);
+            $path = $req->file('avatar')->store('images','s3');
+
+            Storage::disk('s3')->setVisibility($path,'public');
+
             $user->update([
                 'firstname' => $firstname,
                 'lastname' => $lastname,
-                'img' => $img->hashName()
+                'img' =>Storage::disk('s3')->url($path)
             ]);
         }
 

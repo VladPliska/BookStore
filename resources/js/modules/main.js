@@ -282,7 +282,7 @@ $(document).on('click', '.book-btn-edit', function (e) {
                 form.find('#create-select-ganre').val(book.genre_id)
                 form.find('#new-description-book').val(book.description);
                 form.find('#book-price').val(book.price);
-                form.find('img').attr('src', '/storage/bookImg/' + book.img);
+                form.find('img').attr('src', book.img);
                 if (book.action > 0) {
                     form.find('#book-action')[0].checked = true;
                     form.find('.action-price').val(book.action).addClass('active');

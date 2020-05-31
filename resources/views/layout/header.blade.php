@@ -20,7 +20,7 @@
     </nav>
     @if($user != null)
         <div class="btnLogin">
-        <img src="{{$user->img ? 'storage/bookImg/'.$user->img:asset('img/avatar.png')}}"  class='avatar-header' alt="">
+        <img src="{{$user->img ? $user->img:asset('img/avatar.png')}}"  class='avatar-header' alt="">
         <div class='login-area'>
             @if($user != null && $user->role == 'admin')
                 <h2 class="header-title-area">Привіт,{{$user->username}}</h2>
