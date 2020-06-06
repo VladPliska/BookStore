@@ -38,6 +38,8 @@ Route::group(['middleware' => ['user']], function () {
 
     Route::post('/addNews','AdminController@addNews');
 
+    Route::post('/addAuthor','AdminController@addAuthor');
+
     Route::get('/profile','HomeController@profile');
 
     Route::get('/news','HomeController@showNews');
@@ -64,6 +66,10 @@ Route::group(['middleware' => ['user']], function () {
     Route::get('/order','HomeController@orderPage');
 
     Route::post('/createOrder','HomeController@createOrder');
+
+    Route::post('/searchAdmin','AdminController@searchAdmin');
+
+
 
 });
 

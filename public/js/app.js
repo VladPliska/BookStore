@@ -23185,6 +23185,14 @@ $(document).on('click', '.showWork', function (e) {
 
   $('.showWork').removeClass('active');
   $(this).addClass('active');
+
+  if ($(this).hasClass('admin-stats') || $(this).hasClass('admin-addBook')) {
+    $('.searchAdminBlock').hide();
+  } else {
+    $('.searchAdminBlock').show();
+    $('.searchAdminBlock').attr('data-search', showArea);
+  }
+
   $('.tab').addClass('hide');
   $('[data-target=' + showArea + ']').removeClass('hide');
   $.ajax({
@@ -23311,7 +23319,42 @@ $(document).on('click', '.addNews', function () {
       }
     }
   });
-});
+}); /////
+//add Author
+
+$(document).on('click', '.addAuthor', function () {
+  popup.fire({
+    title: "Введіть ім'я автора:",
+    html: "<textarea class='news-textarea' id='news'></textarea>",
+    showCancelButton: true,
+    closeOnConfirm: false,
+    showLoaderOnConfirm: true,
+    animation: "slide-from-top",
+    inputPlaceholder: "Write something"
+  }).then(function (res) {
+    if (res.value) {
+      var text = $('#news').val();
+
+      if (text != "") {
+        $.ajax({
+          type: 'post',
+          url: '/addAuthor',
+          data: {
+            text: text
+          },
+          success: function success(result) {
+            if (result.news) {
+              popup.fire('Успіх', 'Автора успішено додано', 'success');
+            } else {
+              popup.fire('Помилка', 'Помилка під час додавання автора,спробуйте пізніше', 'error');
+            }
+          }
+        });
+      }
+    }
+  });
+}); /////
+
 $(document).on('click', '.avatar-header', function () {
   $('.login-area').toggleClass('active');
 });
@@ -23753,6 +23796,81 @@ $(document).on('click', '.updateAuthor,.removeAuthor', function (e) {
       }
     });
   }
+});
+$(document).on('click', '.searchAdminBtn', function (e) {
+  var search = $(this).parent().attr('data-search');
+  var searchData = '';
+
+  if (search === 'All-Author') {
+    searchData = 'author';
+  } else if (search === 'All-Orders') {
+    searchData = 'order';
+  } else if (search === 'All-Comment') {
+    searchData = 'comment';
+  } else if (search === 'All-Book') {
+    searchData = 'book';
+  } else if (search === 'All-User') {
+    searchData = 'user';
+  }
+
+  var text = $(this).parent().find('input').val();
+  $.ajax({
+    type: 'POST',
+    url: '/searchAdmin',
+    data: {
+      text: text,
+      search: searchData
+    },
+    success: function success(res) {
+      switch (search) {
+        case 'All-Author':
+          if (res.view === '') {
+            $('.admin-all-author').find('.list-author').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+          } else {
+            $('.admin-all-author').find('.list-author').html(res.view);
+          }
+
+          break;
+
+        case 'All-Orders':
+          if (res.view === '') {
+            $('.admin-all-order').find('.list-orders').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+          } else {
+            $('.admin-all-order').find('.list-orders').html(res.view);
+          }
+
+          break;
+
+        case 'All-Comment':
+          if (res.view === '') {
+            $('.admin-all-coments').find('.all-comments').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+          } else {
+            $('.admin-all-coments').find('.all-comments').html(res.view);
+          }
+
+          break;
+
+        case 'All-Book':
+          if (res.view === '') {
+            $('.admin-all-book').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+          } else {
+            $('.admin-all-book').html(res.view);
+          }
+
+          break;
+
+        case 'All-User':
+          if (res.view === '') {
+            $(document).find('.user-append').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+          } else {
+            $(document).find('.user-append').html(res.view);
+          }
+
+          break;
+      }
+    }
+  });
+  $(this).parent().find('input').val('');
 });
 
 /***/ }),

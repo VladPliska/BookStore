@@ -1336,6 +1336,22 @@ header .btnLogin .avatar-header {
   font-weight: 500;
 }
 
+.addBlock {
+  text-align: center;
+}
+
+.searchAdminBlock {
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.searchAdminBlock input {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
 .ce {
   margin: 0 auto;
   display: block;

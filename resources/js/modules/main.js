@@ -40,6 +40,13 @@ $(document).on('click', '.showWork', function (e) {
 
     $('.showWork').removeClass('active');
     $(this).addClass('active');
+    if ($(this).hasClass('admin-stats') || $(this).hasClass('admin-addBook')) {
+        $('.searchAdminBlock').hide();
+    } else {
+        $('.searchAdminBlock').show();
+        $('.searchAdminBlock').attr('data-search', showArea);
+    }
+
 
     $('.tab').addClass('hide');
     $('[data-target=' + showArea + ']').removeClass('hide');
@@ -183,6 +190,42 @@ $(document).on('click', '.addNews', function () {
         }
     })
 });
+/////
+
+//add Author
+$(document).on('click', '.addAuthor', function () {
+    popup.fire({
+        title: "Введіть ім'я автора:",
+        html: "<textarea class='news-textarea' id='news'></textarea>",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        showLoaderOnConfirm: true,
+        animation: "slide-from-top",
+        inputPlaceholder: "Write something"
+    }).then((res) => {
+        if (res.value) {
+            let text = $('#news').val();
+            if (text != "") {
+                $.ajax({
+                    type: 'post',
+                    url: '/addAuthor',
+                    data: {
+                        text: text
+                    },
+                    success: function (result) {
+                        if (result.news) {
+                            popup.fire('Успіх', 'Автора успішено додано', 'success')
+                        } else {
+                            popup.fire('Помилка', 'Помилка під час додавання автора,спробуйте пізніше', 'error')
+                        }
+                    }
+                })
+            }
+        }
+    })
+});
+
+/////
 
 $(document).on('click', '.avatar-header', function () {
     $('.login-area').toggleClass('active');
@@ -537,7 +580,7 @@ $('.admin-orders').click(function (e) {
 })
 
 $(document).on('click', '.item-order', function (e) {
-    if(!$(e.target).hasClass('updateAuthor') || !$(e.target).hasClass('removeAuthor')){
+    if (!$(e.target).hasClass('updateAuthor') || !$(e.target).hasClass('removeAuthor')) {
         let id = $(this).attr('data-id');
         $.ajax({
             type: "POST",
@@ -546,17 +589,17 @@ $(document).on('click', '.item-order', function (e) {
                 id: id
             },
             success: (res) => {
-                $('.pib-order').text(res.order.firstname +" "+res.order.lastname);
+                $('.pib-order').text(res.order.firstname + " " + res.order.lastname);
                 $('.phone-order').text(res.order.phone);
                 $('.email-order').text(res.order.email);
                 $('.city-order').val(res.order.city);
                 $('.paymethod-order').text(res.order.payType);
                 $('.post-order').text(res.order.post);
                 $('.body-order-item').html(res.view);
-                $('.orderDetail-title').first().text('Замовлення №'+res.order.id)
-                $('.order-price').text('Ціна '+res.order.price +"грн.")
+                $('.orderDetail-title').first().text('Замовлення №' + res.order.id)
+                $('.order-price').text('Ціна ' + res.order.price + "грн.")
                 $('#status').val(res.order.status)
-                $('.changeStatusBtn').attr('data-id',res.order.id);
+                $('.changeStatusBtn').attr('data-id', res.order.id);
 
                 $('.list-orders').addClass('hide');
                 $('.header-list-order').addClass('hide');
@@ -566,101 +609,101 @@ $(document).on('click', '.item-order', function (e) {
     }
 
 })
-$(document).on('click','.all-orders-show',function(e){
+$(document).on('click', '.all-orders-show', function (e) {
     $('.list-orders').removeClass('hide');
     $('.header-list-order').removeClass('hide');
     $('.selectOrder').toggleClass('hide');
 })
 
-$(document).on('click','.changeStatusBtn',function(){
+$(document).on('click', '.changeStatusBtn', function () {
     let id = $(this).attr('data-id');
     let status = $(this).parent().find('select').val();
 
     $.ajax({
-        type:'POST',
-        url:"/changeStatus",
-        data:{
-            id:id,status
+        type: 'POST',
+        url: "/changeStatus",
+        data: {
+            id: id, status
         },
-        success:(res)=>{
-            if(res.success){
+        success: (res) => {
+            if (res.success) {
                 popup.fire({
-                    title:'Статус змінено',
-                    icon:"success"
+                    title: 'Статус змінено',
+                    icon: "success"
                 })
             }
-    }
+        }
     })
 })
 
-$(document).on('click','.admin-authors',function(e){
+$(document).on('click', '.admin-authors', function (e) {
 
-        $.ajax({
-            type:'post',
-            url:'/getAuthors',
-            success:function(res){
-                $('.list-author').html(res.view)
-            }
-        })
+    $.ajax({
+        type: 'post',
+        url: '/getAuthors',
+        success: function (res) {
+            $('.list-author').html(res.view)
+        }
+    })
 
 })
 
-$(document).on('click','.updateAuthor,.removeAuthor',function(e) {
+$(document).on('click', '.updateAuthor,.removeAuthor', function (e) {
     let curr = $(this);
     let name = $(this).parent().find('.nameAuthor').text();
     let id = $(this).attr('data-id');
-    if($(this).hasClass('remove')){
+    if ($(this).hasClass('remove')) {
         let curr = $(this).parent();
         $.ajax({
-            type:'post',
-            url:'/changeAuthor',
-            data:{
-                delete:true,
-                id:id
+            type: 'post',
+            url: '/changeAuthor',
+            data: {
+                delete: true,
+                id: id
             },
-            success:(res)=>{
-                if(res.change){
+            success: (res) => {
+                if (res.change) {
                     curr.remove();
                     popup.fire('Успіх', 'Автор видалений', 'success')
-                }else{
-                    if(res.message){
+                } else {
+                    if (res.message) {
                         popup.fire('Помилка', res.message, 'error')
-                    }else{
+                    } else {
                         popup.fire('Помилка', 'Невдалося оновити автора', 'error')
                     }
                 }
             }
         })
-    }else{
-        let html = '<textarea class=\'news-textarea\' id=\'news\'>'+name+'</textarea>';
+    } else {
+        let html = '<textarea class=\'news-textarea\' id=\'news\'>' + name + '</textarea>';
         popup.fire({
-            title:"Зміна імені автора.",
-            showCancelButton:true,
+            title: "Зміна імені автора.",
+            showCancelButton: true,
             html: html,
             closeOnConfirm: false,
             showLoaderOnConfirm: true,
             animation: "slide-from-top",
             inputPlaceholder: "Write something"
-        }).then((res)=>{
-            if(res.value){
+        }).then((res) => {
+            if (res.value) {
                 let text = $('#news').val();
                 if (text != "") {
                     $.ajax({
-                        type:'post',
-                        url:'/changeAuthor',
-                        data:{
-                            delete:false,
-                            name:text,
-                            id:id
+                        type: 'post',
+                        url: '/changeAuthor',
+                        data: {
+                            delete: false,
+                            name: text,
+                            id: id
                         },
-                        success:(res)=>{
-                            if(res.change){
+                        success: (res) => {
+                            if (res.change) {
                                 curr.parent().find('.nameAuthor').text(text);
                                 popup.fire('Успіх', 'Дані оновленно', 'success')
-                            }else{
-                                if(res.message){
+                            } else {
+                                if (res.message) {
                                     popup.fire('Помилка', res.message, 'error')
-                                }else{
+                                } else {
                                     popup.fire('Помилка', 'Невдалося оновити автора', 'error')
                                 }
                             }
@@ -673,4 +716,70 @@ $(document).on('click','.updateAuthor,.removeAuthor',function(e) {
     }
 
 
+})
+
+$(document).on('click', '.searchAdminBtn', function (e) {
+    let search = $(this).parent().attr('data-search');
+    let searchData = '';
+    if (search === 'All-Author') {
+        searchData = 'author';
+    } else if (search === 'All-Orders') {
+        searchData = 'order';
+    } else if (search === 'All-Comment') {
+        searchData = 'comment';
+    } else if (search === 'All-Book') {
+        searchData = 'book';
+    } else if (search === 'All-User') {
+        searchData = 'user';
+    }
+    let text = $(this).parent().find('input').val();
+
+    $.ajax({
+        type: 'POST',
+        url: '/searchAdmin',
+        data: {
+            text: text,
+            search: searchData
+        },
+        success: (res) => {
+            switch (search) {
+                case 'All-Author':
+                    if(res.view === ''){
+                        $('.admin-all-author').find('.list-author').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+                    }else{
+                        $('.admin-all-author').find('.list-author').html(res.view);
+                    }
+                    break;
+                case 'All-Orders':
+                    if(res.view === ''){
+                        $('.admin-all-order').find('.list-orders').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+                    }else{
+                        $('.admin-all-order').find('.list-orders').html(res.view);
+                    }
+                    break;
+                case 'All-Comment':
+                    if(res.view === ''){
+                        $('.admin-all-coments').find('.all-comments').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+                    }else{
+                        $('.admin-all-coments').find('.all-comments').html(res.view);
+                    }
+                    break;
+                case 'All-Book':
+                    if(res.view === '') {
+                        $('.admin-all-book').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+                    }else{
+                        $('.admin-all-book').html(res.view);
+                    }
+                    break;
+                case 'All-User':
+                    if(res.view === '') {
+                        $(document).find('.user-append').html('<h2 style="text-align: center;padding: 20px;">Нічого не знайдено</h2>');
+                    }else{
+                        $(document).find('.user-append').html(res.view);
+                    }
+                    break;
+            }
+        }
+    })
+    $(this).parent().find('input').val('');
 })

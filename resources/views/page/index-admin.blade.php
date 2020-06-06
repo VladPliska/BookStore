@@ -8,11 +8,16 @@
                 <a href="javascript:;" class="admin-addBook btn-nav showWork" data-open="Add-Book">Додати книжку</a>
                 <a href="javascript:;" class="admin-allBook btn-nav showWork" data-open="All-Book" data-type="books">Книжки</a>
                 <a href="javascript:;" class="admin-users btn-nav showWork" data-open="All-User" data-type="users">Користувачі</a>
-                <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment" data-type="comments">Коментарі</a>
+                <a href="javascript:;" class="admin-comments btn-nav showWork" data-open="All-Comment"
+                   data-type="comments">Коментарі</a>
                 <a href="javascript:;" class="admin-orders btn-nav showWork" data-open="All-Orders" data-type="orders">Замовлення</a>
                 <a href="javascript:;" class="admin-authors btn-nav showWork" data-open="All-Author" data-type="author">Автори</a>
             </div>
             <div class="admin-workspace">
+                <div class="searchAdminBlock" style="display: none">
+                    <input type="text" class="searchAdmin" placeholder="Введіть текст">
+                    <button class="btn-g searchAdminBtn">Пошук</button>
+                </div>
                 <div class="tab-stats tab" data-target="Statistic">
                     <div class="info-1">
                         <div class="info-block">
@@ -175,11 +180,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <form action="/asdasd">
+                                    <form action="/changeCity" method="POST">
+                                        @csrf
                                         <div>
-                                            <span class="input-city-order">Місто: </span><input value=""
-                                                                                                class='input-city-order city-order'
-                                                                                                placeholder="Місто"/>
+                                            <span class="input-city-order">Місто: </span>
+                                            <input value="" name='city-name' class='input-city-order city-order'
+                                                   placeholder="Місто"/>
                                         </div>
                                     </form>
                                     <div>
@@ -212,12 +218,15 @@
                     <div class="list-orders list-author">
 
                     </div>
-{{--                    <div class="btnAddAuthor">Додати автора</div>--}}
                 </div>
 
 
             </div>
-            <button class="btn-g ce addNews">Додати новину</button>
+            <div class="addBlock ce">
+                <button class="btn-g  addNews" data-add='news'>Додати новину</button>
+                <button class="btn-g  addAuthor" data-add='author'>Додати автора</button>
+            </div>
+
         </div>
 
     </div>
