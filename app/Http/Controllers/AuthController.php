@@ -55,10 +55,15 @@ class AuthController extends Controller
         ])->first();
 
             if($user != null){
-            $token = hash('md5',rand(2,200));
-            $user->update(['token'=>$token]);
-            Cookie::queue('auth',$token,60*30);
-            return redirect('profile',302);
+                if(!$user->ban){
+                    $token = hash('md5',rand(2,200));
+                    $user->update(['token'=>$token]);
+                    Cookie::queue('auth',$token,60*30);
+                    return redirect('profile',302);
+                }else{
+                    return back()->with(['err'=>'Користувач заблокований']);
+                }
+
         }else{
             return back()->with(['err'=>'Неправильний логін або пароль']);
         }

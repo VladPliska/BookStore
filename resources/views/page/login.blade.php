@@ -16,6 +16,9 @@
                         <input type="password" id ="pass"  name="password" placeholder="**********" required>
                     </div>
                 </div>
+               @if(session('err'))
+                      <p class ="msg msg-err">{{session('err')}}</p>
+                  @endif
               @if(!empty($reg))
                   <p class ="msg msg-suc">Verification link send successful</p>
               @elseif(!empty($confirm))
