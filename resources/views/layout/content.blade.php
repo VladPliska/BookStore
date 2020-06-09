@@ -3,7 +3,6 @@
     <div class="main-slider">
         <div class="slider">
             <div class="slider-{{$type}}">
-
                 @if(!empty($data))
                         @foreach($data as $v)
                         <a class="popular-item openBook" href="/book/{{$v->getOriginal('id')}}">

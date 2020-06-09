@@ -7,7 +7,6 @@
             </div>
             <div class="admin-user-name">{{$val->username}}</div>
             <div class="admin user-email">{{$val->email}}</div>
-            <div class="admin-user-inclub">Так</div> {{--club--}}
             @if($val->ban == false)
                 <div class="admin-user-block msg-err" data-id="{{$val->id}}">Заблокувати</div>
             @else

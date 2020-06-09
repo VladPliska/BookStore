@@ -147,6 +147,13 @@ footer * {
   display: block;
   font-size: 1.2em;
   font-weight: bold;
+  max-height: 27px;
+  max-width: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .book-price {
@@ -584,6 +591,11 @@ input[type=range]::-webkit-slider-thumb {
 .book-card-name {
   font-weight: 500;
   font-size: 1.8em;
+  max-height: 40px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .book-card-price {
@@ -909,6 +921,16 @@ header .btnLogin .avatar-header {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
+.admin-workspace .admin-all-book .book-info .book-name {
+  margin-top: 30px;
+  display: block;
+  max-height: 50px;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .admin-workspace .admin-all-book .book-info div {
   display: -webkit-box;
   display: flex;
@@ -931,6 +953,14 @@ header .btnLogin .avatar-header {
 .admin-workspace .admin-all-book .book-info:hover {
   background: #9de0f6;
   cursor: pointer;
+}
+
+.admin-workspace .all-coments-title,
+.admin-workspace .coments-body-parent,
+.admin-workspace .user-list,
+.admin-workspace .user-list-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
 }
 
 .admin-workspace .user-list,

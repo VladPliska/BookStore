@@ -38,21 +38,22 @@
             </div>
             <div class="sort">
                 <span>Сортувати за:</span>
-                <div class="sort-by">
+                <div class="sort-by" style="text-align: center;">
                     <label for="sort-up">
                         Зростанням
                         <input id="sort-up" name="sort-by" type="radio" value="asc" checked>
                     </label>
+                    <br><br>
                     <label for="sort-down">
                         Спаданням
                         <input id="sort-down" name="sort-by" type="radio" value="desc">
                     </label>
                 </div>
                 <div class="button-block">
-                    <div class="sort-btn-all btnNewBook btnFilter" data-type="News">Новинки</div>
-                    <div class="sort-btn-all btnAction btnFilter" data-type="Action">Акції</div>
-                    <div class="sort-btn-all btnPopular btnFilter" data-type="Popular">Популярні</div>
-                    <div class="sort-btn-all btnRecomended btnFilter" data-type="Recommended">Рекомендовані</div>
+{{--                    <div class="sort-btn-all btnNewBook btnFilter" data-type="News">Новинки</div>--}}
+{{--                    <div class="sort-btn-all btnAction btnFilter" data-type="Action">Акції</div>--}}
+{{--                    <div class="sort-btn-all btnPopular btnFilter" data-type="Popular">Популярні</div>--}}
+{{--                    <div class="sort-btn-all btnRecomended btnFilter" data-type="Recommended">Рекомендовані</div>--}}
                 </div>
             </div>
         </div>

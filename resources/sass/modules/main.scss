@@ -133,6 +133,13 @@ footer {
     display: block;
     font-size: 1.2em;
     font-weight: bold;
+    max-height: 27px;
+    max-width: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
 }
 .book-price {
     display: block;
@@ -556,6 +563,11 @@ input[type="range"]::-webkit-slider-thumb {
     &-name{
         font-weight: 500;
         font-size: 1.8em;
+        max-height:40px;
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     &-price{
         // border:1px solid;
@@ -858,6 +870,15 @@ header{
            padding: 10px;
            display:grid;
            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+           .book-name{
+               margin-top: 30px;
+               display: block;
+               max-height: 50px;
+               max-width: 250px;
+               overflow: hidden;
+               text-overflow:ellipsis;
+               white-space: nowrap;
+           }
            div{
                display: flex;
                align-items: center;
@@ -877,6 +898,11 @@ header{
            cursor: pointer;
        }
        }
+    }
+
+    .all-coments-title,.coments-body-parent,.user-list,.user-list-title{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr!important;
     }
     .user-list,.user-list-title,.all-coments-title,.coments-body-parent{
         padding:10px;

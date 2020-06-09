@@ -33,7 +33,6 @@ class checkAuth
         if ($cook) {
             $user = User::where('token', $cook)->first();
 
-//            dd($user);
             if ($user != null) {
                 View::share('user', $user);
                 $request->request->add(['user' => $user]);
@@ -43,7 +42,7 @@ class checkAuth
             } else {
                 View::share('user', null);
                 $request->request->add(['user' => null]);
-                if ($request->path() == 'profile') {
+                if ($request->path() == 'profile' || $request->path() == 'admin') {
                     return redirect('/login', 302);
                 }
             }

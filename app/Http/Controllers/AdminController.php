@@ -126,17 +126,14 @@ class AdminController extends Controller
         foreach ($orderData as $v) {
             $profit += $v->price;
         }
-        $orderMonth = Order::whereMonth(
-            'created_at', '=', Carbon::now()->subMonth()->month
-        );
+        $orderMonth = Order::where(
+            'created_at', '>=', Carbon::now()->subDays(30)->toDateTimeString()
+        )->get();
         $monthProfit = 0;
         foreach ($orderMonth as $v) {
             $monthProfit += $v->price;
         }
         $orders = Order::count();
-//        $users = 100;
-//        $books = 100;
-//        $orders = 100;
         $comments = Comments::count();
         $genre = Ganre::all();
         return view('page.index-admin', compact('users', 'books', 'club', 'profit',
@@ -379,14 +376,14 @@ class AdminController extends Controller
 
         switch ($table) {
             case 'book':
-                $data = Product::where('title','ilike', '%' . $query . '%')->get();
+                $data = Product::where('title', 'ilike', '%' . $query . '%')->get();
                 $view = view('page.admin.book-list', ['books' => $data])->render();
                 return response()->json([
                     'view' => $view
                 ]);
                 break;
             case 'author':
-                $data = Author::where('name','ilike', '%' . $query . '%')->get();
+                $data = Author::where('name', 'ilike', '%' . $query . '%')->get();
                 $view = view('.layout.order-item', ['data' => $data, 'author' => true])->render();
                 return response()->json([
                     'view' => $view
@@ -394,21 +391,21 @@ class AdminController extends Controller
                 break;
                 break;
             case 'order':
-                $data = Order::where('firstname','ilike', '%' . $query . '%')->orWhere('lastname','ilike', '%' . $query . '%')->get();
-                $view = view('.layout.order-item',['orders'=>$data])->render();
+                $data = Order::where('firstname', 'ilike', '%' . $query . '%')->orWhere('lastname', 'ilike', '%' . $query . '%')->get();
+                $view = view('.layout.order-item', ['orders' => $data])->render();
                 return response()->json([
                     'view' => $view
                 ]);
                 break;
             case 'comment':
-                $data = Comments::where('coment','ilike', '%' . $query . '%')->get();
+                $data = Comments::where('coment', 'ilike', '%' . $query . '%')->get();
                 $view = view('page.admin.comments-list', compact('data'))->render();
                 return response()->json([
                     'view' => $view
                 ]);
                 break;
             case 'user':
-                $data = User::where('username','ilike', '%' . $query . '%')->orWhere('email','ilike', '%' . $query . '%')->get();
+                $data = User::where('username', 'ilike', '%' . $query . '%')->orWhere('email', 'ilike', '%' . $query . '%')->get();
                 $view = view('page.admin.users-list', compact('data'))->render();
                 return response()->json([
                     'view' => $view

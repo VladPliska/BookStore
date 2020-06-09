@@ -28,10 +28,7 @@
                             <p>Всіх книг</p>
                             <h4>{{$books}}</h4>
                         </div>
-                        <div class="info-block">
-                            <p>В клубі</p>
-                            <h4>{{$club}}</h4>
-                        </div>
+
                     </div>
                     <div class="info-2">
                         <div class="info-center info-block">
@@ -120,7 +117,6 @@
                         <div class="admin-user-avatar first">Фото</div>
                         <div class="admin-user-name">Ім'я</div>
                         <div class="admin user-email">Email</div>
-                        <div class="admin-user-inclub">В клубі</div>
                         <div class="admin-user-block-title last">Блокування</div>
                     </div>
                     <div class="user-append">
@@ -134,7 +130,7 @@
                         <div class="comment-user-info">Користувач</div>
                         <div class="comment-text-admin">Текст</div>
                         <div class="comment-response-btn-title">Відповісти</div>
-                        <div class="comment-remove-btn-title last">Видалити</div>
+{{--                        <div class="comment-remove-btn-title last">Видалити</div>--}}
                     </div>
                     <div class="all-comments">
 
