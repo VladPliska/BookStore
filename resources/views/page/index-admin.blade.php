@@ -129,8 +129,8 @@
                         <div class="comment-name-book first">Назва книги</div>
                         <div class="comment-user-info">Користувач</div>
                         <div class="comment-text-admin">Текст</div>
-                        <div class="comment-response-btn-title">Відповісти</div>
-{{--                        <div class="comment-remove-btn-title last">Видалити</div>--}}
+{{--                        <div class="comment-response-btn-title">Відповісти</div>--}}
+                        <div class="comment-remove-btn-title last">Видалити</div>
                     </div>
                     <div class="all-comments">
 
