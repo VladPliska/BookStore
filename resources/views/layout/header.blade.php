@@ -10,12 +10,16 @@
             <a href="/news">Новини</a>
             <a href="/action">Акції</a>
             <a href="#contact">Контакти</a>
+            <div class="searc-block mobile-search" hidden>
+                <form action="/headerSearch">
+                    <input type="text"  class="search-query" id="headerSearch" name='title' placeholder="Пошук книг">
+                </form>
+            </div>
         </div>
-        <div class="searc-block">
+        <div class="searc-block desktop-search">
             <form action="/headerSearch">
                 <input type="text"  class="search-query" id="headerSearch" name='title' placeholder="Пошук книг">
             </form>
-
         </div>
     </nav>
     @if($user != null)
