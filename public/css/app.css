@@ -1568,6 +1568,117 @@ header .btnLogin .avatar-header {
   footer h1 {
     font-size: 30px;
   }
+
+  .loginBtnHeader {
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+
+  .main-info {
+    height: unset;
+    grid-template-columns: unset;
+  }
+
+  .main-filters .ganre-list {
+    width: unset;
+  }
+
+  .news-content {
+    grid-template-columns: 1fr;
+  }
+
+  .news-content .news-item {
+    width: unset;
+  }
+
+  .reg-block .get-reg-info div {
+    display: block !important;
+  }
+
+  .profile-page {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-page form input {
+    margin: 20px auto;
+  }
+
+  .admin-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tab-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  .book-save {
+    grid-template-columns: 1fr !important;
+  }
+
+  .book-info {
+    grid-template-columns: unset !important;
+  }
+
+  .book-info .book-name {
+    margin: 0 auto;
+  }
+
+  .user-list-title {
+    display: none !important;
+  }
+
+  .admin-workspace .user-list {
+    grid-template-columns: unset !important;
+  }
+
+  .all-coments-title {
+    display: none !important;
+  }
+
+  .admin-workspace .coments-body-parent {
+    display: block !important;
+  }
+
+  .comment-text-admin {
+    display: block;
+  }
+
+  .admin-workspace .header-list-order {
+    display: none;
+  }
+
+  .admin-workspace .item-order {
+    display: block;
+    border-bottom: 1px solid;
+  }
+
+  .all-orders-show {
+    position: relative !important;
+  }
+
+  .change-status {
+    position: relative !important;
+  }
+
+  .selectOrderInfo .userInfo {
+    grid-template-columns: 1fr !important;
+  }
+
+  .selectOrderInfo .item {
+    font-size: 10px;
+  }
+
+  .selectOrderInfo .item img {
+    width: 80px;
+  }
+
+  .news-textarea {
+    width: auto;
+  }
+}
+
+footer {
+  height: auto;
 }
 
 .ce {
